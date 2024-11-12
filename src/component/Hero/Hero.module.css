@@ -1,35 +1,13 @@
-/* Hero.module.css */
-.hero {
+.hero{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    background: #f0f4f8; /* A soft background for the hero section */
+    justify-content: center;
+    max-width: 400px;
+    margin: 20px auto;
 }
-
-.signup_Con {
-    max-width: 650px;
-    padding: 40px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.hero .hero_text{
+    background-color: black;
 }
-
-.signup_Conh1 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.signup_Con p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.signup_Con p:last-child {
-    font-weight: bold;
-    color: #0056b3; /* A blue color for the call to action */
+.hero_text h1{
+    background-color: transparent;
 }
