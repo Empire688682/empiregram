@@ -11,3 +11,10 @@
 .hero_text h1{
     background-color: transparent;
 }
+.signup_Con{
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 9px;
+}

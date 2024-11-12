@@ -2,6 +2,36 @@
   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/empiregram-hero-bg.webp');
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 150vh;
+  width: 100%;
+}
+.page_hero {
+  max-width: 650px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  background: linear-gradient(rgba(100, 50, 10, 10), rgba(10, 154, 54, 0.5));
+}
+
+.page_hero h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.page_hero p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.page_hero p:last-child {
+  font-weight: bold;
+  color: #0056b3; 
+  background-color: transparent;
+  text-shadow: 0 0 10px white;
 }

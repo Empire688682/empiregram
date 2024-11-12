@@ -11,7 +11,7 @@ const Hero = () => {
         
       <div className={style.signup_Con}>
         {
-            showSignup ? <Signup/> : <div></div>
+            showSignup ? <Signup/> : null
         }
       </div>
     </div>

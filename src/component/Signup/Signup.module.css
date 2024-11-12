@@ -1,11 +1,10 @@
 .signup{
     min-width: 400px;
     max-width: 400px;
-    min-height: 500px;
     position: relative;
     border-radius: 9px;
     padding: 20px;
-    margin: 40px 0;
+    margin: 10px 0;
 }
 .times_icons{
     position: absolute;
