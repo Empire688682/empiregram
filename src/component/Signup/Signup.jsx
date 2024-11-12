@@ -1,19 +1,26 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import style from './Signup.module.css';
 import Image from 'next/image';
 import logo from '../../../public/empiregram-logo.webp';
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import { LiaTimesSolid } from "react-icons/lia";
+import { useGlobalContext } from '../Context';
+
 
 const Signup = () => {
+    const {setShowSignup} = useGlobalContext();
+    const [signup, setSignup] = useState("Create acct")
   return (
     <div className={style.signup}>
+        <LiaTimesSolid className={style.times_icons} onClick={()=>setShowSignup(false)} />
         <div className={style.logo}>
             <Image src={logo} alt='logo' sizes='100vw' fill/>
         </div>
         <div className={style.form_Con}>
-            <h2>Create account</h2>
+            <h2>{signup === "Create acct" ? "Create account" :"Login"}</h2>
             <p>Continue with</p>
             <div className={style.login_options}>
                 <div className={style.login_option}>
@@ -33,12 +40,23 @@ const Signup = () => {
             <form>
                 <input type="text" name="name" placeholder='Username' required />
                 <input type="password" name="pwd" placeholder='Password' required />
-                <input type="password" name="Rpwd" placeholder='Confirm password' required />
-                <input type="email" name="email" placeholder='Email' required />
-                <span>Add an email to be able to reset your password. Use email to optionally be discoverable by existing contacts.</span>
+                {
+                    signup === "Create acct" ? <input type="password" name="Rpwd" placeholder='Confirm Password' required /> : ""
+                }
+                {
+                    signup === "Create acct" ? <input type="email" name="email" placeholder='Email' required /> : ""
+                }
+                {
+                    signup === "Create acct" ? <input type="text" name="phone" placeholder='Phone' required /> : ""
+                }
                 <button type="submit">Register</button>
+                {
+                    signup === "Login" && <p style={{cursor: "pointer", textDecoration: "underline"}}>Forgotten password?</p>
+                }
                 <hr />
-                <small>Already have an account? <strong>Sign in here</strong></small>
+                {
+                    signup === "Create acct" ? <p>Already have an account? <strong onClick={() => setSignup("Login")}>Login</strong></p> : <p>Don't have an account? <strong onClick={() => setSignup("Create acct")}>Sign up</strong></p>
+                }
             </form>
         </div>
     </div>

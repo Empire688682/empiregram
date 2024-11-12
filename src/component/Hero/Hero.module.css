@@ -1,14 +1,35 @@
-.hero{
-    min-width: 100%;
-    min-height: 100vh;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/empiregram-hero-bg.webp');
-    background-position: center;
-    background-size: cover;
+/* Hero.module.css */
+.hero {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #f0f4f8; /* A soft background for the hero section */
 }
-.signup_Con{
-    border-radius: 9px;
-    background: rgba(187, 196, 196, 0) ;
+
+.signup_Con {
+    max-width: 650px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signup_Conh1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.signup_Con p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.signup_Con p:last-child {
+    font-weight: bold;
+    color: #0056b3; /* A blue color for the call to action */
 }

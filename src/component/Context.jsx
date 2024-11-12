@@ -1,21 +1,23 @@
 'use client';
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 const AppContext = React.createContext();
 
-export const AppProvider = ({children}) =>{
-    const hello = "hello world";
-    console.log(hello)
-    return <AppContext.Provider 
-    value={
-        {hello}
+export const AppProvider = ({ children }) => {
+    const [showSignup, setShowSignup] = useState(true);
+    return <AppContext.Provider
+        value={
+            {
+                showSignup,
+                setShowSignup
+            }
         }>
         {children}
     </AppContext.Provider>
 };
 
-export const useGlobalContext = () =>{
+export const useGlobalContext = () => {
     return useContext(AppContext);
 };
 
