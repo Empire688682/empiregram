@@ -16,9 +16,6 @@ const Signup = () => {
   return (
     <div className={style.signup}>
         <LiaTimesSolid className={style.times_icons} onClick={()=>setShowSignup(false)} />
-        <div className={style.logo}>
-            <Image src={logo} alt='logo' sizes='100vw' fill/>
-        </div>
         <div className={style.form_Con}>
             <h2>{signup === "Create acct" ? "Create account" :"Login"}</h2>
             <p>Continue with</p>

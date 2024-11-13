@@ -16,7 +16,7 @@ const Navbar = () => {
                 <p>Empiregram</p>
             </div>
             <div className={style.login} onClick={()=>setShowSignup(true)}>
-                <p>Login</p>
+                <p>Signup</p>
             </div>
         </div>
     )

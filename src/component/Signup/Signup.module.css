@@ -13,15 +13,6 @@
     font-size: 30px;
     cursor: pointer;
 }
-.logo{
-    position: relative;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    align-items: center;
-    margin: 0 auto;
-}
 .form_Con{
     margin-top: 15px;
     text-align: center;
