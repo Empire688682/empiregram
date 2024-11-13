@@ -1,13 +1,17 @@
 .left_bar{
-    background-color: white;
-    padding-top: 20px;
+
     min-width: 300px;
     min-height: 100vh;
-    padding-left: 10px;
+    background-color: white;
+    padding: 20px 10px;
+}
+.left_bar_Con{
+    height: 100%;
+    width: 100%;
 }
 .header{
     display: grid;
-    grid-template-columns: 3fr 0.7fr 0.5fr;
+    grid-template-columns: 3fr 0.7fr 0fr;
     width: 100%;
     align-items: center;
 }
@@ -18,15 +22,27 @@
 .search_bar{
     display: flex;
     align-items: center;
-    padding-right: 20px;
     margin-top: 10px;
     height: 30px;
+    background-color: rgb(228, 224, 224);
+    border-radius: 5px;
+    padding: 3px;
+}
+.search_bar label{
+    display: flex;
 }
 .search_bar input{
     flex: 2;
     height: 100%;
     outline: none;
-
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+}
+.search_bar input::placeholder {
+    color: rgb(88, 86, 86);
 }
 .search_bar_icon{
     font-size: 25px;

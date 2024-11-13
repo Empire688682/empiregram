@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: white;
 }
 .form_Con{
     margin-top: 15px;

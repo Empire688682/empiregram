@@ -3,6 +3,7 @@ import style from './LeftBar.module.css';
 import { IoIosAddCircle } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
+import ChatMenu from '../ChatMenu/ChatMenu';
 
 const LeftBar = () => {
   return (
@@ -14,9 +15,12 @@ const LeftBar = () => {
           <BsThreeDotsVertical className={style.icon} />
         </div>
         <div className={style.search_bar}>
+        <label htmlFor="search">
         <IoSearchOutline className={style.search_bar_icon}  />
-        <input type="text" placeholder='Search' name='search' required />
+        </label>
+        <input type="text" id='search' placeholder='Search' name='search' required />
         </div>
+        <ChatMenu/>
       </div>
     </div>
   )
