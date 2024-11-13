@@ -6,13 +6,6 @@
     padding: 20px;
     margin: 10px 0;
 }
-.times_icons{
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
 .form_Con{
     margin-top: 15px;
     text-align: center;

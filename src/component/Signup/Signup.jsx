@@ -1,12 +1,9 @@
 'use client'
 import React, { useState } from 'react';
 import style from './Signup.module.css';
-import Image from 'next/image';
-import logo from '../../../public/empiregram-logo.webp';
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { LiaTimesSolid } from "react-icons/lia";
 import { useGlobalContext } from '../Context';
 
 
@@ -15,7 +12,6 @@ const Signup = () => {
     const [signup, setSignup] = useState("Create acct")
   return (
     <div className={style.signup}>
-        <LiaTimesSolid className={style.times_icons} onClick={()=>setShowSignup(false)} />
         <div className={style.form_Con}>
             <h2>{signup === "Create acct" ? "Create account" :"Login"}</h2>
             <p>Continue with</p>
