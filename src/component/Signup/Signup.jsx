@@ -9,11 +9,11 @@ import { useGlobalContext } from '../Context';
 
 const Signup = () => {
     const {setShowSignup} = useGlobalContext();
-    const [signup, setSignup] = useState("Create acct")
+    const [currentState, setCurrentState] = useState("Create acct")
   return (
     <div className={style.signup}>
         <div className={style.form_Con}>
-            <h2>{signup === "Create acct" ? "Create account" :"Login"}</h2>
+            <h2>{currentState === "Create acct" ? "Create account" :"Login"}</h2>
             <p>Continue with</p>
             <div className={style.login_options}>
                 <div className={style.login_option}>
@@ -34,21 +34,21 @@ const Signup = () => {
                 <input type="text" name="name" placeholder='Username' required />
                 <input type="password" name="pwd" placeholder='Password' required />
                 {
-                    signup === "Create acct" ? <input type="password" name="Rpwd" placeholder='Confirm Password' required /> : ""
+                    currentState === "Create acct" ? <input type="password" name="Rpwd" placeholder='Confirm Password' required /> : ""
                 }
                 {
-                    signup === "Create acct" ? <input type="email" name="email" placeholder='Email' required /> : ""
+                    currentState === "Create acct" ? <input type="email" name="email" placeholder='Email' required /> : ""
                 }
                 {
-                    signup === "Create acct" ? <input type="text" name="phone" placeholder='Phone' required /> : ""
+                    currentState === "Create acct" ? <input type="text" name="phone" placeholder='Phone' required /> : ""
                 }
-                <button type="submit">Register</button>
+                <button type="submit">{currentState === "Create acct"? "Register":"Login"}</button>
                 {
-                    signup === "Login" && <p style={{cursor: "pointer", textDecoration: "underline"}}>Forgotten password?</p>
+                    currentState === "Login" && <p style={{cursor: "pointer", textDecoration: "underline"}}>Forgotten password?</p>
                 }
                 <hr />
                 {
-                    signup === "Create acct" ? <p>Already have an account? <strong onClick={() => setSignup("Login")}>Login</strong></p> : <p>Don't have an account? <strong onClick={() => setSignup("Create acct")}>Sign up</strong></p>
+                    currentState === "Create acct" ? <p>Already have an account? <strong onClick={() => setCurrentState("Login")}>Login</strong></p> : <p>Don't have an account? <strong onClick={() => setCurrentState("Create acct")}>Sign up</strong></p>
                 }
             </form>
         </div>
