@@ -3,9 +3,31 @@
     padding-top: 20px;
     min-width: 300px;
     min-height: 100vh;
+    padding-left: 10px;
 }
 .header{
     display: grid;
-    grid-template-columns: 3fr 0.5fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 3fr 0.7fr 0.5fr;
+    width: 100%;
+    align-items: center;
+}
+.icon{
+    font-size: 30px;
+    cursor: pointer;
+}
+.search_bar{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-top: 10px;
+    height: 30px;
+}
+.search_bar input{
+    flex: 2;
+    height: 100%;
+    outline: none;
+
+}
+.search_bar_icon{
+    font-size: 25px;
 }
