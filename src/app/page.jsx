@@ -14,7 +14,7 @@ const page = () => {
             <div className={style.col_Con}>
                 <div className={style.left_col}>
                     <div className={style.img_Con}>
-                    <Image src={IMG} alt='logo' fill sizes='100vw' />
+                    <Image src={IMG} alt="Img" fill />
                     </div>
                 </div>
                 <div className={style.right_col}>
