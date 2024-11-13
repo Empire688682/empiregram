@@ -1,0 +1,11 @@
+.chat{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 0 20px;
+}
+.chat_Con{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    flex-wrap: wrap;
+}

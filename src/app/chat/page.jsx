@@ -1,10 +1,17 @@
 import React from 'react';
-import style from './chat.module.css';
+import style from './chat.module.css'
+import LeftBar from '@/component/LeftBar/LeftBar';
+import ChatBox from '@/component/ChatBox/ChatBox';
+import RightBar from '@/component/RightBar/RightBar';
 
 const page = () => {
   return (
-    <div>
-      
+    <div className={style.chat}>
+      <div className={style.chat_Con}>
+      <LeftBar/>
+      <ChatBox/>
+      <RightBar/>
+      </div>
     </div>
   )
 }
