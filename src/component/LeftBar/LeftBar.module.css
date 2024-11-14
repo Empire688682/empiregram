@@ -4,7 +4,7 @@
     background-color: white;
     padding: 20px 10px;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    scrollbar-width: none;
 }
 .left_bar::-webkit-scrollbar{
     display: none;
@@ -12,12 +12,18 @@
 .left_bar_Con{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 .header{
     display: grid;
     grid-template-columns: 3fr 0.7fr 0fr;
     width: 100%;
     align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
 }
 .icon{
     font-size: 30px;
