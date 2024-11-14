@@ -12,12 +12,13 @@
     transition: .1s ease-in-out;
     cursor: pointer;
     font-weight: bolder;
+    background-color: rgb(235, 242, 243);
 }
 .menu:hover{
-    background-color: rgb(228, 224, 224);
+    background-color: rgb(184, 192, 196);
 }
 .menu.active{
-    background-color: rgb(228, 224, 224);
+    background-color: rgb(184, 192, 196);
     padding: 10px 15px;
     font-size: 12px;
     border-radius: 3px;

@@ -1,9 +1,13 @@
 .left_bar{
-
     min-width: 300px;
-    min-height: 100vh;
+    height: 100vh;
     background-color: white;
     padding: 20px 10px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.left_bar::-webkit-scrollbar{
+    display: none;
 }
 .left_bar_Con{
     height: 100%;
@@ -46,4 +50,28 @@
 }
 .search_bar_icon{
     font-size: 25px;
+}
+.users{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.left_side{
+   display: grid;
+   grid-template-columns: 0.5fr 2fr;
+   place-items: center;
+   gap: 5px;
+}
+.left_side span{
+    font-size: 13px;
+}
+.img_Con{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgb(228, 216, 216);
 }
