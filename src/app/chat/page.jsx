@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className={style.chat}>
       <div className={style.chat_Con}>
-      <LeftBar/>
+      <div className={style.left_bar}><LeftBar/></div>
       <ChatBox/>
       <RightBar/>
       </div>

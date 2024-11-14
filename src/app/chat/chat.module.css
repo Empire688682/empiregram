@@ -8,3 +8,6 @@
     grid-template-columns: 1fr 2fr 1fr;
     flex-wrap: wrap;
 }
+.left_bar{
+    position: relative;
+}
