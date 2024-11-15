@@ -25,3 +25,21 @@
     overflow: hidden;
     border: 2px solid rgb(139, 131, 131);
 }
+.user_cart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    gap: 20px;
+    transition: .1s ease-in-out;
+    padding: 10px;
+}
+.user_cart:hover{
+    background-color: #606770;
+    color: white;
+    border-radius: 3px;
+}
+.icons{
+    font-size: 25px;
+}

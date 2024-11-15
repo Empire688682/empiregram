@@ -26,55 +26,55 @@ const RightBar = () => {
           <p>Daniel Juwon Asehinde</p>
         </div>
         <div className={style.user_cart}>
-          <IoSettingsOutline />
+          <IoSettingsOutline className={style.icons} />
           <p>Settings</p>
         </div>
         <div className={style.user_cart}>
-          <MdVideoLibrary />
+          <MdVideoLibrary className={style.icons} />
           <p>Videos</p>
         </div>
         <div className={style.user_cart}>
-          <FaPhotoVideo />
+          <FaPhotoVideo className={style.icons} />
           <p>Memories</p>
         </div>
         <div className={`${style.user_cart} ${style.mode}`}>
-          <BsSun />
+          <BsSun className={style.icons} />
           <p>Light/Dark Mode</p>
         </div>
         <div className={style.user_cart}>
-          <BsArchive />
+          <BsArchive className={style.icons} />
           <p>Archived Chats</p>
         </div>
         <div className={style.user_cart}>
-          <AiOutlineStar />
+          <AiOutlineStar className={style.icons} />
           <p>Starred Messages</p>
         </div>
         <div className={style.user_cart}>
-          <MdNotifications />
+          <MdNotifications className={style.icons} />
           <p>Notification Control</p>
         </div>
         <div className={style.user_cart}>
-          <MdSecurity />
+          <MdSecurity className={style.icons} />
           <p>Privacy & Security</p>
         </div>
         <div className={style.user_cart}>
-          <AiOutlineCloud />
+          <AiOutlineCloud className={style.icons} />
           <p>Data & Storage</p>
         </div>
         <div className={style.user_cart}>
-          <MdHelpOutline />
+          <MdHelpOutline className={style.icons} />
           <p>Help & Support</p>
         </div>
         <div className={style.user_cart}>
-          <AiOutlineStop />
+          <AiOutlineStop className={style.icons} />
           <p>Blocked Contacts</p>
         </div>
         <div className={style.user_cart}>
-          <AiOutlineInfoCircle />
+          <AiOutlineInfoCircle className={style.icons} />
           <p>About</p>
         </div>
         <div className={style.user_cart}>
-          <IoLogOut />
+          <IoLogOut className={style.icons} />
           <p>Sign out</p>
         </div>
       </div>
