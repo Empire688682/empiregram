@@ -25,6 +25,7 @@ const RightBar = () => {
           </div>
           <p>Daniel Juwon Asehinde</p>
         </div>
+        <div className={style.user_cart_Con}>
         <div className={style.user_cart}>
           <IoSettingsOutline className={style.icons} />
           <p>Settings</p>
@@ -76,6 +77,7 @@ const RightBar = () => {
         <div className={style.user_cart}>
           <IoLogOut className={style.icons} />
           <p>Sign out</p>
+        </div>
         </div>
       </div>
     </div>
