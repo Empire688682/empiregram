@@ -1,4 +1,4 @@
 .chat_box{
     min-width: 300px;
-    flex: 2;
+    flex-basis: 50%;
 }
