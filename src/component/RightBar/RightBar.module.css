@@ -6,7 +6,6 @@
     overflow-y: scroll;
     scrollbar-width: none;
     flex-basis: 25%;
-    padding: 20px;
     position: relative;
 }
 .right_bar_Con{
@@ -20,8 +19,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    padding: 20px 0;
+    background-color: white;
+    width: 100%;
 }
 .img_Con{
+    margin-left: 20px;
     position: relative;
     width: 40px;
     height: 40px;
@@ -34,6 +37,8 @@
     width: 100%;
     overflow-y: auto;
     scrollbar-width: none;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .user_cart{
     width: 100%;
