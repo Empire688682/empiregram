@@ -4,8 +4,7 @@
     background-color: #f0f2f5;
 }
 .chat_Con{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
     flex-wrap: wrap;
 }
 .left_bar{
