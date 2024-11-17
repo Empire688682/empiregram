@@ -6,7 +6,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdVideoLibrary } from "react-icons/md";
 import { FaPhotoVideo  } from "react-icons/fa";
 import { BsSun } from "react-icons/bs";
-import { BsMoon } from "react-icons/bs";
+import { IoMoon } from "react-icons/io5";
 import { BsArchive } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import { AiOutlineStop } from "react-icons/ai";
@@ -47,7 +47,7 @@ const RightBar = () => {
          {
           defaultMode ? <BsSun className={style.icons} />
           :
-          <BsMoon className={style.icons} />
+          <IoMoon className={style.icons} />
          }
          <p>Display Mode</p>
          </div>
