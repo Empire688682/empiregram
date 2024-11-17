@@ -6,11 +6,14 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
     const [showSignup, setShowSignup] = useState(true);
+    const [mode, setMode] = useState("light")
     return <AppContext.Provider
         value={
             {
                 showSignup,
-                setShowSignup
+                setShowSignup,
+                mode, 
+                setMode
             }
         }>
         {children}

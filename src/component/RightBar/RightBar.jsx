@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import style from'./RightBar.module.css';
 import Image from 'next/image';
@@ -14,8 +15,10 @@ import { MdHelpOutline  } from "react-icons/md";
 import { AiOutlineCloud } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IoLogOut } from "react-icons/io5";
+import { useGlobalContext } from '../Context';
 
 const RightBar = () => {
+  const {mode, setMode} = useGlobalContext()
   return (
     <div className={style.right_bar}>
       <div className={style.right_bar_Con}>
@@ -43,8 +46,8 @@ const RightBar = () => {
          <BsSun className={style.icons} />
          <p>Display Mode</p>
          </div>
-         <div className={style.mode_right}>
-          <span className={style.mode_motor}></span>
+         <div className={style.mode_right} onClick={()=>setMode(!mode)}>
+          <span className={mode !== "light"?`${style.mode_motor} ${style.dark}`:`${style.mode_motor}`}></span>
          </div>
         </div>
         <div className={style.user_cart}>
