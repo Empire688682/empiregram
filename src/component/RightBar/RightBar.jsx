@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from'./RightBar.module.css';
 import Image from 'next/image';
 import { IoSettingsOutline } from "react-icons/io5";
@@ -19,7 +19,11 @@ import { IoLogOut } from "react-icons/io5";
 import { useGlobalContext } from '../Context';
 
 const RightBar = () => {
-  const {defaultMode, setDefaultMode} = useGlobalContext()
+  const {defaultMode, setDefaultMode} = useGlobalContext();
+  const handleModeClick = () =>{
+    setDefaultMode((prevMode) => (prevMode === "light"? "dark":"light"))
+  };
+
   return (
     <div className={style.right_bar}>
       <div className={style.right_bar_Con}>
@@ -51,8 +55,8 @@ const RightBar = () => {
          }
          <p>Display Mode</p>
          </div>
-         <div className={style.mode_right} onClick={()=>setDefaultMode(!defaultMode)}>
-          <span className={defaultMode ? `${style.mode_motor}`:`${style.mode_motor} ${style.dark}`}></span>
+         <div className={style.mode_right} onClick={handleModeClick}>
+          <span className={defaultMode === "light" ? `${style.mode_motor}`:`${style.mode_motor} ${style.dark}`}></span>
          </div>
         </div>
         <div className={style.user_cart}>
