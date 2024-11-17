@@ -50,9 +50,35 @@
     transition: .1s ease-in-out;
     padding: 10px;
 }
+.mode{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    gap: 20px;
+    transition: .1s ease-in-out;
+    padding: 10px;
+}
+.mode_left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mode_right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+.sun::before{
+    content: '';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
 .user_cart:hover{
-    background-color: #606770;
-    color: white;
+    background-color: var(--background-color);
     border-radius: 3px;
 }
 .icons{

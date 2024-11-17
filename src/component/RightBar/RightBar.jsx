@@ -39,8 +39,14 @@ const RightBar = () => {
           <p>Memories</p>
         </div>
         <div className={`${style.user_cart} ${style.mode}`}>
-          <BsSun className={style.icons} />
-          <p>Light/Dark Mode</p>
+         <div className={style.mode_left}>
+         <BsSun className={style.icons} />
+         <p>Display Mode</p>
+         </div>
+         <div className={style.mode_right}>
+          <span className={style.sun}></span>
+          <span className={style.moon}></span>
+         </div>
         </div>
         <div className={style.user_cart}>
           <BsArchive className={style.icons} />
