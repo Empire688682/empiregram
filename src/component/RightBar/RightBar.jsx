@@ -44,8 +44,7 @@ const RightBar = () => {
          <p>Display Mode</p>
          </div>
          <div className={style.mode_right}>
-          <span className={style.sun}></span>
-          <span className={style.moon}></span>
+          <span className={style.mode_motor}></span>
          </div>
         </div>
         <div className={style.user_cart}>
