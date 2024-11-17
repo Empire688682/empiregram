@@ -56,7 +56,7 @@ const RightBar = () => {
          <p>Display Mode</p>
          </div>
          <div className={style.mode_right} onClick={handleModeClick}>
-          <span className={defaultMode === "light" ? `${style.mode_motor}`:`${style.mode_motor} ${style.dark}`}></span>
+          <span className={ defaultMode === "light" ? `${style.mode_motor}`:`${style.mode_motor} ${style.dark}`}></span>
          </div>
         </div>
         <div className={style.user_cart}>
