@@ -6,6 +6,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdVideoLibrary } from "react-icons/md";
 import { FaPhotoVideo  } from "react-icons/fa";
 import { BsSun } from "react-icons/bs";
+import { BsMoon } from "react-icons/bs";
 import { BsArchive } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import { AiOutlineStop } from "react-icons/ai";
@@ -18,7 +19,7 @@ import { IoLogOut } from "react-icons/io5";
 import { useGlobalContext } from '../Context';
 
 const RightBar = () => {
-  const {mode, setMode} = useGlobalContext()
+  const {defaultMode, setDefaultMode} = useGlobalContext()
   return (
     <div className={style.right_bar}>
       <div className={style.right_bar_Con}>
@@ -43,11 +44,15 @@ const RightBar = () => {
         </div>
         <div className={`${style.user_cart} ${style.mode}`}>
          <div className={style.mode_left}>
-         <BsSun className={style.icons} />
+         {
+          defaultMode ? <BsSun className={style.icons} />
+          :
+          <BsMoon className={style.icons} />
+         }
          <p>Display Mode</p>
          </div>
-         <div className={style.mode_right} onClick={()=>setMode(!mode)}>
-          <span className={mode !== "light"?`${style.mode_motor} ${style.dark}`:`${style.mode_motor}`}></span>
+         <div className={style.mode_right} onClick={()=>setDefaultMode(!defaultMode)}>
+          <span className={defaultMode ? `${style.mode_motor}`:`${style.mode_motor} ${style.dark}`}></span>
          </div>
         </div>
         <div className={style.user_cart}>
