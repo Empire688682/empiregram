@@ -6,8 +6,8 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
     const [showSignup, setShowSignup] = useState(true);
-    const [defaultMode, setDefaultMode] =  useState(typeof window !== "undefined" ? localStorage.getItem("colorMode"):"light");
-
+    const [defaultMode, setDefaultMode] =  useState(localStorage.getItem("colorMode") || "light");
+    
     useEffect(()=>{
         localStorage.setItem("colorMode", defaultMode);
       },[defaultMode])

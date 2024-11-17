@@ -49,7 +49,7 @@ const RightBar = () => {
         <div className={`${style.user_cart} ${style.mode}`}>
          <div className={style.mode_left}>
          {
-          defaultMode ? <BsSun className={style.icons} />
+          defaultMode === "light" ? <BsSun className={style.icons} />
           :
           <IoMoon className={style.icons} />
          }
