@@ -1,12 +1,25 @@
 import React from 'react';
 import style from './ChatBox.module.css';
+import { IoMdHome } from "react-icons/io";
+import Image from 'next/image';
 
 const ChatBox = () => {
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
         <div className={style.header}>
-          
+          <IoMdHome className={style.icons} />
+          <IoMdHome className={style.icons} />
+          <IoMdHome className={style.icons} />
+          <IoMdHome className={style.icons} />
+        </div>
+        <div className={style.home_M_Con}>
+          <div className={style.home_user_post}>
+            <div className={style.img_Con}>
+              <Image src='/avatar_icon.png' alt='User' fill sizes='100%' />
+            </div>
+            <p>What it is in your mind?</p>
+          </div>
         </div>
       </div>
     </div>

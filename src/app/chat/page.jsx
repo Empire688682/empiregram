@@ -8,9 +8,9 @@ const page = () => {
   return (
     <div className={style.chat}>
       <div className={style.chat_Con}>
-      <div className={style.left_bar}><LeftBar/></div>
-      <ChatBox/>
-      <RightBar/>
+        <div className={style.left_bar}><LeftBar /></div>
+        <ChatBox />
+        <div className={style.right_bar}><RightBar /></div>
       </div>
     </div>
   )

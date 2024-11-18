@@ -2,10 +2,12 @@
     width: 100%;
     min-height: 100vh;
     background-color: var(--secondary-background-color);
+
 }
 .chat_Con{
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .left_bar{
     position: relative;
