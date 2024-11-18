@@ -1,5 +1,7 @@
-export const Navlink = [
+export const usersPost = [
     {
-        title:""
+        name:"",
+        post:"",
+        userIcon:""
     }
 ]
