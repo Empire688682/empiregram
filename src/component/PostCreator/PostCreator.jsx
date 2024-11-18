@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { MdOutlineEmojiEmotions } from "react-icons/md";
 import { LiaTimesSolid } from "react-icons/lia";
 
-const PostCreator = () => {
+const PostCreator = ({setCreatePost}) => {
   return (
     <div className={style.post_creator}>
-        <LiaTimesSolid className={style.time_icon} />
+        <LiaTimesSolid className={style.time_icon} onClick={()=>setCreatePost(false)} />
       <h2>Create post</h2>
       <hr />
       <div className={style.content}>

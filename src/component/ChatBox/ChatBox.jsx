@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import style from './ChatBox.module.css';
 import { IoMdHome } from "react-icons/io";
 import Image from 'next/image';
@@ -17,14 +17,16 @@ const ChatBox = () => {
           <IoMdHome className={style.icons} />
         </div>
         <div className={style.home_M_Con}>
-          <div className={style.home_user_post}>
-            <div className={style.img_Con}>
-              <Image src='/avatar_icon.png' alt='User' fill sizes='100%' />
-            </div>
-            <p>What it is in your mind?</p>
-          </div>
           {
-            createPost && <PostCreator/>
+            !createPost && <div className={style.home_user_post}>
+              <div className={style.img_Con}>
+                <Image src='/avatar_icon.png' alt='User' fill sizes='100%' />
+              </div>
+              <p onClick={() => setCreatePost(true)}>What it is in your mind?</p>
+            </div>
+          }
+          {
+            createPost && <PostCreator setCreatePost={setCreatePost} />
           }
         </div>
       </div>
