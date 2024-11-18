@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './PostCreator.module.css'
 import Image from 'next/image';
+import { MdOutlineEmojiEmotions } from "react-icons/md";
 
 const PostCreator = () => {
   return (
@@ -21,6 +22,10 @@ const PostCreator = () => {
           </select>
           </div>
         </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder='What it is in your mind @Username'></textarea>
+       <div className={style.icon_Con}>
+       <MdOutlineEmojiEmotions className={style.icon}/>
+       </div>
       </div>
     </div>
   )
