@@ -3,15 +3,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", serif;}
-  
-body{
-  background-color: var(--background-color);
-  
+  font-family: "Roboto", serif;
 }
+  
 /* Light Mode Colors */
 :root {
-  --background-color: #f4f4f9;
+  --background-color: #f0f2f5;
   /* Light gray background */
   --secondary-background-color: #ffffff;
   /* White secondary background */
