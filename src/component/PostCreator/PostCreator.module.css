@@ -9,6 +9,15 @@
     flex-direction: column;
     background-color: var(--background-color);
 }
+.time_icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
 .post_creator h2{
     text-align: center;
     padding-bottom: 20px;
@@ -22,6 +31,7 @@
 .user_details{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 .img_Con{
     position: relative;
@@ -39,6 +49,8 @@
     font-size: 16px;
     outline: none;
     width: 100%;
+    background-color: transparent;
+    color: var(--text-color);
 }
 .icon_Con{
     width: 100%;
@@ -46,5 +58,12 @@
 }
 .icon{
     cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content select{
+    background-color: transparent;
+    border-color: var(--text-color);
+    color: var(--text-color);
+    border-radius: 9px;
 }

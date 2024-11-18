@@ -2,10 +2,12 @@ import React from 'react';
 import style from './PostCreator.module.css'
 import Image from 'next/image';
 import { MdOutlineEmojiEmotions } from "react-icons/md";
+import { LiaTimesSolid } from "react-icons/lia";
 
 const PostCreator = () => {
   return (
     <div className={style.post_creator}>
+        <LiaTimesSolid className={style.time_icon} />
       <h2>Create post</h2>
       <hr />
       <div className={style.content}>
@@ -22,9 +24,10 @@ const PostCreator = () => {
           </select>
           </div>
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder='What it is in your mind @Username'></textarea>
+        <textarea name="" id="" cols="10" rows="5" placeholder='What it is in your mind @Username'></textarea>
        <div className={style.icon_Con}>
        <MdOutlineEmojiEmotions className={style.icon}/>
+       <hr />
        </div>
       </div>
     </div>

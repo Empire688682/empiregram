@@ -1,10 +1,12 @@
-import React from 'react';
+'use client'
+import React, {useState} from 'react';
 import style from './ChatBox.module.css';
 import { IoMdHome } from "react-icons/io";
 import Image from 'next/image';
 import PostCreator from '../PostCreator/PostCreator';
 
 const ChatBox = () => {
+  const [createPost, setCreatePost] = useState(false);
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
@@ -21,7 +23,9 @@ const ChatBox = () => {
             </div>
             <p>What it is in your mind?</p>
           </div>
-          <PostCreator/>
+          {
+            createPost && <PostCreator/>
+          }
         </div>
       </div>
     </div>
