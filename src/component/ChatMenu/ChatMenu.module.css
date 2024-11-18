@@ -13,6 +13,7 @@
     cursor: pointer;
     font-weight: bolder;
     background-color: rgb(235, 242, 243);
+    color: gray;
 }
 .menu:hover{
     background-color: rgb(184, 192, 196);
