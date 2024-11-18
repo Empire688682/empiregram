@@ -18,7 +18,7 @@ function InnerLayout({ children }) {
   const { defaultMode } = useGlobalContext();
 
   return (
-    <html lang="en" data-theme={defaultMode}> 
+    <html lang="en"> 
       <Head>
         <title>Empiregram</title>
         <meta name="description" content="This is Empiregram" />
@@ -34,7 +34,9 @@ function InnerLayout({ children }) {
         <meta name="twitter:image" content="URL to your image" />
       </Head>
       <body>
-        {children}
+        <div className={defaultMode === "dark" ? "dark":"light"}>
+         {children}
+        </div>
       </body>
     </html>
   );
