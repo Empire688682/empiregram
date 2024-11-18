@@ -1,7 +1,7 @@
 .left_bar{
     min-width: 300px;
     height: 100vh;
-    background-color: white;
+    background-color: var(--background-color);
     padding: 20px 0px 20px 10px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -54,7 +54,7 @@
 }
 .header_fixed{
     position: absolute;
-    background-color: white;
+    background-color: var(--background-color);
     z-index: 99;
     top: 0;
     left: 0;
