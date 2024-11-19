@@ -58,6 +58,7 @@ const PostCreator = ({ setCreatePost }) => {
             <MdOutlineEmojiEmotions className={style.fotter_icon} />
           </div>
         </div>
+        <button>Next</button>
       </div>
     </div>
   )
