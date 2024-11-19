@@ -6,7 +6,7 @@ import Image from 'next/image';
 import PostCreator from '../PostCreator/PostCreator';
 
 const ChatBox = () => {
-  const [createPost, setCreatePost] = useState(true);
+  const [createPost, setCreatePost] = useState(false);
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
