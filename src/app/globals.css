@@ -31,7 +31,7 @@
   --success-color: #42b72a;
   /* Green for success notifications */
   --error-color: #e74c3c;
-  --shadow-color: gold;
+  --shadow-color: rgb(30, 255, 0);
 }
 
 .dark {
