@@ -67,3 +67,15 @@
     color: var(--text-color);
     border-radius: 9px;
 }
+.post_fotter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px 0;
+}
+.fotter_icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
