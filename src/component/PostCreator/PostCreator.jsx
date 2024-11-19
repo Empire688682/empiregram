@@ -32,7 +32,7 @@ const PostCreator = ({setCreatePost}) => {
         </div>
         <textarea name="" id="" cols="5" rows="2" placeholder='What it is in your mind @Username'></textarea>
         {
-          imageUploader && <div>
+          imageUploader && <div className={style.uploader}>
             <input type="file" name="image" id='image' hidden />
             <label htmlFor="image">
               <IoIosAddCircle className={style.add_image_icon}/>

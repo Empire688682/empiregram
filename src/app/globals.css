@@ -31,7 +31,7 @@
   --success-color: #42b72a;
   /* Green for success notifications */
   --error-color: #e74c3c;
-  /* Red for error notifications */
+  --shadow-color: gold;
 }
 
 .dark {
@@ -58,7 +58,7 @@
   --success-color: #4caf50;
   /* Green for success notifications */
   --error-color: #f44336;
-  /* Red for error notifications */
+  --shadow-color: rgb(240, 238, 231);
 }
 
 body {

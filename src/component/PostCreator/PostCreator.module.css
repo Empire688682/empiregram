@@ -77,5 +77,21 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.fotter_icon{
+    font-size: 20px;
     cursor: pointer;
+}
+.uploader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--secondary-background-color) ;
+    border-radius: 9px;
+    box-shadow: 8px 8px 0 0 var(--shadow-color);
+    margin-bottom: 20px;
+}
+.add_image_icon{
+    font-size: 50px;
 }
