@@ -10,7 +10,7 @@ import { IoIosAddCircle } from "react-icons/io";
 
 const PostCreator = ({ setCreatePost }) => {
   const [image, setImage] = useState(null);
-  const [imageUploader, setImageUploader] = useState(true);
+  const [imageUploader, setImageUploader] = useState(false);
   return (
     <div className={style.post_creator}>
       <LiaTimesSolid className={style.time_icon} onClick={() => setCreatePost(false)} />
@@ -41,6 +41,7 @@ const PostCreator = ({ setCreatePost }) => {
         }
         {
           image && <div className={style.post_image_Con}>
+            <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setImage(null)} />
             <Image src={window.URL.createObjectURL(image)} alt='User' fill sizes='100%' className={style.post_image} />
           </div>
         }
@@ -51,7 +52,7 @@ const PostCreator = ({ setCreatePost }) => {
         <div className={style.post_fotter}>
           <p>Add to your post</p>
           <div className={style.fotter_icons}>
-            <FaFileImage className={style.fotter_icon} />
+            <FaFileImage className={style.fotter_icon} onClick={() => setImageUploader(true)} />
             <IoIosContacts className={style.fotter_icon} />
             <FaLocationDot className={style.fotter_icon} />
             <MdOutlineEmojiEmotions className={style.fotter_icon} />
