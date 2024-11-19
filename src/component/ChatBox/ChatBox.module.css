@@ -40,6 +40,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--text-color);
 }
 .img_Con{
     position: relative;

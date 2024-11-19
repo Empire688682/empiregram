@@ -28,6 +28,7 @@ const ChatBox = () => {
           {
             createPost && <PostCreator setCreatePost={setCreatePost} />
           }
+          <hr style={{marginTop: "20px", marginBottom:"20px"}} />
         </div>
       </div>
     </div>
