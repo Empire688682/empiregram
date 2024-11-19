@@ -33,17 +33,17 @@ const PostCreator = ({ setCreatePost }) => {
         <textarea name="" id="" cols="5" rows="2" placeholder='What it is in your mind @Username'></textarea>
         {
           imageUploader && <div className={style.uploader}>
-            <input type="file" onChange={(e) => {setImage(e.target.files[0]); setImageUploader(false);}} name="image" id='image' hidden />
+            <input type="file" onChange={(e) => { setImage(e.target.files[0]); setImageUploader(false); }} name="image" id='image' hidden accept='image/*' />
             <label htmlFor="image">
               <IoIosAddCircle className={style.add_image_icon} />
             </label>
           </div>
         }
-        <div className={style.post_image_Con}>
-          {
-            image && <Image src={window.URL.createObjectURL(image)} alt='User' fill sizes='100%' />
-          }
-        </div>
+        {
+          image && <div className={style.post_image_Con}>
+            <Image src={window.URL.createObjectURL(image)} alt='User' fill sizes='100%' className={style.post_image} />
+          </div>
+        }
         <div className={style.icon_Con}>
           <MdOutlineEmojiEmotions className={style.icon} />
           <hr />
