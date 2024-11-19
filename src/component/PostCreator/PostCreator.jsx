@@ -24,7 +24,7 @@ const PostCreator = ({setCreatePost}) => {
           </select>
           </div>
         </div>
-        <textarea name="" id="" cols="10" rows="5" placeholder='What it is in your mind @Username'></textarea>
+        <textarea name="" id="" cols="5" rows="2" placeholder='What it is in your mind @Username'></textarea>
        <div className={style.icon_Con}>
        <MdOutlineEmojiEmotions className={style.icon}/>
        <hr />
