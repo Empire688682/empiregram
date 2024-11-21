@@ -5,6 +5,7 @@ import { IoMdHome } from "react-icons/io";
 import Image from 'next/image';
 import PostCreator from '../PostCreator/PostCreator';
 import StatusBar from '../StatusBar/StatusBar';
+import SinglePost from '../SinglePost/SinglePost';
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
@@ -31,6 +32,9 @@ const ChatBox = () => {
           }
           <div className={style.status_page}>
             <StatusBar />
+          </div>
+          <div className={style.single_post}>
+            <SinglePost/>
           </div>
         </div>
       </div>
