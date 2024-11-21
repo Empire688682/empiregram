@@ -12,3 +12,6 @@
 .left_bar{
     position: relative;
 }
+.chat_box{
+    flex-basis: 50%;
+}
