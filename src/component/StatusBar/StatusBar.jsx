@@ -23,7 +23,7 @@ const StatusBar = () => {
         </div>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={-40}
+          spaceBetween={-50}
           slidesPerView={3}
           navigation={{ clickable: true }}
           pagination={{ clickable: true }}

@@ -13,16 +13,19 @@
   border-radius: 12px;
   background-color: var(--white-color);
   position: relative;
+  justify-content: space-between;
 }
 
 .user {
   position: relative;
-  width: 150px;
+  min-width: 130px;
+  max-width: 130px;
   height: 250px;
   overflow: hidden;
   border-radius: 9px;
   box-shadow: 0 0 2.5px var(--text-color);
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .user:hover .user_img,
@@ -81,7 +84,7 @@
 
 .friends {
   position: relative;
-  width: 150px;
+  width: 140px;
   height: 250px;
   overflow: hidden;
   border-radius: 9px;
@@ -102,10 +105,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 300px;
-  padding: 50px 100px;
-  text-align: center;
 }
 
 .status_bar_Con :global(.swiper-button-next::after),
@@ -120,8 +121,6 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 10;
   font-size: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
