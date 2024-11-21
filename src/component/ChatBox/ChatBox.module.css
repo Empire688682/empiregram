@@ -61,3 +61,6 @@
     cursor: pointer;
     flex: 1;
 }
+.status_page{
+    padding-top: 30px;
+}

@@ -1,11 +1,19 @@
 import React from 'react';
 import style from'./StatusBar.mudule.css';
+import Image from 'next/image';
 
 const StatusBar = () => {
   return (
     <div className={style.status_bar}>
-      <h1>STATUS BAR</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quidem incidunt distinctio libero asperiores officiis ex! Impedit, placeat officiis! Optio aperiam, nihil odit recusandae laborum corrupti? Dolore mollitia eligendi adipisci?</p>
+     <div className={style.status_bar_Con}>
+      <div className={style.user}>
+        <Image src='/avatar_icon.png' fill alt='IMG' sizes='100%'/>
+        <div className={style.user_plus}>
+          <p>+</p>
+          <span>Create story</span>
+        </div>
+      </div>
+     </div>
     </div>
   )
 }

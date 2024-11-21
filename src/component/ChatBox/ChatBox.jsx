@@ -29,8 +29,10 @@ const ChatBox = () => {
           {
             createPost && <PostCreator setCreatePost={setCreatePost} />
           }
+          <div className={style.status_page}>
+            <StatusBar />
+          </div>
         </div>
-        <StatusBar/>
       </div>
     </div>
   )
