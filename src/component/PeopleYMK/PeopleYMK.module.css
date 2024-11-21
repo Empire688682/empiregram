@@ -1,0 +1,21 @@
+.people_you_may_know{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.user {
+    position: relative;
+    min-width: 130px;
+    max-width: 130px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 9px;
+    box-shadow: 0 0 2.5px var(--text-color);
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .user:hover .user_img,
+  .friends:hover .friends_img {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+  }
