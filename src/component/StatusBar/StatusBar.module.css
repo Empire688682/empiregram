@@ -1,12 +1,13 @@
 .status_bar {
     width: 100%;
     height: 250px;
-    margin-top: 15px;
+  }
+  .status_bar_Con{
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
   }
-  .user{
+  .user, .friends{
     position: relative;
     width: 150px;
     height: 250px;
@@ -15,14 +16,14 @@
     box-shadow: 0 0 2.5px var(--text-color);
     cursor: pointer;
   }
-  .user:hover .user_img{
+  .user:hover .user_img, .friends:hover .friends_img{
     transform: scale(1.1);
     transition: .3s ease-in-out;
   }
   .user:hover .user_plus{
     background-color: rgba(161, 161, 161, 0.753);
   }
-  .user_img{
+  .user_img, .friends_img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,4 +53,19 @@
   .user_plus span{
     color: black;
     padding: 20px 0 10px 0;
+  }
+  .secondary_friends_img{
+    position: absolute;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    border: 3px solid var(--shadow-color);
+  }
+  .friends_name{
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 2px black;
   }
