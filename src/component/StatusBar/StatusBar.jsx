@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './StatusBar.mudule.css';
+import style from './StatusBar.module.css';
 import Image from 'next/image';
 
 const StatusBar = () => {
