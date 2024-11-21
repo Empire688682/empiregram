@@ -10,7 +10,9 @@ import { TiArrowForward } from "react-icons/ti";
 const SinglePost = () => {
     return (
         <div className={style.single_post}>
-            <div className={style.single_post_Con}>
+           {
+            Array(5).fill('').map((item, id) =>(
+                <div className={style.single_post_Con} key={id}>
                 <div className={style.header}>
                     <div className={style.header_left}>
                         <Image className={style.user_img} src='/profile_alison.png' width={50} height={50} alt='Img' sizes='100%' />
@@ -72,6 +74,8 @@ const SinglePost = () => {
                         </div>
                     </div>
             </div>
+            ))
+           }
         </div>
     )
 }

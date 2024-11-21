@@ -1,13 +1,14 @@
 .single_post{
-    width: 100%;
     margin-top: 20px;
-    background-color: var(--background-color);
-    border-radius: 9px;
     margin-bottom: 30px;
 }
 .single_post_Con{
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
+    margin: 15px 0;
 }
 .header{
     display: flex;
@@ -69,8 +70,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: .1px solid var(--text-color);
     margin: 10px;
+    padding-bottom: 10px;
 }
 .post_reaction_header_left{
     display: flex;
@@ -82,19 +84,16 @@
     gap: 10px;
     align-items: center;
 }
-.comment, .forward{
-    display: flex;
-    gap: 2px;
-    align-items: center;
-}
 .post_reaction_Con{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
-.comment, .like, .share{
+.comment, .like, .share, .forward{
     display: flex;
     gap: 2px;
     align-items: center;
+    cursor: pointer;
+    font-size: 12px;
 }
