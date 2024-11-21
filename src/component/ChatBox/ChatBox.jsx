@@ -4,6 +4,7 @@ import style from './ChatBox.module.css';
 import { IoMdHome } from "react-icons/io";
 import Image from 'next/image';
 import PostCreator from '../PostCreator/PostCreator';
+import StatusBar from '../StatusBar/StatusBar';
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
@@ -29,6 +30,7 @@ const ChatBox = () => {
             createPost && <PostCreator setCreatePost={setCreatePost} />
           }
         </div>
+        <StatusBar/>
       </div>
     </div>
   )
