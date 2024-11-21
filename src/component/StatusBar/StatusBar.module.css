@@ -1,20 +1,55 @@
 .status_bar {
     width: 100%;
     height: 250px;
-    margin-top: 100px;
-    background-color: blue;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .user{
     position: relative;
-    width: 120px;
+    width: 150px;
     height: 250px;
     overflow: hidden;
+    border-radius: 9px;
+    box-shadow: 0 0 2.5px var(--text-color);
+    cursor: pointer;
+  }
+  .user:hover .user_img{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+  }
+  .user:hover .user_plus{
+    background-color: rgba(161, 161, 161, 0.753);
   }
   .user_img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .user_plus{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .user_plus p{
+    color: white;
+    background-color: var( --shadow-color);
+    padding: 5px 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    bottom: 30px;
+  }
+  .user_plus span{
+    color: black;
+    padding: 20px 0 10px 0;
   }
