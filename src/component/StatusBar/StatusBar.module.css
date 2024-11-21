@@ -4,8 +4,16 @@
   }
   .status_bar_Con{
     display: flex;
-    gap: 10px;
-    align-items: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-width: 500px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px var(--menu-color);
+  border-radius: 12px;
+  background-color: var(--white-color);
+  position: relative;
+
   }
   .user, .friends{
     position: relative;
@@ -68,4 +76,13 @@
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 2px 2px 2px black;
+  }
+  .post_slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 50px 100px;
+    text-align: center;
   }
