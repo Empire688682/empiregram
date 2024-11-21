@@ -23,9 +23,9 @@ const StatusBar = () => {
         </div>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={1}
+          spaceBetween={-40}
           slidesPerView={3}
-          navigation
+          navigation={{ clickable: true }}
           pagination={{ clickable: true }}
           scrollbar={false}
           loop={false}

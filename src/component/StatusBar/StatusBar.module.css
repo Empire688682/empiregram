@@ -1,88 +1,135 @@
 .status_bar {
-    width: 100%;
-    height: 250px;
-  }
-  .status_bar_Con{
-    display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.status_bar_Con {
+  display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
-  min-width: 500px;
-  max-width: 700px;
+  min-width: 400px;
+  max-width: 650px;
   box-shadow: 0 4px 15px var(--menu-color);
   border-radius: 12px;
   background-color: var(--white-color);
   position: relative;
+}
 
+.user {
+  position: relative;
+  width: 150px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 9px;
+  box-shadow: 0 0 2.5px var(--text-color);
+  cursor: pointer;
+}
+
+.user:hover .user_img,
+.friends:hover .friends_img {
+  transform: scale(1.1);
+  transition: .3s ease-in-out;
+}
+
+.user:hover .user_plus {
+  background-color: rgba(161, 161, 161, 0.753);
+}
+
+.user_img,
+.friends_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user_plus {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user_plus p {
+  color: white;
+  background-color: var(--shadow-color);
+  padding: 5px 15px;
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 50%;
+  border: 3px solid white;
+  position: absolute;
+  bottom: 30px;
+}
+
+.user_plus span {
+  color: black;
+  padding: 20px 0 10px 0;
+}
+
+.secondary_friends_img {
+  position: absolute;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  border: 3px solid var(--shadow-color);
+}
+
+.friends {
+  position: relative;
+  width: 150px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 9px;
+  box-shadow: 0 0 2.5px var(--text-color);
+  cursor: pointer;
+}
+
+.friends_name {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 2px black;
+}
+
+.post_slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.status_bar_Con :global(.swiper-button-next::after),
+.status_bar_Con :global(.swiper-button-prev::after) {
+  color: white !important;
+  background-color: var(--shadow-color);
+  border-radius: 50%;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 670px) {
+  .status_bar_Con {
+    min-width: 300px;
+    max-width: 300px;
   }
-  .user, .friends{
-    position: relative;
-    width: 150px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 9px;
-    box-shadow: 0 0 2.5px var(--text-color);
-    cursor: pointer;
-  }
-  .user:hover .user_img, .friends:hover .friends_img{
-    transform: scale(1.1);
-    transition: .3s ease-in-out;
-  }
-  .user:hover .user_plus{
-    background-color: rgba(161, 161, 161, 0.753);
-  }
-  .user_img, .friends_img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .user_plus{
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .user_plus p{
-    color: white;
-    background-color: var( --shadow-color);
-    padding: 5px 15px;
-    font-size: 30px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 3px solid white;
-    position: absolute;
-    bottom: 30px;
-  }
-  .user_plus span{
-    color: black;
-    padding: 20px 0 10px 0;
-  }
-  .secondary_friends_img{
-    position: absolute;
-    border-radius: 50%;
-    left: 10px;
-    top: 10px;
-    border: 3px solid var(--shadow-color);
-  }
-  .friends_name{
-    position: absolute;
-    color: white;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-shadow: 2px 2px 2px black;
-  }
-  .post_slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    padding: 50px 100px;
-    text-align: center;
-  }
+}

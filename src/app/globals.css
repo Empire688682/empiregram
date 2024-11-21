@@ -64,6 +64,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  height: 100vh;
 }
 
 div,h1,h2,h3,h4,p, span,small{
