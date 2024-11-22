@@ -8,7 +8,7 @@
   width: 100%;
   align-items: center;
   min-width: 400px;
-  max-width: 650px;
+  max-width: 800px;
   box-shadow: 0 4px 15px var(--menu-color);
   border-radius: 12px;
   background-color: var(--white-color);
