@@ -10,7 +10,18 @@ import { IoIosAddCircle } from "react-icons/io";
 
 const PostCreator = ({ setCreatePost }) => {
   const [image, setImage] = useState(null);
+  const [media, setMedia] = useState(null);
+  const [medialUrl, setMedialUrl] = useState(null);
   const [imageUploader, setImageUploader] = useState(false);
+  const handleOnchage = (e) =>{
+  const file = e.target.files[0];
+  if(file){
+    setMedia(file);
+    const url = window.URL.createObjectURL(file);
+    setMedialUrl(url);
+  }
+  setImageUploader(false);
+  }
   return (
     <div className={style.post_creator}>
       <LiaTimesSolid className={style.time_icon} onClick={() => setCreatePost(false)} />
@@ -33,7 +44,7 @@ const PostCreator = ({ setCreatePost }) => {
         <textarea name="" id="" cols="5" rows="2" placeholder='What it is in your mind @Username'></textarea>
         {
           imageUploader && <div className={style.uploader}>
-            <input type="file" onChange={(e) => { setImage(e.target.files[0]); setImageUploader(false); }} name="image" id='image' hidden accept='image/*' />
+            <input type="file" onChange={handleOnchage} name="image" id='image' hidden accept='image/* video/*' />
             <label htmlFor="image">
               <IoIosAddCircle className={style.add_image_icon} />
             </label>
