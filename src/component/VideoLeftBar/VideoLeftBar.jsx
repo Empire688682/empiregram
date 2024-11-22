@@ -1,10 +1,12 @@
 import React from 'react';
 import style from './VideoLeftBar.module.css';
-import { IoIosAddCircle } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
-import ChatMenu from '../ChatMenu/ChatMenu';
-import Image from 'next/image';
+import { RiFolderVideoFill } from "react-icons/ri";
+import { IoMdVideocam } from "react-icons/io";
+import { FaPhotoVideo } from "react-icons/fa";
+import { PiVideoFill } from "react-icons/pi";
+import { MdSaveAlt } from "react-icons/md";
 
 const VideoLeftBar = () => {
   return (
@@ -13,7 +15,6 @@ const VideoLeftBar = () => {
         <div className={style.header_fixed}>
           <div className={style.header}>
             <h2>Video</h2>
-            <IoIosAddCircle className={style.icon} />
             <BsThreeDotsVertical className={style.icon} />
           </div>
           <div className={style.search_bar}>
@@ -23,26 +24,27 @@ const VideoLeftBar = () => {
             <input type="text" id='search' placeholder='Search' name='search' required />
           </div>
         </div>
-        <div className={style.users_list}>
-        {
-          Array(100).fill('').map((item, id) => (
-            <div className={style.users} key={id}>
-              <div className={style.left_side}>
-                <div className={style.img_Con}>
-                  <Image src='/profile_marco.png' fill alt='User' />
-                </div>
-                <div className={style.name_msg}>
-                  <p>Jayempire</p>
-                  <span>Hello world</span>
-                </div>
-              </div>
-              <div className={style.right_side}>
-                <p>Today</p>
-                <span>1</span>
-              </div>
-            </div>
-          ))
-        }
+        <div className={style.menus}>
+          <div className={style.menu}>
+            <RiFolderVideoFill className={style.icon} />
+            <p>Home</p>
+          </div>
+          <div className={style.menu}>
+            <IoMdVideocam className={style.icon} />
+            <p>Live</p>
+          </div>
+          <div className={style.menu}>
+            <FaPhotoVideo className={style.icon} />
+            <p>Reels</p>
+          </div>
+          <div className={style.menu}>
+            <PiVideoFill className={style.icon} />
+            <p>Shows</p>
+          </div>
+          <div className={style.menu}>
+            <MdSaveAlt className={style.icon} />
+            <p>Saved Videos</p>
+          </div>
         </div>
       </div>
     </div>
