@@ -9,21 +9,24 @@ import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
 import { MdOutlineVideoLibrary } from "react-icons/md";
-import { useRouter } from 'next/navigation';
 import { FaUserGroup } from "react-icons/fa6";
-import { IoMdChatbubbles } from "react-icons/io";
+import Link from 'next/link'
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
-  const router = useRouter()
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
         <div className={style.header}>
-          <IoMdHome className={style.icons} />
-          <MdOutlineVideoLibrary onClick={()=>router.push("/video")} className={style.icons} />
-          <FaUserGroup className={style.icons} />
-          <IoMdChatbubbles className={style.icons} />
+        <Link href='/chat' style={{textDecoration:'none'}}>
+          <IoMdHome className={style.icon} />
+          </Link>
+          <Link href='/video' style={{textDecoration:'none'}}>
+          <MdOutlineVideoLibrary className={style.icon} />
+          </Link>
+          <Link href='/chat' style={{textDecoration:'none'}}>
+          <FaUserGroup className={style.icon} />
+          </Link>
         </div>
         <div className={style.home_M_Con}>
           {

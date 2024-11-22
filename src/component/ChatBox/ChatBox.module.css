@@ -19,12 +19,12 @@
     padding: 15px 20px;
     z-index: 99;
 }
-.icons{
+.icon{
     font-size: 25px;
     cursor: pointer;
     transition: .3s ease-in-out;
 }
-.icons:hover{
+.icon:hover{
     color: gray;
     border-bottom: 3px solid white;
 }
