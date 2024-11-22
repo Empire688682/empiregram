@@ -5,11 +5,13 @@ import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { useGlobalContext } from '../Context';
+import { useRouter } from 'next/navigation';
 
 
 const Signup = () => {
     const {setShowSignup} = useGlobalContext();
-    const [currentState, setCurrentState] = useState("Create acct")
+    const [currentState, setCurrentState] = useState("Create acct");
+    const router = useRouter()
   return (
     <div className={style.signup}>
         <div className={style.form_Con}>
@@ -42,7 +44,7 @@ const Signup = () => {
                 {
                     currentState === "Create acct" ? <input type="text" name="phone" placeholder='Phone' required /> : ""
                 }
-                <button type="submit">{currentState === "Create acct"? "Register":"Login"}</button>
+                <button onClick={()=>router.push("/chat")} type="submit">{currentState === "Create acct"? "Register":"Login"}</button>
                 {
                     currentState === "Login" && <p style={{cursor: "pointer", textDecoration: "underline"}}>Forgotten password?</p>
                 }

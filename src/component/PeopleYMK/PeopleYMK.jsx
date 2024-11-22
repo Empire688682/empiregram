@@ -10,6 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { peopleYMK } from '../data';
+
 
 const PeopleYMK = () => {
   return (
@@ -20,12 +22,12 @@ const PeopleYMK = () => {
         </div>
       <div className={style.Con}>
       {
-        Array(12).fill('').map((user, id)=>(
+        peopleYMK.map((user, id)=>(
             <div className={style.user} key={id}>
-          <Image className={style.user_img} src='/pic2.png' fill alt='IMG' sizes='100%' />
+          <Image className={style.user_img} src={user.img} fill alt='IMG' sizes='100%' />
           <LiaTimesSolid className={style.icon}/>
           <div className={style.user_details}>
-            <p className={style.name}>Daniel Brown</p>
+            <p className={style.name}>{user.name}</p>
             <div className={style.add_btn}>
                 <HiUserAdd className={style.icon} />
                 <span>Add User</span>
