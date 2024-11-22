@@ -11,14 +11,35 @@ import { IoIosAddCircle } from "react-icons/io";
 const PostCreator = ({ setCreatePost }) => {
   const [image, setImage] = useState(null);
   const [media, setMedia] = useState(null);
-  const [medialUrl, setMedialUrl] = useState(null);
   const [imageUploader, setImageUploader] = useState(false);
-  const handleOnchage = (e) =>{
+
+  const getMediaPreview = () =>{
+    const mediaURL = window.URL.createObjectURL(media);
+    if(media.type.startsWith('image/')){
+      return (
+        <div className={style.post_image_Con}>
+        <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+        <Image src={mediaURL} alt='User' fill sizes='100%' className={style.post_image} />
+      </div>
+      )
+    }
+    else if (media.type.startsWith('video/')){
+      return (
+        <div className={style.post_image_Con}>
+        <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+        <video controls className={style.post_image}>
+            <source src={mediaURL} type={media.type} />
+            Your browser does not support the video tag.
+          </video>
+      </div>
+      )
+    }
+  }
+
+  const handleOnchange = (e) =>{
   const file = e.target.files[0];
   if(file){
     setMedia(file);
-    const url = window.URL.createObjectURL(file);
-    setMedialUrl(url);
   }
   setImageUploader(false);
   }
@@ -44,18 +65,13 @@ const PostCreator = ({ setCreatePost }) => {
         <textarea name="" id="" cols="5" rows="2" placeholder='What it is in your mind @Username'></textarea>
         {
           imageUploader && <div className={style.uploader}>
-            <input type="file" onChange={handleOnchage} name="image" id='image' hidden accept='image/* video/*' />
-            <label htmlFor="image">
+            <input type="file" onChange={handleOnchange} name="image" id='media' hidden accept='image/*, video/*' />
+            <label htmlFor="media">
               <IoIosAddCircle className={style.add_image_icon} />
             </label>
           </div>
         }
-        {
-          image && <div className={style.post_image_Con}>
-            <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setImage(null)} />
-            <Image src={window.URL.createObjectURL(image)} alt='User' fill sizes='100%' className={style.post_image} />
-          </div>
-        }
+        {media && getMediaPreview()}
         <div className={style.icon_Con}>
           <MdOutlineEmojiEmotions className={style.icon} />
           <hr />
