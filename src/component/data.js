@@ -59,7 +59,8 @@ export const usersPost = [
         postImg:"/img1.jpg",
         id:5,
     },
-]
+];
+
 export const peopleYMK = [
     {
         name:"Simba Rossie",
@@ -110,5 +111,38 @@ export const peopleYMK = [
         name:"Simba Rossie",
         img:"/profile_richard.png",
         id:10,
+    },
+];
+
+export const groupYML = [
+    {
+        name:"Software Dev",
+        img:"/pic1.png",
+        id:1,
+    },
+    {
+        name:"Data Analysis",
+        img:"/pic2.png",
+        id:2,
+    },
+    {
+        name:"Simba Rossie",
+        img:"/pic3.png",
+        id:3,
+    },
+    {
+        name:"Cyber security",
+        img:"/pic4.png",
+        id:4,
+    },
+    {
+        name:"Javascript Developers",
+        img:"/pic1.png",
+        id:5,
+    },
+    {
+        name:"Happy group",
+        img:"/pic2.png",
+        id:6,
     },
 ]

@@ -7,6 +7,7 @@ import PostCreator from '../PostCreator/PostCreator';
 import StatusBar from '../StatusBar/StatusBar';
 import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
+import GroupYML from '../GroupYML/GroupYML';
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
@@ -42,6 +43,9 @@ const ChatBox = () => {
           </div>
           <div className={style.single_post}>
             <SinglePost/>
+          </div>
+          <div className={style.group_you_may_like}>
+            <GroupYML/>
           </div>
         </div>
       </div>
