@@ -66,6 +66,7 @@
   .name {
     font-size: 15px;
     color: rgb(41, 40, 40);
+    padding-top: 15px;
   }
   
   .group_btns {

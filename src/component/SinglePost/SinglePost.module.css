@@ -21,6 +21,14 @@
     align-items: center;
     gap: 10px;
 }
+.date_privacy{
+    display: flex;
+    flex-direction:column;
+}
+.date_privacy .icon{
+    cursor: pointer;
+    font-size: 18px;
+}
 .header_right{
     display: flex;
     align-items: center;

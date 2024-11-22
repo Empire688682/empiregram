@@ -41,7 +41,7 @@ const GroupYML = () => {
                 <div className={style.add_btn}>
                   <div className={style.group_btns}>
                   <button>Join Group</button> 
-                  <button>Invite Member</button>
+                  <button>Remove</button>
                   </div>
                 </div>
               </div>

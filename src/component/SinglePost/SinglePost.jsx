@@ -6,19 +6,27 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { AiOutlineLike } from "react-icons/ai";
 import { BiMessage } from "react-icons/bi";
 import { TiArrowForward } from "react-icons/ti";
+import { MdOutlinePublic } from "react-icons/md";
+import { LiaUserFriendsSolid } from "react-icons/lia";
+import { allPosts } from '../data';
 
 const SinglePost = () => {
     return (
         <div className={style.single_post}>
            {
-            Array(5).fill('').map((item, id) =>(
+            allPosts.map((post, id) =>(
                 <div className={style.single_post_Con} key={id}>
                 <div className={style.header}>
                     <div className={style.header_left}>
-                        <Image className={style.user_img} src='/profile_alison.png' width={50} height={50} alt='Img' sizes='100%' />
+                        <Image className={style.user_img} src={post.user_img} width={50} height={50} alt='Img' sizes='100%' />
                         <div className={style.user_name_time}>
-                            <p className={style.user_name}>Simba Rossie</p>
-                            <span>Nov 19 at 4:25 PM</span>
+                            <p className={style.user_name}>{post.user_Name}</p>
+                            <div className={style.date_privacy}>
+                            <span>{post.date}</span>
+                           {
+                            post.privacy === "public"?  <MdOutlinePublic className={style.icon} />: <LiaUserFriendsSolid className={style.icon} />
+                           }
+                            </div>
                         </div>
                     </div>
                     <div className={style.header_right}>
@@ -26,35 +34,36 @@ const SinglePost = () => {
                         <LiaTimesSolid className={style.icon} />
                     </div>
                 </div>
-                <p className={style.post_text}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sapiente molestiae. Modi ratione, nesciunt libero optio eaque doloremque quia, sapiente amet facilis repellat maxime voluptas aliquid fugit enim ab impedit.
-                    Praesentium illum, sit rem voluptatum reprehenderit neque? Praesentium quaerat nemo distinctio possimus vero architecto enim illo voluptas dolorem nostrum voluptatibus et reiciendis error, temporibus nisi omnis quis aut, deleniti necessitatibus.
-                </p>
+                <p className={style.post_text}>{post.text}</p>
                 <div className={style.post_images}>
                     <div className={style.img_big_Con}>
-                        <Image className={style.post_img} src='/pic1.png' fill alt='Img' sizes='100%' />
+                        <Image className={style.post_img} src={post.big_Img} fill alt='Img' sizes='100%' />
                     </div>
                     <div className={style.small_img_Cons}>
-                    <div className={style.img_small_Con}>
-                        <Image className={style.post_img} src='/img1.jpg' fill alt='Img' sizes='100%' />
+                    {
+                        post.small_Img1 && <div className={style.img_small_Con}>
+                        <Image className={style.post_img} src={post.small_Img1} fill alt='Img' sizes='100%' />
                     </div>
-                    <div className={style.img_small_Con}>
-                        <Image className={style.post_img} src='/img2.jpg' fill alt='Img' sizes='100%' />
+                    }
+                    {
+                        post.small_Img2 && <div className={style.img_small_Con}>
+                        <Image className={style.post_img} src={post.small_Img2} fill alt='Img' sizes='100%' />
                     </div>
+                    }
                     </div>
                 </div>
                 <div className={style.post_reaction_header}>
                     <div className={style.post_reaction_header_left}>
                         <AiOutlineLike className={style.icon} />
-                        <p>10k</p>
+                        <p>{post.like_No}</p>
                     </div>
                     <div className={style.post_reaction_header_right}>
                         <div className={style.comment}>
-                            <p>10</p>
+                            <p>{post.comment_No}</p>
                             <BiMessage className={style.icon} />
                         </div>
                         <div className={style.forward}>
-                            <p>8</p>
+                            <p>{post.forward_No}</p>
                             <TiArrowForward className={style.icon} />
                         </div>
                     </div>
