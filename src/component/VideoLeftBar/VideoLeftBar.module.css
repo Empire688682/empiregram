@@ -62,3 +62,22 @@
     margin-right: 10px;
     padding-top: 10px;
 }
+.menus{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.menu:hover{
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
