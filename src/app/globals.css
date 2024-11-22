@@ -6,57 +6,34 @@
   font-family: "Roboto", serif;
 }
   
-/* Light Mode Colors */
 :root {
   --background-color: #f0f2f5;
-  /* Light gray background */
   --secondary-background-color: #ffffff;
-  /* White secondary background */
   --text-color: #1c1e21;
-  /* Dark gray for text */
   --secondary-text-color: #606770;
-  /* Muted gray for secondary text */
   --accent-color: #006eff;
-  /* Blue accent for primary buttons/links */
   --button-bg-color: #e3e6ea;
-  /* Light gray for button background */
   --button-text-color: #1c1e21;
-  /* Dark gray text on buttons */
   --input-bg-color: #f0f2f5;
-  /* Very light gray for input fields */
   --border-color: #dcdfe3;
-  /* Light gray for borders and dividers */
   --hover-color: #e8f0fe;
-  /* Light blue for hover effects */
   --success-color: #42b72a;
-  /* Green for success notifications */
   --error-color: #e74c3c;
   --shadow-color: rgb(30, 255, 0);
 }
 
 .dark {
   --background-color: #18191a;
-  /* Very dark gray background */
   --secondary-background-color: #242526;
-  /* Dark gray secondary background */
   --text-color: #e4e6eb;
-  /* Light gray for text */
   --secondary-text-color: #b0b3b8;
-  /* Muted gray for secondary text */
   --accent-color: #4e9eff;
-  /* Bright blue for primary buttons/links */
   --button-bg-color: #3a3b3c;
-  /* Dark gray button background */
   --button-text-color: #e4e6eb;
-  /* Light text on buttons */
   --input-bg-color: #3a3b3c;
-  /* Dark gray input field background */
   --border-color: #3e4042;
-  /* Darker gray for borders and dividers */
   --hover-color: #4b4c4f;
-  /* Lighter gray for hover effects */
   --success-color: #4caf50;
-  /* Green for success notifications */
   --error-color: #f44336;
   --shadow-color: rgb(240, 238, 231);
 }

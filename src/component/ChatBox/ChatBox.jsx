@@ -8,15 +8,18 @@ import StatusBar from '../StatusBar/StatusBar';
 import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
+import { FaPhotoVideo  } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
+  const router = useRouter()
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
         <div className={style.header}>
           <IoMdHome className={style.icons} />
-          <IoMdHome className={style.icons} />
+          <FaPhotoVideo onClick={()=>router.push("/video")} className={style.icons} />
           <IoMdHome className={style.icons} />
           <IoMdHome className={style.icons} />
         </div>

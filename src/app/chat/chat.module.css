@@ -2,7 +2,6 @@
     width: 100%;
     min-height: 100vh;
     background-color: var(--secondary-background-color);
-
 }
 .chat_Con{
     display: flex;
