@@ -3,3 +3,16 @@
     min-height: 100vh;
     background-color: var(--secondary-background-color);
 }
+.video_Con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.left_bar{
+    flex-basis: 25%;
+    width: 100%;
+}
+.video_box{
+    flex-basis: 75%;
+}
