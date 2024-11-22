@@ -4,6 +4,12 @@ import Image from 'next/image';
 import { BsThreeDots } from "react-icons/bs";
 import { LiaTimesSolid } from "react-icons/lia";
 import { HiUserAdd } from "react-icons/hi";
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const PeopleYMK = () => {
   return (
@@ -13,7 +19,9 @@ const PeopleYMK = () => {
             <BsThreeDots className={style.icon}/>
         </div>
       <div className={style.Con}>
-      <div className={style.user}>
+      {
+        Array(12).fill('').map((user, id)=>(
+            <div className={style.user} key={id}>
           <Image className={style.user_img} src='/pic2.png' fill alt='IMG' sizes='100%' />
           <LiaTimesSolid className={style.icon}/>
           <div className={style.user_details}>
@@ -24,6 +32,8 @@ const PeopleYMK = () => {
             </div>
           </div>
         </div>
+        ))
+      }
       </div>
       <p className={style.see_all}>See all</p>
     </div>

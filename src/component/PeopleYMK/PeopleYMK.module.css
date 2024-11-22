@@ -4,6 +4,7 @@
     background-color: var(--background-color);
     border-radius: 9px;
     padding: 15px;
+    overflow: hidden;
 }
 .header{
     display: flex;
@@ -13,6 +14,12 @@
 }
 .header h2{
     font-size: 22px;
+}
+.Con{
+    max-width: 600px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
 }
 .icon{
     font-size: 25px;
@@ -65,5 +72,6 @@
     text-align: center;
     font-size: bolder;
     cursor: pointer;
-    color:  rgb(41, 40, 40);
+    color:  white;
+    padding-top: 20px;
   }
