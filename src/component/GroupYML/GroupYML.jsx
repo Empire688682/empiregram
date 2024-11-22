@@ -51,7 +51,6 @@ const GroupYML = () => {
         }
       </Swiper>
       </div>
-      <p className={style.see_all}>See all</p>
     </div>
   )
 }
