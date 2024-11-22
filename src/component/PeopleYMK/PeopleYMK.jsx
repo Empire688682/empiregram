@@ -14,10 +14,10 @@ const PeopleYMK = () => {
         </div>
       <div className={style.Con}>
       <div className={style.user}>
-          <Image className={style.user_img} src='/avatar_icon.png' fill alt='IMG' sizes='100%' />
+          <Image className={style.user_img} src='/pic2.png' fill alt='IMG' sizes='100%' />
           <LiaTimesSolid className={style.icon}/>
           <div className={style.user_details}>
-            <p>Daniel Brown</p>
+            <p className={style.name}>Daniel Brown</p>
             <div className={style.add_btn}>
                 <HiUserAdd className={style.icon} />
                 <span>Add User</span>
@@ -25,7 +25,7 @@ const PeopleYMK = () => {
           </div>
         </div>
       </div>
-      <p>See all</p>
+      <p className={style.see_all}>See all</p>
     </div>
   )
 }
