@@ -18,11 +18,11 @@ const SinglePost = () => {
                 <div className={style.single_post_Con} key={id}>
                 <div className={style.header}>
                     <div className={style.header_left}>
-                        <Image className={style.user_img} src={post.user_img} width={50} height={50} alt='Img' sizes='100%' />
+                        <Image className={style.user_img} src={post.user_Img} width={50} height={50} alt='Img' sizes='100%' />
                         <div className={style.user_name_time}>
                             <p className={style.user_name}>{post.user_Name}</p>
                             <div className={style.date_privacy}>
-                            <span>{post.date}</span>
+                            <p className={style.date}>{post.date}</p>
                            {
                             post.privacy === "public"?  <MdOutlinePublic className={style.icon} />: <LiaUserFriendsSolid className={style.icon} />
                            }

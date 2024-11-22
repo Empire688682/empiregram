@@ -20,10 +20,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 .date_privacy{
     display: flex;
     flex-direction:column;
+}
+.date{
+    font-size: 14px;
 }
 .date_privacy .icon{
     cursor: pointer;
@@ -37,6 +41,9 @@
 .icon{
     font-size: 25px;
     cursor: pointer;
+}
+.user_name{
+    font-weight: bolder;
 }
 .user_img{
     border-radius: 50%;
