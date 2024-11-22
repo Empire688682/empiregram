@@ -50,7 +50,7 @@ const Signup = () => {
                 }
                 <hr />
                 {
-                    currentState === "Create acct" ? <p>Already have an account? <strong onClick={() => setCurrentState("Login")}>Login</strong></p> : <p>Don't have an account? <strong onClick={() => setCurrentState("Create acct")}>Sign up</strong></p>
+                    currentState === "Create acct" ? <p>Already have an account? <strong onClick={() => setCurrentState("Login")}>Login</strong></p> : <p>Don&apos;t have an account? <strong onClick={() => setCurrentState("Create acct")}>Sign up</strong></p>
                 }
             </form>
         </div>
