@@ -40,6 +40,9 @@ const ChatBox = () => {
           <div className={style.people_you_may_know}>
             <PeopleYMK/>
           </div>
+          <div className={style.single_post}>
+            <SinglePost/>
+          </div>
         </div>
       </div>
     </div>
