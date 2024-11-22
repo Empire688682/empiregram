@@ -8,7 +8,7 @@
 }
 .video_left_bar_Con{
     min-width: 300px;
-    height: 100vh;
+    height: 80vh;
     overflow-y: scroll;
     scrollbar-width: none;
 }
@@ -54,7 +54,7 @@
 .header_fixed{
     position: absolute;
     background-color: var(--background-color);
-    z-index: 99;
+    z-index: 88;
     top: 0;
     left: 0;
     margin-left: 10px;

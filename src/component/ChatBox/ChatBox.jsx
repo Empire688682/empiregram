@@ -8,8 +8,10 @@ import StatusBar from '../StatusBar/StatusBar';
 import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
-import { FaPhotoVideo  } from "react-icons/fa";
+import { MdOutlineVideoLibrary } from "react-icons/md";
 import { useRouter } from 'next/navigation';
+import { FaUserGroup } from "react-icons/fa6";
+import { IoMdChatbubbles } from "react-icons/io";
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
@@ -19,9 +21,9 @@ const ChatBox = () => {
       <div className={style.chat_box_Con}>
         <div className={style.header}>
           <IoMdHome className={style.icons} />
-          <FaPhotoVideo onClick={()=>router.push("/video")} className={style.icons} />
-          <IoMdHome className={style.icons} />
-          <IoMdHome className={style.icons} />
+          <MdOutlineVideoLibrary onClick={()=>router.push("/video")} className={style.icons} />
+          <FaUserGroup className={style.icons} />
+          <IoMdChatbubbles className={style.icons} />
         </div>
         <div className={style.home_M_Con}>
           {
