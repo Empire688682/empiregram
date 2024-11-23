@@ -11,17 +11,6 @@ import Image from 'next/image';
 import { allVideoPost } from '../data';
 
 const Video = () => {
-  const PlayVideo = (e) =>{
-    const videoElement = e.target;
-    if(videoElement.paused){
-      videoElement.play()
-      videoElement.controls = true
-    }
-    else{
-      videoElement.pause()
-      videoElement.controls = false
-    }
-  }
   return (
     <div className={style.video}>
       {
@@ -47,7 +36,7 @@ const Video = () => {
                 </div>
                 <p className={style.post_text}>{video.text}</p>
                 <div className={style.post_video}>
-                  <video src={video.video} onClick={PlayVideo} title={`${video.user_Name}_empiregram_video`} ></video>
+                  <video src={video.video} controls title={`${video.user_Name}_empiregram_video`} ></video>
                 </div>
                 <div className={style.post_reaction_header}>
                     <div className={style.post_reaction_header_left}>
