@@ -64,7 +64,7 @@
 }
 .post_video{
     width: 100%;
-    min-height: 250px;
+    min-height: 100px;
 }
 .post_video video{
     width: 100%;
