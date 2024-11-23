@@ -9,37 +9,40 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosAddCircle } from "react-icons/io";
 
 const PostCreator = ({ setCreatePost }) => {
-  const [image, setImage] = useState(null);
-  const [media, setMedia] = useState(null);
+  const [media, setMedia] = useState([]);
   const [imageUploader, setImageUploader] = useState(false);
 
   const getMediaPreview = () =>{
-    const mediaURL = window.URL.createObjectURL(media);
-    if(media.type.startsWith('image/')){
-      return (
-        <div className={style.post_image_Con}>
-        <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
-        <Image src={mediaURL} alt='User' fill sizes='100%' className={style.post_image} />
-      </div>
-      )
-    }
-    else if (media.type.startsWith('video/')){
-      return (
-        <div className={style.post_image_Con}>
-        <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
-        <video controls className={style.post_image}>
-            <source src={mediaURL} type={media.type} />
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      )
-    }
+    media.map((file, i)=>{
+      const mediaURL = window.URL.createObjectURL(file);
+      console.log("mediaURL",mediaURL);
+      if(file.type.startsWith('image/')){
+        return (
+          <div className={style.post_image_Con} key={i}>
+          <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+          <Image src={mediaURL} alt='User' fill sizes='100%' className={style.post_image} />
+        </div>
+        )
+      }
+      else if (file.type.startsWith('video/')){
+        return (
+          <div className={style.post_image_Con} key={i}>
+          <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+          <video controls className={style.post_image}>
+              <source src={mediaURL} type={media.type} />
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        )
+      }
+      return null;
+    })
   }
 
   const handleOnchange = (e) =>{
-  const file = e.target.files[0];
-  if(file){
-    setMedia(file);
+  const files = Array.from(e.target.files);
+  if(files){
+    setMedia((prevMedia)=>([...prevMedia, ...files]));
   }
   setImageUploader(false);
   }
@@ -71,7 +74,7 @@ const PostCreator = ({ setCreatePost }) => {
             </label>
           </div>
         }
-        {media && getMediaPreview()}
+        {media.length > 0 && getMediaPreview()}
         <div className={style.icon_Con}>
           <MdOutlineEmojiEmotions className={style.icon} />
           <hr />
