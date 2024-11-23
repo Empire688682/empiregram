@@ -12,32 +12,36 @@ const PostCreator = ({ setCreatePost }) => {
   const [media, setMedia] = useState([]);
   const [imageUploader, setImageUploader] = useState(false);
 
+  const removeMedia =(index) =>{
+    setMedia((prevMedia)=> prevMedia.filter((_, i)=> i !== index));
+  }
+
   const getMediaPreview = () =>{
-    media.map((file, i)=>{
+    return media.map((file, index)=>{
       const mediaURL = window.URL.createObjectURL(file);
       console.log("mediaURL",mediaURL);
       if(file.type.startsWith('image/')){
         return (
-          <div className={style.post_image_Con} key={i}>
-          <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+          <div className={style.post_image_Con} key={index}>
+          <LiaTimesSolid className={style.post_image_time_icon} onClick={()=>removeMedia(index)} />
           <Image src={mediaURL} alt='User' fill sizes='100%' className={style.post_image} />
         </div>
         )
       }
       else if (file.type.startsWith('video/')){
         return (
-          <div className={style.post_image_Con} key={i}>
-          <LiaTimesSolid className={style.post_image_time_icon} onClick={() => setMedia(null)} />
+          <div className={style.post_image_Con} key={index}>
+          <LiaTimesSolid className={style.post_image_time_icon} onClick={()=>removeMedia(index)} />
           <video controls className={style.post_image}>
               <source src={mediaURL} type={media.type} />
               Your browser does not support the video tag.
             </video>
         </div>
-        )
+        );
       }
       return null;
-    })
-  }
+    });
+  };
 
   const handleOnchange = (e) =>{
   const files = Array.from(e.target.files);
