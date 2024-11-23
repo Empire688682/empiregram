@@ -36,9 +36,7 @@ const Video = () => {
                 </div>
                 <p className={style.post_text}>{video.text}</p>
                 <div className={style.post_video}>
-                  {
-                    ///VIDEO
-                  }
+                  <video src={video.video} controls={false} title={video.user_Name} ></video>
                 </div>
                 <div className={style.post_reaction_header}>
                     <div className={style.post_reaction_header_left}>
