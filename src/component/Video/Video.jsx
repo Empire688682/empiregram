@@ -13,11 +13,14 @@ import { allVideoPost } from '../data';
 const Video = () => {
   const PlayVideo = (e) =>{
     const videoElement = e.target;
-    e.target.play();
-    if(videoElement.play){
-      e.target.controls = true
+    if(videoElement.paused){
+      videoElement.play()
+      videoElement.controls = true
     }
-    return null
+    else{
+      videoElement.pause()
+      videoElement.controls = false
+    }
   }
   return (
     <div className={style.video}>
