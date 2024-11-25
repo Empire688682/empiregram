@@ -313,6 +313,8 @@ export const allFriends = [
         user_Name: "Juwon Asehinde",
         user_Img: "/profile_alison.png",
         id: 1,
-        message: "Hello"
+        currentMessage: "Hello bro",
+        allMessages:{},
+        date:Date.now(),
     }
 ]
