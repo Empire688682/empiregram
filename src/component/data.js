@@ -306,4 +306,13 @@ export const allVideoPost = [
         forward_No: 8,
         like_No: 80,
     }
+];
+
+export const allFriends = [
+    {
+        user_Name: "Juwon Asehinde",
+        user_Img: "/profile_alison.png",
+        id: 1,
+        message: "Hello"
+    }
 ]
