@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import style from './LeftBar.module.css';
 import { IoIosAddCircle } from "react-icons/io";
@@ -9,6 +10,7 @@ import { useGlobalContext } from '../Context';
 
 const LeftBar = () => {
   const {friends} = useGlobalContext();
+  console.log(friends)
   return (
     <div className={style.left_bar}>
       <div className={style.left_bar_Con}>
@@ -29,7 +31,7 @@ const LeftBar = () => {
         <div className={style.users_list}>
         {
           friends.map((friend) => (
-            <div className={style.users} key={friend.index}>
+            <div className={style.users} key={friend.id}>
               <div className={style.left_side}>
                 <div className={style.img_Con}>
                   <Image src={friend.user_Img} fill alt='User' />
