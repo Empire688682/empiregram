@@ -9,6 +9,7 @@ export const AppProvider = ({ children }) => {
     const [showSignup, setShowSignup] = useState(true);
     const [defaultMode, setDefaultMode] =  useState(localStorage.getItem("colorMode") || "light");
     const [friends, setFriends] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     const fetchFriends = async () =>{
         try {
@@ -16,6 +17,7 @@ export const AppProvider = ({ children }) => {
             if(response){
                 console.log(response.data.results);
                 const data = response.data.results;
+                setPosts(data);
                 const friends = data.map((user, index)=>({
                     user_Name: `${user.name.first} ${user.name.last}`,
                     user_Img: user.picture.thumbnail,
@@ -46,7 +48,8 @@ export const AppProvider = ({ children }) => {
                 setShowSignup,
                 defaultMode, 
                 setDefaultMode,
-                friends
+                friends,
+                posts
             }
         }>
         {children}
