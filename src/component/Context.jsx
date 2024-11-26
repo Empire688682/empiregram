@@ -14,8 +14,9 @@ export const AppProvider = ({ children }) => {
         try {
             const response = await axios.get("https://randomuser.me/api/?results=30");
             if(response){
-                setFriends(response.data.results);
                 console.log(response.data.results);
+                const data = response.data.results;
+                const friends = da
             }
         } catch (error) {
             console.log("User-Error:", error);

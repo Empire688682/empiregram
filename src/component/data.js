@@ -308,14 +308,3 @@ export const allVideoPost = [
         like_No: 80,
     }
 ];
-
-export const allFriends = [
-    {
-        user_Name: "Juwon Asehinde",
-        user_Img: "/profile_alison.png",
-        id: 1,
-        currentMessage: "Hello bro",
-        allMessages:{},
-        date:Date.now(),
-    }
-]
