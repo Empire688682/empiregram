@@ -5,8 +5,10 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import ChatMenu from '../ChatMenu/ChatMenu';
 import Image from 'next/image';
+import { useGlobalContext } from '../Context';
 
 const LeftBar = () => {
+  const {friends} = useGlobalContext();
   return (
     <div className={style.left_bar}>
       <div className={style.left_bar_Con}>
@@ -26,15 +28,15 @@ const LeftBar = () => {
         </div>
         <div className={style.users_list}>
         {
-          Array(100).fill('').map((item, id) => (
-            <div className={style.users} key={id}>
+          friends.map((friend) => (
+            <div className={style.users} key={friend.index}>
               <div className={style.left_side}>
                 <div className={style.img_Con}>
-                  <Image src='/profile_marco.png' fill alt='User' />
+                  <Image src={friend.user_Img} fill alt='User' />
                 </div>
                 <div className={style.name_msg}>
-                  <p>Jayempire</p>
-                  <span>Hello world</span>
+                  <p>{friend.user_Name}</p>
+                  <span>{friend.currentMessage}</span>
                 </div>
               </div>
               <div className={style.right_side}>

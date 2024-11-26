@@ -16,7 +16,15 @@ export const AppProvider = ({ children }) => {
             if(response){
                 console.log(response.data.results);
                 const data = response.data.results;
-                const friends = da
+                const friends = data.map((user, index)=>({
+                    user_Name: `${user.name.first} ${user.name.last}`,
+                    user_Img: user.picture.thumbnail,
+                    id: index +1,
+                    currentMessage: "Hello bro",
+                    allMessages:{},
+                    date:Date.now(),
+                }));
+                setFriends(friends);
             }
         } catch (error) {
             console.log("User-Error:", error);
@@ -37,7 +45,8 @@ export const AppProvider = ({ children }) => {
                 showSignup,
                 setShowSignup,
                 defaultMode, 
-                setDefaultMode
+                setDefaultMode,
+                friends
             }
         }>
         {children}
