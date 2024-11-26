@@ -34,7 +34,7 @@ const LeftBar = () => {
             <div className={style.users} key={friend.id}>
               <div className={style.left_side}>
                 <div className={style.img_Con}>
-                  <Image src={friend.user_Img} fill alt='User' />
+                  <Image src={friend.user_Img} fill alt='User' sizes='100%' />
                 </div>
                 <div className={style.name_msg}>
                   <p>{friend.user_Name}</p>
