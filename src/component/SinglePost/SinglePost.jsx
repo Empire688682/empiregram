@@ -19,15 +19,17 @@ const SinglePost = () => {
     },[]);
 
     const removePost = (postId) =>{
-       const postUpdate =  posts.filter((post)=> post.id !== postId);
-       console.log(postId);
-       console.log(typeof(postId));
+       const updatedPosts =  posts.filter((post)=> post.id !== postId);
+       console.log(updatedPosts);
+       if(updatedPosts){
+        setAllPost(updatedPosts)
+       }
     }
     return (
         <div className={style.single_post}>
            {
             posts.map((post, id) =>(
-                <div className={style.single_post_Con} key={id}>
+                <div className={style.single_post_Con} key={post.id}>
                 <div className={style.header}>
                     <div className={style.header_left}>
                         <Image className={style.user_img} src={post.user_Img} width={50} height={50} alt='Img' sizes='100%' />
@@ -43,7 +45,7 @@ const SinglePost = () => {
                     </div>
                     <div className={style.header_right}>
                         <BsThreeDots className={style.icon} />
-                        <LiaTimesSolid className={style.icon} />
+                        <LiaTimesSolid className={style.icon} onClick={()=>removePost(post.id)} />
                     </div>
                 </div>
                 <p className={style.post_text}>{post.text}</p>
