@@ -35,7 +35,7 @@ const LeftBar = () => {
           <div className={style.users_list}>
         {
           friends.map((friend) => (
-            <div className={style.users} key={friend.id}>
+            <div className={style.users} key={friend.login.uuid}>
               <div className={style.left_side}>
                 <div className={style.img_Con}>
                   <Image src={friend.user_Img} fill alt='User' sizes='100%' />

@@ -36,8 +36,8 @@ const StatusBar = () => {
           loop={false}
         >
           {
-            posts.map((post, id) => (
-              <SwiperSlide key={id} className={style.post_slider}>
+            posts.map((post) => (
+              <SwiperSlide key={post.login.uuid} className={style.post_slider}>
                 <div className={style.friends}>
                       <Image className={style.friends_img} src={post.picture.large} fill alt='IMG' sizes='100%' />
                       <div className={style.friends_post_Con}>

@@ -20,12 +20,14 @@ export const AppProvider = ({ children }) => {
                 const data = response.data.results;
                 setPosts(data);
                 setLoading(false)
-                const friends = data.map((user, index)=>({
+                const friends = data.map((user)=>({
                     user_Name: `${user.name.first} ${user.name.last}`,
                     user_Img: user.picture.thumbnail,
-                    id: index +1,
-                    currentMessage: "Hello bro",
+                    currentMessage:  "Hello",
                     allMessages:{},
+                    newMessages: 0,
+                    seenMessages: 0,
+                    lastMessage: "",
                     date:Date.now(),
                 }));
                 setFriends(friends);
