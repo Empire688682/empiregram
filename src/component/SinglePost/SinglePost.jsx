@@ -25,7 +25,7 @@ const SinglePost = () => {
         }
     }
     const removePost = (postId) => {
-        const updatedPosts = posts.filter((post) => (post.id !== postId));
+        const updatedPosts = posts.filter((post) => post.id !== postId);
         if (updatedPosts) {
             setAllPost(updatedPosts)
         }
