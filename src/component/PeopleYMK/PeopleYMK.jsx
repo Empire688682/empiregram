@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import style from './PeopleYMK.module.css';
 import Image from 'next/image';
 import { BsThreeDots } from "react-icons/bs";
@@ -11,9 +12,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { peopleYMK } from '../data';
-
+import axios from 'axios';
 
 const PeopleYMK = () => {
+  const [allPeople, setAllPeople] = useState([]);
+  const fetchPeople = async () =>{
+    try {
+      const response = await axios.get("https://randomuser.me/api/?results=20");
+      if(response){
+        setAllPeople(response.data.results);
+      }
+    } catch (error) {
+      console.log('ERROR:', error);
+    }
+  }
+  useEffect(()=>{
+    fetchPeople();
+  },[])
   return (
     <div className={style.people_you_may_know}>
       <div className={style.header}>
@@ -31,13 +46,13 @@ const PeopleYMK = () => {
       spaceBetween={10}
       >
          {
-          peopleYMK.map((user, id) => (
+          allPeople.map((people, id) => (
             <SwiperSlide key={id}>
               <div className={style.user} >
-              <Image className={style.user_img} src={user.img} fill alt='IMG' sizes='100%' />
+              <Image className={style.user_img} src={people.picture.large} fill alt='IMG' sizes='100%' />
               <LiaTimesSolid className={style.icon} />
               <div className={style.user_details}>
-                <p className={style.name}>{user.name}</p>
+                <p className={style.name}>{`${people.name.first} ${people.name.first}`}</p>
                 <div className={style.add_btn}>
                   <HiUserAdd className={style.icon} />
                   <span>Add User</span>
