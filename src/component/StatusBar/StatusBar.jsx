@@ -32,9 +32,9 @@ const StatusBar = () => {
           loop={false}
         >
           {
-            posts.map((post) => (
-              <SwiperSlide key={post.id} className={style.post_slider}>
-                <div className={style.friends} key={id}>
+            posts.map((post, id) => (
+              <SwiperSlide key={id} className={style.post_slider}>
+                <div className={style.friends}>
                       <Image className={style.friends_img} src={post.picture.thumbnail} fill alt='IMG' sizes='100%' />
                       <div className={style.friends_post_Con}>
                         <Image className={style.secondary_friends_img} src={post.picture.thumbnail} width={50} height={50} alt='IMG' sizes='100%' />
