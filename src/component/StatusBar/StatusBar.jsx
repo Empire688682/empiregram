@@ -10,8 +10,7 @@ import 'swiper/css/scrollbar';
 import { useGlobalContext } from '../Context';
 
 const StatusBar = () => {
-  const {posts} = useGlobalContext();
-  console.log(posts);
+  const {posts, loading} = useGlobalContext();
   return (
     <div className={style.status_bar}>
       <div className={style.status_bar_Con}>
@@ -22,7 +21,12 @@ const StatusBar = () => {
             <span>Create story</span>
           </div>
         </div>
-        <Swiper
+        {
+          loading ? <div className={style.loading}>
+            <h2>Loading...</h2>
+          </div>
+          :
+          <Swiper
           modules={[Navigation]}
           spaceBetween={0}
           slidesPerView={4}
@@ -35,16 +39,17 @@ const StatusBar = () => {
             posts.map((post, id) => (
               <SwiperSlide key={id} className={style.post_slider}>
                 <div className={style.friends}>
-                      <Image className={style.friends_img} src={post.picture.thumbnail} fill alt='IMG' sizes='100%' />
+                      <Image className={style.friends_img} src={post.picture.large} fill alt='IMG' sizes='100%' />
                       <div className={style.friends_post_Con}>
                         <Image className={style.secondary_friends_img} src={post.picture.thumbnail} width={50} height={50} alt='IMG' sizes='100%' />
                       </div>
-                      <p className={style.friends_name}>{`${post.first} ${post.last}`}</p>
+                      <p className={style.friends_name}>{`${post.name.first} ${post.name.last}`}</p>
                     </div>
               </SwiperSlide>
             ))
           }
         </Swiper>
+        }
       </div>
     </div>
   );

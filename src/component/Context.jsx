@@ -10,14 +10,16 @@ export const AppProvider = ({ children }) => {
     const [defaultMode, setDefaultMode] =  useState(localStorage.getItem("colorMode") || "light");
     const [friends, setFriends] = useState([]);
     const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     const fetchFriends = async () =>{
         try {
+            setLoading(true)
             const response = await axios.get("https://randomuser.me/api/?results=30");
             if(response){
-                console.log(response.data.results);
                 const data = response.data.results;
                 setPosts(data);
+                setLoading(false)
                 const friends = data.map((user, index)=>({
                     user_Name: `${user.name.first} ${user.name.last}`,
                     user_Img: user.picture.thumbnail,
@@ -49,7 +51,8 @@ export const AppProvider = ({ children }) => {
                 defaultMode, 
                 setDefaultMode,
                 friends,
-                posts
+                posts,
+                loading
             }
         }>
         {children}

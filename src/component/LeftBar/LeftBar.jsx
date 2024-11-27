@@ -9,8 +9,7 @@ import Image from 'next/image';
 import { useGlobalContext } from '../Context';
 
 const LeftBar = () => {
-  const {friends} = useGlobalContext();
-  console.log(friends)
+  const {friends, loading} = useGlobalContext();
   return (
     <div className={style.left_bar}>
       <div className={style.left_bar_Con}>
@@ -28,7 +27,12 @@ const LeftBar = () => {
           </div>
           <ChatMenu />
         </div>
-        <div className={style.users_list}>
+        {
+          loading ? <div className={style.loading}>
+            <h2>Loading...</h2>
+          </div>
+          :
+          <div className={style.users_list}>
         {
           friends.map((friend) => (
             <div className={style.users} key={friend.id}>
@@ -49,6 +53,7 @@ const LeftBar = () => {
           ))
         }
         </div>
+        }
       </div>
     </div>
   )
