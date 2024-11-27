@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import style from './SinglePost.module.css';
 import Image from 'next/image';
 import { BsThreeDots } from "react-icons/bs";
@@ -11,10 +12,21 @@ import { LiaUserFriendsSolid } from "react-icons/lia";
 import { allPosts } from '../data';
 
 const SinglePost = () => {
+    const [posts, setAllPost] = useState([]);
+
+    useEffect(()=>{
+        setAllPost(allPosts);
+    },[]);
+
+    const removePost = (postId) =>{
+       const postUpdate =  posts.filter((post)=> post.id !== postId);
+       console.log(postId);
+       console.log(typeof(postId));
+    }
     return (
         <div className={style.single_post}>
            {
-            allPosts.map((post, id) =>(
+            posts.map((post, id) =>(
                 <div className={style.single_post_Con} key={id}>
                 <div className={style.header}>
                     <div className={style.header_left}>

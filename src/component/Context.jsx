@@ -24,6 +24,7 @@ export const AppProvider = ({ children }) => {
                     user_Name: `${user.name.first} ${user.name.last}`,
                     user_Img: user.picture.thumbnail,
                     currentMessage:  "Hello",
+                    id:user.login.uuid,
                     allMessages:{},
                     newMessages: 0,
                     seenMessages: 0,
