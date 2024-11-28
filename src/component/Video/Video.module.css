@@ -1,7 +1,7 @@
 .video{
     background-color: var(--secondary-background-color);
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     overflow-y: scroll;
     scrollbar-width: none;
     padding: 50px;

@@ -1,6 +1,7 @@
 .video_left_bar{
     background-color: var(--background-color);
     position: relative;
+    padding: 0 10px;
 }
 .video_left_bar::-webkit-scrollbar{
     display: none;
