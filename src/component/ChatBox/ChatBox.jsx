@@ -1,13 +1,13 @@
 'use client'
 import React, { useState } from 'react';
 import style from './ChatBox.module.css';
-import { IoMdHome } from "react-icons/io";
 import Image from 'next/image';
 import PostCreator from '../PostCreator/PostCreator';
 import StatusBar from '../StatusBar/StatusBar';
 import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
+import { IoMdHome } from "react-icons/io";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { FaUserGroup } from "react-icons/fa6";
 import { MdNotifications   } from "react-icons/md";

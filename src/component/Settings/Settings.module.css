@@ -1,0 +1,30 @@
+.settings{
+    width: 100%;
+    min-width: 300px;
+    flex-basis: 50%;
+    min-height: 100vh;
+    position: relative;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 99;
+}
+.icon{
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.icon:hover{
+    color: gray;
+    border-bottom: 3px solid white;
+}
