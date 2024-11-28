@@ -10,6 +10,7 @@ import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { FaUserGroup } from "react-icons/fa6";
+import { MdNotifications   } from "react-icons/md";
 import Link from 'next/link'
 
 const ChatBox = () => {
@@ -27,6 +28,7 @@ const ChatBox = () => {
           <Link href='/chat' style={{textDecoration:'none'}}>
           <FaUserGroup className={style.icon} />
           </Link>
+          <MdNotifications className={style.icon} />
         </div>
         <div className={style.home_M_Con}>
           {

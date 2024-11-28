@@ -17,12 +17,15 @@ import { AiOutlineCloud } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IoLogOut } from "react-icons/io5";
 import { useGlobalContext } from '../Context';
+import { useRouter } from 'next/navigation';
 
 const RightBar = () => {
   const {defaultMode, setDefaultMode} = useGlobalContext();
   const handleModeClick = () =>{
     setDefaultMode((prevMode) => (prevMode === "light"? "dark":"light"))
   };
+
+  const router = useRouter()
 
   return (
     <div className={style.right_bar}>
@@ -35,7 +38,7 @@ const RightBar = () => {
         </div>
         <div className={style.user_cart_Con}>
         <div className={style.user_cart}>
-          <IoSettingsOutline className={style.icons} />
+          <IoSettingsOutline className={style.icons} onClick={()=>router.push("/setting")} />
           <p>Settings</p>
         </div>
         <div className={style.user_cart}>
