@@ -12,6 +12,7 @@
 .left_bar{
     flex-basis: 25%;
     width: 100%;
+    background-color: var(--background-color);
 }
 .video_box{
     flex-basis: 75%;
