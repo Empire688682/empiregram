@@ -28,6 +28,9 @@ const Settings = () => {
                     <div className={style.SettingsLeftBar}>
                         <SettingsLeftBar />
                     </div>
+                    <div className={style.Settings_Content}>
+                        
+                    </div>
                 </div>
             </div>
         </div>
