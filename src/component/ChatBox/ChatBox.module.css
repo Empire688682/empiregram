@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 300px;
     flex-basis: 50%;
-    min-height: 100vh;
+    max-height: 100vh;
     position: relative;
     padding: 20px;
 }
@@ -36,7 +36,6 @@
 }
 .home_user_post{
     width: 100%;
-    margin-top: 70px;
     display: flex;
     align-items: center;
     gap: 10px;

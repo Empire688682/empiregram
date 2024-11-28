@@ -1,7 +1,8 @@
 .chat{
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     background-color: var(--secondary-background-color);
+    padding-top: 90px;
 }
 .chat_Con{
     display: flex;

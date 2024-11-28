@@ -1,6 +1,6 @@
 .right_bar{
     min-width: 300px;
-    height: 100vh;
+    max-height: 100vh;
     background-color: var(--background-color);
     padding: 20px 10px;
     overflow-y: scroll;
