@@ -24,12 +24,6 @@ const SinglePost = () => {
             setAllPost(updatedPosts)
         }
     }
-    const removePost = (postId) => {
-        const updatedPosts = posts.filter((post) => post.id !== postId);
-        if (updatedPosts) {
-            setAllPost(updatedPosts)
-        }
-    }
 
     return (
         <div className={style.single_post}>
