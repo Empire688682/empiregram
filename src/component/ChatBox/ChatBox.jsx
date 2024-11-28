@@ -18,18 +18,6 @@ const ChatBox = () => {
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
-        <div className={style.header}>
-        <Link href='/chat' style={{textDecoration:'none'}}>
-          <IoMdHome className={style.icon} />
-          </Link>
-          <Link href='/video' style={{textDecoration:'none'}}>
-          <MdOutlineVideoLibrary className={style.icon} />
-          </Link>
-          <Link href='/chat' style={{textDecoration:'none'}}>
-          <FaUserGroup className={style.icon} />
-          </Link>
-          <MdNotifications className={style.icon} />
-        </div>
         <div className={style.home_M_Con}>
           {
             !createPost && <div className={style.home_user_post}>
