@@ -1,6 +1,8 @@
 .video_left_bar{
     position: relative;
     margin: 100px 0 10px 0;
+    padding-left: 20px 0 0 10px;
+    background-color: var(--background-color);
 }
 .video_left_bar::-webkit-scrollbar{
     display: none;
@@ -57,7 +59,6 @@
     margin-left: 10px;
     width: 95%;
     margin-right: 10px;
-    padding-top: 10px;
 }
 .menus{
     display: flex;
