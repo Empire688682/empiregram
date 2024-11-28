@@ -28,3 +28,9 @@
     color: gray;
     border-bottom: 3px solid white;
 }
+.settings_Con{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
