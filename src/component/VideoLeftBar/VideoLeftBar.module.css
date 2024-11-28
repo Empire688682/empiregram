@@ -1,6 +1,5 @@
 .video_left_bar{
     background-color: var(--background-color);
-    padding: 20px 0px 20px 10px;
     position: relative;
 }
 .video_left_bar::-webkit-scrollbar{
@@ -8,9 +7,7 @@
 }
 .video_left_bar_Con{
     min-width: 300px;
-    height: 80vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    height: 100%;
 }
 .header{
     display: flex;
@@ -63,7 +60,6 @@
     padding-top: 10px;
 }
 .menus{
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
 }
