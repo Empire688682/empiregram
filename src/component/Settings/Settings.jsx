@@ -1,9 +1,10 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Settings.module.css';
 import SettingsLeftBar from '../SettingsLeftBar/SettingsLeftBar';
 
 const Settings = () => {
+    const [defaultMode, setDefaultMode] = useState();
     return (
         <div className={style.settings}>
             <div className={style.settings_Con}>
