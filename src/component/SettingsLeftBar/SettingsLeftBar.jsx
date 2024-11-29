@@ -14,7 +14,7 @@ const SettingsLeftBar = () => {
         <div className={style.settings_cart_Con}>
         <div className={style.settings_cart}>
           <MdVideoLibrary className={style.icons} />
-          <p>Videos</p>
+          <p>Notification settings</p>
         </div>
         </div>
       </div>
