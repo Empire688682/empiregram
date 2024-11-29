@@ -1,5 +1,5 @@
 'use client;'
-import React from 'react';
+import React, {useState} from 'react';
 import style from "./SettingsLeftBar.module.css";
 import { IoNotifications } from "react-icons/io5";
 import { FaTags } from "react-icons/fa";
@@ -10,6 +10,7 @@ import { LiaBirthdayCakeSolid } from "react-icons/lia";
 import { BsCameraReels } from "react-icons/bs";
 
 const SettingsLeftBar = () => {
+  const [settingTag, setSettingTag] = useState("notification");
   return (
     <div className={style.settings_left_bar}>
      <div className={style.settings_left_bar_Con}>
