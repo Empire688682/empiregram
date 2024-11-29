@@ -13,7 +13,7 @@
 }
 .Settings_Content{
     flex-basis: 70%;
-    padding: 100px 20px 0 20px;
+    padding: 100px 50px 0 50px;
     min-width: 300px;
 }
 .container{
@@ -23,17 +23,19 @@
     flex-direction: column;
 }
 .container h2, .container h3, .container p{
-    color: #1c1e21;
+    color: var(--text-color);
 }
 .cart{
-    box-shadow: 0 0 2px 2px;
     padding: 10px;
+    background-color: var(--secondary-background-color);
+    border-radius: 5px;
 }
 .secondary_cart{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px 0;
+    gap: 50px;
 }
 .mode{
     width: 100%;
@@ -77,7 +79,6 @@
     left: 0;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
 .mode_motor.dark::before {
     background-color: white;
     transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
