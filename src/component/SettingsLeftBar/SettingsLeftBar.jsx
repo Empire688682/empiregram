@@ -7,7 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdPostAdd } from "react-icons/md";
 import { GiThreeFriends } from "react-icons/gi";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
-import { FaPhotoVideo } from "react-icons/fa";
+import { BsCameraReels } from "react-icons/bs";
 
 const SettingsLeftBar = () => {
   return (
@@ -42,8 +42,8 @@ const SettingsLeftBar = () => {
           <p>Birthdays</p>
         </div>
         <div className={style.settings_cart}>
-          <FaPhotoVideo className={style.icons} />
-          <p>Birthdays</p>
+          <BsCameraReels className={style.icons} />
+          <p>Reels</p>
         </div>
         </div>
       </div>
