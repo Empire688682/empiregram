@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import style from './settimgs.module.css';
+import style from './settings.module.css';
 import Settings from '@/component/Settings/Settings';
 import MenuBar from '@/component/MenuBar/MenuBar';
 

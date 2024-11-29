@@ -1,23 +1,9 @@
 .settings{
     width: 100%;
+}
+.settings_Con{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.icon{
-    font-size: 25px;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-.icon:hover{
-    color: gray;
-    border-bottom: 3px solid white;
-}
-.settings_main_Con{
     width: 100%;
-    display: flex;
-    align-items: center;
 }
 .SettingsLeftBar{
     flex-basis: 30%;
@@ -27,4 +13,57 @@
 }
 .Settings_Content{
     flex-basis: 70%;
+    padding: 100px 0 0 20px;
+    min-width: 300px;
+}
+
+
+.mode{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    gap: 20px;
+    transition: .1s ease-in-out;
+    padding: 10px;
+}
+.mode_left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mode_right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+.mode_motor {
+    position: relative;
+    background-color: rgb(192, 182, 182);
+    height: 20px;
+    width: 50px;
+    border-radius: 40px;
+    border: 1px solid rgb(82, 81, 81);
+}
+
+.mode_motor::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    left: 0;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.mode_motor.dark::before {
+    background-color: black;
+    transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
+    right: auto; /* Override the `right` position */
 }
