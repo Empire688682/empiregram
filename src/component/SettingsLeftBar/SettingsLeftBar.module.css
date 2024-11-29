@@ -37,6 +37,13 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.settings_cart_Conheader{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
 .settings_cart{
     width: 100%;
     display: flex;

@@ -17,6 +17,10 @@ const SettingsLeftBar = () => {
           <h3>Settings & privacy</h3>
         </div>
         <div className={style.settings_cart_Con}>
+        <div className={style.settings_cart_Conheader}>
+        <h4>Preferences</h4>
+        <p>Customise your experience</p>
+      </div>
         <div className={style.settings_cart}>
           <IoNotifications className={style.icons} />
           <p>Notification settings</p>
