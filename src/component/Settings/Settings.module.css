@@ -13,7 +13,7 @@
 }
 .Settings_Content{
     flex-basis: 70%;
-    padding: 100px 0 0 20px;
+    padding: 100px 20px 0 20px;
     min-width: 300px;
 }
 .container{
@@ -21,6 +21,19 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
+}
+.container h2, .container h3, .container p{
+    color: #1c1e21;
+}
+.cart{
+    box-shadow: 0 0 2px 2px;
+    padding: 10px;
+}
+.secondary_cart{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 .mode{
     width: 100%;
@@ -41,12 +54,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: antiquewhite;
+    background-color: rgb(66, 66, 187);
     border-radius: 20px;
 }
 .mode_motor {
     position: relative;
-    background-color: rgb(192, 182, 182);
+    background-color: rgb(66, 66, 187);
     height: 20px;
     width: 50px;
     border-radius: 40px;
@@ -66,7 +79,7 @@
 }
 
 .mode_motor.dark::before {
-    background-color: black;
+    background-color: white;
     transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
     right: auto; /* Override the `right` position */
 }

@@ -4,7 +4,10 @@ import style from './Settings.module.css';
 import SettingsLeftBar from '../SettingsLeftBar/SettingsLeftBar';
 
 const Settings = () => {
-    const [defaultMode, setDefaultMode] = useState();
+    const [mode, setMode] = useState("on");
+    const handleMode = () =>{
+        setMode((prev)=> (prev === "on"? "off":"on"))
+    }
     return (
         <div className={style.settings}>
             <div className={style.settings_Con}>
@@ -36,7 +39,7 @@ const Settings = () => {
                                 </div>
                                 <div className={style.cart_right}>
                                     <div className={style.mode_right}>
-                                        <span className={defaultMode === "light" ? `${style.mode_motor}` : `${style.mode_motor} ${style.dark}`}></span>
+                                        <span onClick={handleMode} className={mode === "on" ? `${style.mode_motor} ${style.dark}`:`${style.mode_motor}`}></span>
                                     </div>
                                 </div>
                             </div>
