@@ -22,6 +22,7 @@ const Settings = () => {
                 <div className={style.Settings_Content}>
                     <div className={style.container}>
                         <h2>Posts</h2>
+                        <marquee behavior="" direction="down">SCROLL SCROLL</marquee>
                         <div className={style.cart}>
                             <div className={style.secondary_cart}>
                                 <div className={style.cart_left}>
