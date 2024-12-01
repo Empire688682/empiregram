@@ -9,7 +9,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
 import { BsCameraReels } from "react-icons/bs";
 
-const SettingsLeftBar = ({settingTag}) => {
+const SettingsLeftBar = ({setSettingTag}) => {
   return (
     <div className={style.settings_left_bar}>
      <div className={style.settings_left_bar_Con}>
@@ -21,31 +21,31 @@ const SettingsLeftBar = ({settingTag}) => {
         <h4>Preferences</h4>
         <p>Customise your experience</p>
       </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("notifications")}>
           <IoNotifications className={style.icons} />
           <p>Notification settings</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("tags")}>
           <FaTags className={style.icons} />
           <p>Tags</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("profiles")}>
           <CgProfile className={style.icons} />
           <p>Profile details</p>
         </div>
-        <div className={style.settings_cart} onClick={()=>settingTag("post")}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("posts")}>
           <MdPostAdd className={style.icons} />
           <p>Post</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("friends")}>
           <GiThreeFriends className={style.icons} />
           <p>Friends Requests</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("birthdays")}>
           <LiaBirthdayCakeSolid className={style.icons} />
           <p>Birthdays</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>setSettingTag("reels")}>
           <BsCameraReels className={style.icons} />
           <p>Reels</p>
         </div>
