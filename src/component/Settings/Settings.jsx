@@ -12,12 +12,13 @@ const Settings = () => {
     const [mode, setMode] = useState("on");
     const handleMode = () => {
         setMode((prev) => (prev === "on" ? "off" : "on"))
-    }
+    };
+    const [settingTag, setSettingTag] = useState("posts");
     return (
         <div className={style.settings}>
             <div className={style.settings_Con}>
                 <div className={style.SettingsLeftBar}>
-                    <SettingsLeftBar />
+                    <SettingsLeftBar setSettingTag={setSettingTag} />
                 </div>
                 <div className={style.Settings_Content}>
                     <div className={style.container}>

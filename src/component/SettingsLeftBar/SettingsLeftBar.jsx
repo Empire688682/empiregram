@@ -9,8 +9,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
 import { BsCameraReels } from "react-icons/bs";
 
-const SettingsLeftBar = () => {
-  const [settingTag, setSettingTag] = useState("notification");
+const SettingsLeftBar = ({settingTag}) => {
   return (
     <div className={style.settings_left_bar}>
      <div className={style.settings_left_bar_Con}>
@@ -34,7 +33,7 @@ const SettingsLeftBar = () => {
           <CgProfile className={style.icons} />
           <p>Profile details</p>
         </div>
-        <div className={style.settings_cart}>
+        <div className={style.settings_cart} onClick={()=>settingTag("post")}>
           <MdPostAdd className={style.icons} />
           <p>Post</p>
         </div>
