@@ -36,6 +36,37 @@ const Settings = () => {
                                             <div className={style.cart_left_text}>
                                                 <p>Comments</p>
                                                 <span>Push, Email, SMS</span>
+                                                <div className={style.hidden_content}>
+                                                    <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                                    <span>Where you receive these notifications</span>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <FaRegMessage className={style.icon} />
+                                                            <span>Push</span>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
+                                                            button
+                                                        </div>
+                                                    </div>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <FaRegMessage className={style.icon} />
+                                                            <span>Email</span>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
+                                                            button
+                                                        </div>
+                                                    </div>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <FaRegMessage className={style.icon} />
+                                                            <span>SMS</span>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
+                                                            button
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className={style.cart_right}>

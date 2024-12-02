@@ -42,7 +42,6 @@
 }
 .cart_left_notification{
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 .cart_left_text{
