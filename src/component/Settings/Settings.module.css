@@ -103,3 +103,28 @@
     font-size: 30px;
     cursor: pointer;
 }
+.hidden_content{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--background-color);
+    width: 100%;
+}
+.hidden_content p{
+    font-weight: normal;
+}
+.hidden_content span{
+    font-weight: bold;
+}
+.hidden_btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn_text{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
