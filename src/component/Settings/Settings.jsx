@@ -28,55 +28,55 @@ const Settings = () => {
                                 <p>Empiregram may still send you important notifications about your account and content outside of your preferred notification settings.</p>
                                 <h3>What Notification You Recieve</h3>
                                 <div className={style.cart}>
-                                   <div className={style.cart_cart}>
-                                   <div className={style.secondary_cart}>
-                                        <div className={style.cart_left_notification}>
-                                            <div className={style.cart_left_icon_Con}>
-                                                <FaRegMessage className={style.icon} />
-                                            </div>
-                                            <div>
-                                                <div className={style.cart_left_text}>
-                                                    <p>Comments</p>
-                                                    <span>Push, Email, SMS</span>
+                                    <div className={style.cart_cart}>
+                                        <div className={style.secondary_cart}>
+                                            <div className={style.cart_left_notification}>
+                                                <div className={style.cart_left_icon_Con}>
+                                                    <FaRegMessage className={style.icon} />
+                                                </div>
+                                                <div>
+                                                    <div className={style.cart_left_text}>
+                                                        <p>Comments</p>
+                                                        <span>Push, Email, SMS</span>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div className={style.cart_right}>
+                                                <IoIosArrowDown className={style.icon} />
+                                            </div>
                                         </div>
-                                        <div className={style.cart_right}>
-                                            <IoIosArrowDown className={style.icon} />
+                                        <div className={style.hidden_content}>
+                                            <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                            <span>Where you receive these notifications</span>
+                                            <div className={style.hidden_btn}>
+                                                <div className={style.btn_text}>
+                                                    <FaRegMessage className={style.icon} />
+                                                    <small>Push</small>
+                                                </div>
+                                                <div className={style.btn_btn}>
+                                                    button
+                                                </div>
+                                            </div>
+                                            <div className={style.hidden_btn}>
+                                                <div className={style.btn_text}>
+                                                    <FaRegMessage className={style.icon} />
+                                                    <small>Email</small>
+                                                </div>
+                                                <div className={style.btn_btn}>
+                                                    button
+                                                </div>
+                                            </div>
+                                            <div className={style.hidden_btn}>
+                                                <div className={style.btn_text}>
+                                                    <FaRegMessage className={style.icon} />
+                                                    <small>SMS</small>
+                                                </div>
+                                                <div className={style.btn_btn}>
+                                                    button
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className={style.hidden_content}>
-                                                    <p>These are notifications for comments on your posts and replies to your comments.</p>
-                                                    <span>Where you receive these notifications</span>
-                                                    <div className={style.hidden_btn}>
-                                                        <div className={style.btn_text}>
-                                                            <FaRegMessage className={style.icon} />
-                                                            <small>Push</small>
-                                                        </div>
-                                                        <div className={style.btn_btn}>
-                                                            button
-                                                        </div>
-                                                    </div>
-                                                    <div className={style.hidden_btn}>
-                                                        <div className={style.btn_text}>
-                                                            <FaRegMessage className={style.icon} />
-                                                            <small>Email</small>
-                                                        </div>
-                                                        <div className={style.btn_btn}>
-                                                            button
-                                                        </div>
-                                                    </div>
-                                                    <div className={style.hidden_btn}>
-                                                        <div className={style.btn_text}>
-                                                            <FaRegMessage className={style.icon} />
-                                                            <small>SMS</small>
-                                                        </div>
-                                                        <div className={style.btn_btn}>
-                                                            button
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                   </div>
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
                                             <div className={style.cart_left_icon_Con}>
