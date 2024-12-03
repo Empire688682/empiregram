@@ -54,7 +54,7 @@ const Settings = () => {
                                                     <small>Push</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    button
+                                                    
                                                 </div>
                                             </div>
                                             <div className={style.hidden_btn}>
@@ -63,7 +63,7 @@ const Settings = () => {
                                                     <small>Email</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    button
+                                                    
                                                 </div>
                                             </div>
                                             <div className={style.hidden_btn}>
@@ -72,7 +72,7 @@ const Settings = () => {
                                                     <small>SMS</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    button
+                                                    
                                                 </div>
                                             </div>
                                         </div>
