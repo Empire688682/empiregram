@@ -7,6 +7,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaUserFriends } from "react-icons/fa";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { LuMessagesSquare } from "react-icons/lu";
+import { AiTwotoneMail } from "react-icons/ai";
+import { AiOutlinePushpin } from "react-icons/ai";
 
 const Settings = () => {
     const [mode, setMode] = useState("on");
@@ -50,20 +52,20 @@ const Settings = () => {
                                             <span>Where you receive these notifications</span>
                                             <div className={style.hidden_btn}>
                                                 <div className={style.btn_text}>
-                                                    <FaRegMessage className={style.icon} />
+                                                    <AiOutlinePushpin className={style.icon} />
                                                     <small>Push</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div className={style.hidden_btn}>
                                                 <div className={style.btn_text}>
-                                                    <FaRegMessage className={style.icon} />
+                                                    <AiTwotoneMail className={style.icon} />
                                                     <small>Email</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div className={style.hidden_btn}>
@@ -72,7 +74,7 @@ const Settings = () => {
                                                     <small>SMS</small>
                                                 </div>
                                                 <div className={style.btn_btn}>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -91,6 +93,37 @@ const Settings = () => {
                                             <IoIosArrowDown className={style.icon} />
                                         </div>
                                     </div>
+                                    <div className={style.hidden_content}>
+                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                        <span>Where you receive these notifications</span>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiOutlinePushpin className={style.icon} />
+                                                <small>Push</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiTwotoneMail className={style.icon} />
+                                                <small>Email</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <FaRegMessage className={style.icon} />
+                                                <small>SMS</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
                                             <div className={style.cart_left_icon_Con}>
@@ -105,6 +138,37 @@ const Settings = () => {
                                             <IoIosArrowDown className={style.icon} />
                                         </div>
                                     </div>
+                                    <div className={style.hidden_content}>
+                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                        <span>Where you receive these notifications</span>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiOutlinePushpin className={style.icon} />
+                                                <small>Push</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiTwotoneMail className={style.icon} />
+                                                <small>Email</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <FaRegMessage className={style.icon} />
+                                                <small>SMS</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
                                             <div className={style.cart_left_icon_Con}>
@@ -117,6 +181,37 @@ const Settings = () => {
                                         </div>
                                         <div className={style.cart_right}>
                                             <IoIosArrowDown className={style.icon} />
+                                        </div>
+                                    </div>
+                                    <div className={style.hidden_content}>
+                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                        <span>Where you receive these notifications</span>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiOutlinePushpin className={style.icon} />
+                                                <small>Push</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <AiTwotoneMail className={style.icon} />
+                                                <small>Email</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
+                                        </div>
+                                        <div className={style.hidden_btn}>
+                                            <div className={style.btn_text}>
+                                                <FaRegMessage className={style.icon} />
+                                                <small>SMS</small>
+                                            </div>
+                                            <div className={style.btn_btn}>
+
+                                            </div>
                                         </div>
                                     </div>
 
