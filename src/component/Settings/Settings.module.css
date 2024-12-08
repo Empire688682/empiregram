@@ -40,6 +40,12 @@
     padding: 20px 0;
     gap: 50px;
 }
+.settings_Con h2{
+    color:black;
+}
+.black_text{
+    color: black;
+}
 .cart_left_notification{
     display: flex;
     gap: 20px;
