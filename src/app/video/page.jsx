@@ -7,7 +7,7 @@ import MenuBar from '@/component/MenuBar/MenuBar';
 import SavedVideo from '@/component/SavedVideo/SavedVideo';
 
 const Page = () => {
-  const [videoTag, setVideoTag] = useState("home");
+  const [videoTag, setVideoTag] = useState("savedVideos");
   return (
     <div className={style.video}>
       <MenuBar />
@@ -23,7 +23,7 @@ const Page = () => {
           )
         }
         {
-          videoTag === "savedVideo" && (
+          videoTag === "savedVideos" && (
             <div className={style.video_box}>
               <SavedVideo videoTag={videoTag} setVideoTag={setVideoTag} />
             </div>

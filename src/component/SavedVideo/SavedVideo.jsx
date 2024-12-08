@@ -4,13 +4,16 @@ import style from './SavedVideo.module.css';
 import Image from 'next/image';
 import { AiOutlineLike } from "react-icons/ai";
 import { MdFavorite } from "react-icons/md";
+import { allVideoPost } from '../data';
 
 const SavedVideo = () => {
   return (
     <div className={style.saved_video_Con}>
-      <div className={style.saved_video}>
+        {
+            allVideoPost.map((video, id)=>(
+                <div className={style.saved_video} key={id}>
         <div className={style.left_side}>
-            <video src="/video.2.mp4"></video>
+            <video src="/video.2.mp4" controls ></video>
         </div>
         <div className={style.right_side}>
             <div className={style.right_author_info}>
@@ -30,6 +33,8 @@ const SavedVideo = () => {
             </div>
         </div>
       </div>
+            ))
+        }
     </div>
   )
 }
