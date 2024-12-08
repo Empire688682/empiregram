@@ -13,23 +13,23 @@ const SavedVideo = () => {
             allVideoPost.map((video, id)=>(
                 <div className={style.saved_video} key={id}>
         <div className={style.left_side}>
-            <video src="/video.2.mp4" controls ></video>
+            <video src={video.video} controls ></video>
         </div>
         <div className={style.right_side}>
             <div className={style.right_author_info}>
                 <div className={style.author_img_Con}>
-                    <Image src="/avatar_icon.png" width={50} height={50} alt="Avatar" sizes='100%' />
+                    <Image src={video.user_Img} width={50} height={50} alt="Avatar" sizes='100%' />
                 </div>
                 <div className={style.author_name_date_Con}>
-                    <p>John Doe</p>
-                    <p>1 hour ago</p>
+                    <p>{video.user_Img}</p>
+                    <p>{video.date}</p>
                 </div>
             </div>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio a exercitationem quo rem sed harum dolorem eveniet quis ipsum, incidunt soluta maxi</span>
+            <span>{video.text}</span>
             <div className={style.saved_video_reactions}>
             <MdFavorite />
             <AiOutlineLike />
-            <p>You aand 2k others . 73 comments . 23.9k views</p>
+            <p>You and 2k others . {video.comment_No} comments . {video.comment_No} views</p>
             </div>
         </div>
       </div>
