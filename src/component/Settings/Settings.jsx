@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import style from './Settings.module.css';
 import SettingsLeftBar from '../SettingsLeftBar/SettingsLeftBar';
 import { FaRegMessage } from "react-icons/fa6";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowRoundUp } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 import { FaUserFriends } from "react-icons/fa";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { LuMessagesSquare } from "react-icons/lu";
@@ -16,6 +17,7 @@ const Settings = () => {
         setMode((prev) => (prev === "on" ? "off" : "on"))
     };
     const [settingTag, setSettingTag] = useState("notifications");
+    const [hiddenTag, setHiddenTag] = useState("");
     return (
         <div className={style.settings}>
             <div className={style.settings_Con}>
@@ -43,11 +45,17 @@ const Settings = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className={style.cart_right}>
+                                            <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "comments" ? "comments":"")}>
+                                            {
+                                                hiddenTag === "comments"?
+                                                <IoIosArrowUp className={style.icon} />:
                                                 <IoIosArrowDown className={style.icon} />
+                                            }
                                             </div>
                                         </div>
-                                        <div className={style.hidden_content}>
+                                        {
+                                            hiddenTag === "comments" && (
+                                                <div className={style.hidden_content}>
                                             <p>These are notifications for comments on your posts and replies to your comments.</p>
                                             <span>Where you receive these notifications</span>
                                             <div className={style.hidden_btn}>
@@ -78,6 +86,8 @@ const Settings = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                            )
+                                        }
                                     </div>
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
@@ -89,11 +99,17 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right}>
-                                            <IoIosArrowDown className={style.icon} />
+                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "updates" ? "updates":"")}>
+                                            {
+                                                hiddenTag === "updates"?
+                                                <IoIosArrowUp className={style.icon} />:
+                                                <IoIosArrowDown className={style.icon} />
+                                            }
                                         </div>
                                     </div>
-                                    <div className={style.hidden_content}>
+                                    {
+                                        hiddenTag === "updates" && (
+                                            <div className={style.hidden_content}>
                                         <p>These are notifications for comments on your posts and replies to your comments.</p>
                                         <span>Where you receive these notifications</span>
                                         <div className={style.hidden_btn}>
@@ -124,6 +140,8 @@ const Settings = () => {
                                             </div>
                                         </div>
                                     </div>
+                                        )
+                                    }
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
                                             <div className={style.cart_left_icon_Con}>
@@ -134,11 +152,17 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right}>
-                                            <IoIosArrowDown className={style.icon} />
+                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "friends" ? "friends":"")}>
+                                        {
+                                                hiddenTag === "friends"?
+                                                <IoIosArrowUp className={style.icon} />:
+                                                <IoIosArrowDown className={style.icon} />
+                                            }
                                         </div>
                                     </div>
-                                    <div className={style.hidden_content}>
+                                    {
+                                        hiddenTag === "friends" && (
+                                            <div className={style.hidden_content}>
                                         <p>These are notifications for comments on your posts and replies to your comments.</p>
                                         <span>Where you receive these notifications</span>
                                         <div className={style.hidden_btn}>
@@ -169,6 +193,8 @@ const Settings = () => {
                                             </div>
                                         </div>
                                     </div>
+                                        )
+                                    }
                                     <div className={style.secondary_cart}>
                                         <div className={style.cart_left_notification}>
                                             <div className={style.cart_left_icon_Con}>
@@ -179,11 +205,18 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right}>
-                                            <IoIosArrowDown className={style.icon} />
+                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "messages" ? "messages":"")}>
+                                        {
+                                                hiddenTag === "messages"?
+                                                <IoIosArrowUp className={style.icon} />:
+                                                <IoIosArrowDown className={style.icon} />
+                                            }
                                         </div>
                                     </div>
-                                    <div className={style.hidden_content}>
+
+                                   {
+                                    hiddenTag === "messages" && (
+                                         <div className={style.hidden_content}>
                                         <p>These are notifications for comments on your posts and replies to your comments.</p>
                                         <span>Where you receive these notifications</span>
                                         <div className={style.hidden_btn}>
@@ -214,6 +247,8 @@ const Settings = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    )
+                                   }
 
                                 </div>
                             </div>
