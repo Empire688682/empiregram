@@ -8,6 +8,7 @@ import { FaUserGroup } from "react-icons/fa6";
 import { IoNotifications } from "react-icons/io5";
 import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
+import RightBar from '../RightBar/RightBar';
 
 const MenuBar = () => {
     return (
@@ -25,9 +26,12 @@ const MenuBar = () => {
                 </Link>
             </div>
             <div className={style.user_menus}>
-                <Image className={style.user_img} src='/avatar_icon.png' width={50} height={50} sizes='100%' alt='Logo' />
+                <Image className={style.user_img} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
                 <IoNotifications className={style.icon} />
                 <FaFacebookMessenger className={style.icon} />
+            </div>
+            <div className={style.user_profile}>
+                <RightBar/>
             </div>
         </div>
     )

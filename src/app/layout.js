@@ -1,7 +1,5 @@
 // app/layout.js
-
 'use client';
-
 import { AppProvider, useGlobalContext } from "@/component/Context";
 import "./globals.css";
 import Head from "next/head";
