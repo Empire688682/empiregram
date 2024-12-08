@@ -18,17 +18,17 @@ const SavedVideo = () => {
         <div className={style.right_side}>
             <div className={style.right_author_info}>
                 <div className={style.author_img_Con}>
-                    <Image src={video.user_Img} width={50} height={50} alt="Avatar" sizes='100%' />
+                    <Image style={{borderRadius:"50%"}} src={video.user_Img} width={40} height={40} alt="Avatar" sizes='100%' />
                 </div>
                 <div className={style.author_name_date_Con}>
-                    <p>{video.user_Img}</p>
+                    <p>{video.user_Name}</p>
                     <p>{video.date}</p>
                 </div>
             </div>
             <span>{video.text}</span>
             <div className={style.saved_video_reactions}>
-            <MdFavorite />
-            <AiOutlineLike />
+            <MdFavorite className={style.icons} />
+            <AiOutlineLike className={style.icons} />
             <p>You and 2k others . {video.comment_No} comments . {video.comment_No} views</p>
             </div>
         </div>

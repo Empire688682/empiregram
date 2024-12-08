@@ -32,3 +32,20 @@
     align-items: center;
     gap: 10px;
 }
+.saved_video_reactions{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding-top: 20px;
+}
+.saved_video_reactions .icons{
+    cursor: pointer;
+    font-size: 25px;
+}
+.saved_video_reactions .icons:hover{
+    color: var(--primary-color);
+}
+.saved_video_reactions span{
+    font-size: 14px;
+    color: var(--text-color);
+}
