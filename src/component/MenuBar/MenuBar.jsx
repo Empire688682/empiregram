@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import style from './MenuBar.module.css';
 import Image from 'next/image';
 import { IoMdHome } from "react-icons/io";
@@ -11,6 +11,7 @@ import Link from 'next/link';
 import RightBar from '../RightBar/RightBar';
 
 const MenuBar = () => {
+    const [showProfile, setShowProfile] = useState(false)
     return (
         <div className={style.menu_bar}>
             <Image className={style.logo} src='/empiregram-logo.webp' width={50} height={50} sizes='100%' alt='Logo' />
@@ -26,13 +27,17 @@ const MenuBar = () => {
                 </Link>
             </div>
             <div className={style.user_menus}>
-                <Image className={style.user_img} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
+                <Image className={style.user_img} onClick={()=> setShowProfile(true)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
                 <IoNotifications className={style.icon} />
                 <FaFacebookMessenger className={style.icon} />
             </div>
-            <div className={style.user_profile}>
+            {
+                showProfile && (
+                    <div className={style.user_profile}>
                 <RightBar/>
             </div>
+                )
+            }
         </div>
     )
 }

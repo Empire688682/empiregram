@@ -37,10 +37,12 @@
 }
 
 .user_profile{
-    height: 100vh;
-    width: 100px;
     position: absolute;
-    z-index: 99;
-    top: 40px;
-    right: 20px;
+    z-index: 88;
+    top: 90px;
+    right: 0;
+    transition: max-height .1s ease-in-out;
+}
+.user_profile.active{
+    max-height: 100vh;
 }
