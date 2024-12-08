@@ -27,8 +27,8 @@ const Settings = () => {
                         settingTag === "notifications" && (
                             <div className={style.container}>
                                 <h2>Notifications settings</h2>
-                                <p className={style.black_text}>Empiregram may still send you important notifications about your account and content outside of your preferred notification settings.</p>
-                                <h3 className={style.black_text}>What Notification You Recieve</h3>
+                                <p style={{color:"black"}}>Empiregram may still send you important notifications about your account and content outside of your preferred notification settings.</p>
+                                <h3 style={{color:"black"}}>What Notification You Recieve</h3>
                                 <div className={style.cart}>
                                     <div className={style.cart_cart}>
                                         <div className={style.secondary_cart}>
