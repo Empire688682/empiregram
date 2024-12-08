@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import style from './video.module.css';
 import VideoLeftBar from '@/component/VideoLeftBar/VideoLeftBar';
 import Video from '@/component/Video/Video';
@@ -13,15 +13,16 @@ import Link from 'next/link';
 import MenuBar from '@/component/MenuBar/MenuBar';
 
 const page = () => {
+  const [videoTag, setVideoTag] = useState("Home");
   return (
     <div className={style.video}>
       <MenuBar/>
       <div className={style.video_Con}>
         <div className={style.left_bar}>
-        <VideoLeftBar/>
+          <VideoLeftBar videoTag={videoTag} setVideoTag={setVideoTag}/>
         </div>
         <div className={style.video_box}>
-        <Video/>
+        <Video videoTag={videoTag} setVideoTag={setVideoTag}/>
         </div>
       </div>
     </div>
