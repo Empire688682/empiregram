@@ -27,7 +27,7 @@ const MenuBar = () => {
                 </Link>
             </div>
             <div className={style.user_menus}>
-                <Image className={style.user_img} onClick={()=> setShowProfile(true)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
+                <Image className={style.user_img} onClick={()=> setShowProfile(!showProfile)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
                 <IoNotifications className={style.icon} />
                 <FaFacebookMessenger className={style.icon} />
             </div>

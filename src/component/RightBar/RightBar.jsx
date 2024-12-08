@@ -37,8 +37,8 @@ const RightBar = () => {
           <p>Daniel Juwon Asehinde</p>
         </div>
         <div className={style.user_cart_Con}>
-        <div className={style.user_cart}>
-          <IoSettingsOutline className={style.icons} onClick={()=>router.push("/settings")} />
+        <div className={style.user_cart} onClick={()=>router.push("/settings")}>
+          <IoSettingsOutline className={style.icons} />
           <p>Settings</p>
         </div>
         <div className={style.user_cart}>
