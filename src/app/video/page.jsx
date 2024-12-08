@@ -11,6 +11,7 @@ import { IoNotifications } from "react-icons/io5";
 import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
 import MenuBar from '@/component/MenuBar/MenuBar';
+import SavedVideo from '@/component/SavedVideo/SavedVideo';
 
 const page = () => {
   const [videoTag, setVideoTag] = useState("Home");
@@ -21,9 +22,20 @@ const page = () => {
         <div className={style.left_bar}>
           <VideoLeftBar videoTag={videoTag} setVideoTag={setVideoTag}/>
         </div>
-        <div className={style.video_box}>
+        {
+          videoTag === "home" && (
+            <div className={style.video_box}>
         <Video videoTag={videoTag} setVideoTag={setVideoTag}/>
         </div>
+          )
+        }
+        {
+          videoTag === "savedVideo" && (
+            <div className={style.video_box}>
+        <SavedVideo videoTag={videoTag} setVideoTag={setVideoTag}/>
+        </div>
+          )
+        }
       </div>
     </div>
   )

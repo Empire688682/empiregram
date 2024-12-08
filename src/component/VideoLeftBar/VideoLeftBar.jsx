@@ -8,7 +8,7 @@ import { FaPhotoVideo } from "react-icons/fa";
 import { PiVideoFill } from "react-icons/pi";
 import { MdSaveAlt } from "react-icons/md";
 
-const VideoLeftBar = () => {
+const VideoLeftBar = ({videoTag, setVideoTag}) => {
   return (
     <div className={style.video_left_bar}>
       <div className={style.video_left_bar_Con}>
@@ -41,7 +41,7 @@ const VideoLeftBar = () => {
             <PiVideoFill className={style.icon} />
             <p>Shows</p>
           </div>
-          <div className={style.menu}>
+          <div className={style.menu} onClick={()=>setVideoTag("savedVideo")}>
             <MdSaveAlt className={style.icon} />
             <p>Saved Videos</p>
           </div>
