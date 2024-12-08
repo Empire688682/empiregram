@@ -25,7 +25,7 @@ const VideoLeftBar = ({videoTag, setVideoTag}) => {
           </div>
         </div>
         <div className={style.menus}>
-          <div className={style.menu}>
+          <div className={style.menu} onClick={()=>setVideoTag("home")}>
             <RiFolderVideoFill className={style.icon} />
             <p>Home</p>
           </div>
@@ -41,7 +41,7 @@ const VideoLeftBar = ({videoTag, setVideoTag}) => {
             <PiVideoFill className={style.icon} />
             <p>Shows</p>
           </div>
-          <div className={style.menu} onClick={()=>setVideoTag("savedVideo")}>
+          <div className={style.menu} onClick={()=>setVideoTag("savedVideos")}>
             <MdSaveAlt className={style.icon} />
             <p>Saved Videos</p>
           </div>

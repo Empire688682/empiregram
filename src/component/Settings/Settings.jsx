@@ -29,8 +29,8 @@ const Settings = () => {
                         settingTag === "notifications" && (
                             <div className={style.container}>
                                 <h2>Notifications settings</h2>
-                                <p style={{color:"#1c1e21"}}>Empiregram may still send you important notifications about your account and content outside of your preferred notification settings.</p>
-                                <h3 style={{color:"#1c1e21"}}>What Notification You Recieve</h3>
+                                <p style={{ color: "#1c1e21" }}>Empiregram may still send you important notifications about your account and content outside of your preferred notification settings.</p>
+                                <h3 style={{ color: "#1c1e21" }}>What Notification You Recieve</h3>
                                 <div className={style.cart}>
                                     <div className={style.cart_cart}>
                                         <div className={style.secondary_cart}>
@@ -45,47 +45,47 @@ const Settings = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "comments" ? "comments":"")}>
-                                            {
-                                                hiddenTag === "comments"?
-                                                <IoIosArrowUp className={style.icon} />:
-                                                <IoIosArrowDown className={style.icon} />
-                                            }
+                                            <div className={style.cart_right} onClick={() => setHiddenTag((prev) => prev !== "comments" ? "comments" : "")}>
+                                                {
+                                                    hiddenTag === "comments" ?
+                                                        <IoIosArrowUp className={style.icon} /> :
+                                                        <IoIosArrowDown className={style.icon} />
+                                                }
                                             </div>
                                         </div>
                                         {
                                             hiddenTag === "comments" && (
                                                 <div className={style.hidden_content}>
-                                            <p>These are notifications for comments on your posts and replies to your comments.</p>
-                                            <span>Where you receive these notifications</span>
-                                            <div className={style.hidden_btn}>
-                                                <div className={style.btn_text}>
-                                                    <AiOutlinePushpin className={style.icon} />
-                                                    <small>Push</small>
-                                                </div>
-                                                <div className={style.btn_btn}>
+                                                    <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                                    <span>Where you receive these notifications</span>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <AiOutlinePushpin className={style.icon} />
+                                                            <small>Push</small>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
 
-                                                </div>
-                                            </div>
-                                            <div className={style.hidden_btn}>
-                                                <div className={style.btn_text}>
-                                                    <AiTwotoneMail className={style.icon} />
-                                                    <small>Email</small>
-                                                </div>
-                                                <div className={style.btn_btn}>
+                                                        </div>
+                                                    </div>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <AiTwotoneMail className={style.icon} />
+                                                            <small>Email</small>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
 
-                                                </div>
-                                            </div>
-                                            <div className={style.hidden_btn}>
-                                                <div className={style.btn_text}>
-                                                    <FaRegMessage className={style.icon} />
-                                                    <small>SMS</small>
-                                                </div>
-                                                <div className={style.btn_btn}>
+                                                        </div>
+                                                    </div>
+                                                    <div className={style.hidden_btn}>
+                                                        <div className={style.btn_text}>
+                                                            <FaRegMessage className={style.icon} />
+                                                            <small>SMS</small>
+                                                        </div>
+                                                        <div className={style.btn_btn}>
 
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
                                             )
                                         }
                                     </div>
@@ -99,47 +99,47 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "updates" ? "updates":"")}>
+                                        <div className={style.cart_right} onClick={() => setHiddenTag((prev) => prev !== "updates" ? "updates" : "")}>
                                             {
-                                                hiddenTag === "updates"?
-                                                <IoIosArrowUp className={style.icon} />:
-                                                <IoIosArrowDown className={style.icon} />
+                                                hiddenTag === "updates" ?
+                                                    <IoIosArrowUp className={style.icon} /> :
+                                                    <IoIosArrowDown className={style.icon} />
                                             }
                                         </div>
                                     </div>
                                     {
                                         hiddenTag === "updates" && (
                                             <div className={style.hidden_content}>
-                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
-                                        <span>Where you receive these notifications</span>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiOutlinePushpin className={style.icon} />
-                                                <small>Push</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                                <span>Where you receive these notifications</span>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiOutlinePushpin className={style.icon} />
+                                                        <small>Push</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiTwotoneMail className={style.icon} />
-                                                <small>Email</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiTwotoneMail className={style.icon} />
+                                                        <small>Email</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <FaRegMessage className={style.icon} />
-                                                <small>SMS</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <FaRegMessage className={style.icon} />
+                                                        <small>SMS</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
                                         )
                                     }
                                     <div className={style.secondary_cart}>
@@ -152,47 +152,47 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "friends" ? "friends":"")}>
-                                        {
-                                                hiddenTag === "friends"?
-                                                <IoIosArrowUp className={style.icon} />:
-                                                <IoIosArrowDown className={style.icon} />
+                                        <div className={style.cart_right} onClick={() => setHiddenTag((prev) => prev !== "friends" ? "friends" : "")}>
+                                            {
+                                                hiddenTag === "friends" ?
+                                                    <IoIosArrowUp className={style.icon} /> :
+                                                    <IoIosArrowDown className={style.icon} />
                                             }
                                         </div>
                                     </div>
                                     {
                                         hiddenTag === "friends" && (
                                             <div className={style.hidden_content}>
-                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
-                                        <span>Where you receive these notifications</span>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiOutlinePushpin className={style.icon} />
-                                                <small>Push</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                                <span>Where you receive these notifications</span>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiOutlinePushpin className={style.icon} />
+                                                        <small>Push</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiTwotoneMail className={style.icon} />
-                                                <small>Email</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiTwotoneMail className={style.icon} />
+                                                        <small>Email</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <FaRegMessage className={style.icon} />
-                                                <small>SMS</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <FaRegMessage className={style.icon} />
+                                                        <small>SMS</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
                                         )
                                     }
                                     <div className={style.secondary_cart}>
@@ -205,50 +205,50 @@ const Settings = () => {
                                                 <span>Push, Email, SMS</span>
                                             </div>
                                         </div>
-                                        <div className={style.cart_right} onClick={()=>setHiddenTag((prev)=>prev !== "messages" ? "messages":"")}>
-                                        {
-                                                hiddenTag === "messages"?
-                                                <IoIosArrowUp className={style.icon} />:
-                                                <IoIosArrowDown className={style.icon} />
+                                        <div className={style.cart_right} onClick={() => setHiddenTag((prev) => prev !== "messages" ? "messages" : "")}>
+                                            {
+                                                hiddenTag === "messages" ?
+                                                    <IoIosArrowUp className={style.icon} /> :
+                                                    <IoIosArrowDown className={style.icon} />
                                             }
                                         </div>
                                     </div>
 
-                                   {
-                                    hiddenTag === "messages" && (
-                                         <div className={style.hidden_content}>
-                                        <p>These are notifications for comments on your posts and replies to your comments.</p>
-                                        <span>Where you receive these notifications</span>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiOutlinePushpin className={style.icon} />
-                                                <small>Push</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                    {
+                                        hiddenTag === "messages" && (
+                                            <div className={style.hidden_content}>
+                                                <p>These are notifications for comments on your posts and replies to your comments.</p>
+                                                <span>Where you receive these notifications</span>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiOutlinePushpin className={style.icon} />
+                                                        <small>Push</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <AiTwotoneMail className={style.icon} />
-                                                <small>Email</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <AiTwotoneMail className={style.icon} />
+                                                        <small>Email</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
-                                            </div>
-                                        </div>
-                                        <div className={style.hidden_btn}>
-                                            <div className={style.btn_text}>
-                                                <FaRegMessage className={style.icon} />
-                                                <small>SMS</small>
-                                            </div>
-                                            <div className={style.btn_btn}>
+                                                    </div>
+                                                </div>
+                                                <div className={style.hidden_btn}>
+                                                    <div className={style.btn_text}>
+                                                        <FaRegMessage className={style.icon} />
+                                                        <small>SMS</small>
+                                                    </div>
+                                                    <div className={style.btn_btn}>
 
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    )
-                                   }
+                                        )
+                                    }
 
                                 </div>
                             </div>
