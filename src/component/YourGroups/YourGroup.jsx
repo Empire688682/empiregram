@@ -23,7 +23,7 @@ const YourGroups = () => {
                                 </div>
                             </div>
                             <div className={style.pending_group_footer}>
-                                <button>Update responses</button>
+                                <button>View group</button>
                                 <BsThreeDots className={style.icon} />
                             </div>
                         </div>
@@ -36,7 +36,7 @@ const YourGroups = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magni sunt similique unde quibusdam cupiditate modi autem ut architecto! Sapiente, repudiandae facilis dicta neque laborum ipsam quisquam vitae atque natus.</p>
                 <div className={style.group_you_are_cart_con}>
                 {
-                    Array.from({length: 2}).map((_, id) => (
+                    Array.from({length: 10}).map((_, id) => (
                         <div className={style.group_you_are_cart} key={id}>
                             <div className={style.group_you_are_header}>
                                 <div className={style.group_you_are_img_con}>

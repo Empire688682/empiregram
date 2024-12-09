@@ -41,7 +41,7 @@ const GroupLeftBar = ({setShowGroups}) => {
       <div className={style.group_you_joined} >
         <div className={style.group_you_joined_header}>
           <h4>Groups you have joined</h4>
-          <span>See all</span>
+          <span onClick={()=>setShowGroups(true)}>See all</span>
         </div>
         {
           allVideoPost.map((group, id) => (
