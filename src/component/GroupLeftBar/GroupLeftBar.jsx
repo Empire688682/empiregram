@@ -20,10 +20,10 @@ const GroupLeftBar = () => {
         </label>
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
-      <button className={style.user_group_btn}> <MdGroups2/> Your groups</button>
+      <button className={style.user_group_btn}> <MdGroups2 /> Your groups</button>
       <button className={style.user_group_btn}> <FaCirclePlus />Create new group</button>
       <div className={style.group_you_manage}>
-      <div className={style.group_you_manage_header}>
+        <div className={style.group_you_manage_header}>
           <h4>Groups you manage</h4>
           <span>See all</span>
         </div>
@@ -37,25 +37,26 @@ const GroupLeftBar = () => {
           </div>
         </div>
       </div>
-     {
-      allVideoPost.map((group, id)=>(
-        <div className={style.group_you_joined} key={id}>
+
+      <div className={style.group_you_joined} >
         <div className={style.group_you_joined_header}>
           <h4>Groups you have joined</h4>
           <span>See all</span>
         </div>
-        <div className={style.group_you_joined_cart}>
-          <div className={style.group_you_joined_img}>
-            <Image src={group.user_Img} alt='IMG' fill />
-          </div>
-          <div className={style.group_you_joined_text_all}>
-            <p>{group.user_Name}</p>
-            <span>Last active {group.date}</span>
-          </div>
-        </div>
+        {
+          allVideoPost.map((group, id) => (
+            <div className={style.group_you_joined_cart} key={id}>
+              <div className={style.group_you_joined_img_con}>
+                <Image className={style.group_you_joined_img} src={group.user_Img} alt='IMG' fill />
+              </div>
+              <div className={style.group_you_joined_text_all}>
+                <p>{group.user_Name}</p>
+                <span>Last active {group.date}</span>
+              </div>
+            </div>
+          ))
+        }
       </div>
-      ))
-     }
     </div>
   )
 }

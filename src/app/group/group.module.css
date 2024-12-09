@@ -13,13 +13,8 @@
     flex-basis: 30%;
     min-width: 300px;
     width: 100%;
-    padding-top: 90px;
 }
 .group_Com{
     flex-basis: 70%;
-    padding: 100px 50px 0 50px;
     min-width: 300px;
-    height: 100vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
 }
