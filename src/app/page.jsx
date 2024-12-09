@@ -12,14 +12,7 @@ const page = () => {
         <div className={style.page}>
             <Navbar/>
             <div className={style.col_Con}>
-                <div className={style.left_col}>
-                    <div className={style.img_Con}>
-                    <Image src="/empiregram-logo.webp" alt="Img" fill />
-                    </div>
-                </div>
-                <div className={style.right_col}>
                     <Signup/>
-                </div>
             </div>
         </div>
     )

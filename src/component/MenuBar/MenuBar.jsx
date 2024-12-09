@@ -4,7 +4,7 @@ import style from './MenuBar.module.css';
 import Image from 'next/image';
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineVideoLibrary } from "react-icons/md";
-import { FaUserGroup } from "react-icons/fa6";
+import { MdGroups2 } from "react-icons/md";
 import { IoNotifications } from "react-icons/io5";
 import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
@@ -22,8 +22,8 @@ const MenuBar = () => {
                 <Link href='/video' style={{ textDecoration: 'none' }}>
                     <MdOutlineVideoLibrary className={style.icon} />
                 </Link>
-                <Link href='/chat' style={{ textDecoration: 'none' }}>
-                    <FaUserGroup className={style.icon} />
+                <Link href='/group' style={{ textDecoration: 'none' }}>
+                    <MdGroups2 className={style.icon} />
                 </Link>
             </div>
             <div className={style.user_menus}>
