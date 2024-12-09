@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { MdGroups2 } from "react-icons/md";
 import { allVideoPost } from '../data';
 
-const GroupLeftBar = () => {
+const GroupLeftBar = ({setShowGroups}) => {
   return (
     <div className={style.group_left_bar}>
       <div className={style.group_left_bar_header}>
@@ -20,7 +20,7 @@ const GroupLeftBar = () => {
         </label>
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
-      <button className={style.user_group_btn}> <MdGroups2 /> Your groups</button>
+      <button className={style.user_group_btn} onClick={()=>setShowGroups(true)}> <MdGroups2 /> Your groups</button>
       <button className={style.user_group_btn}> <FaCirclePlus />Create new group</button>
       <div className={style.group_you_manage}>
         <div className={style.group_you_manage_header}>

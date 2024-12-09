@@ -9,6 +9,7 @@ import { IoNotifications } from "react-icons/io5";
 import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
 import RightBar from '../RightBar/RightBar';
+import { IoIosArrowDown } from "react-icons/io";
 
 const MenuBar = () => {
     const [showProfile, setShowProfile] = useState(false)
@@ -30,6 +31,7 @@ const MenuBar = () => {
                 <Image className={style.user_img} onClick={()=> setShowProfile(!showProfile)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
                 <IoNotifications className={style.icon} />
                 <FaFacebookMessenger className={style.icon} />
+                <IoIosArrowDown className={style.icon_arrow_down} onClick={()=> setShowProfile(!showProfile)} />
             </div>
             {
                 showProfile && (
