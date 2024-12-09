@@ -10,6 +10,19 @@
 .group_left_bar_header{
     display: flex;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.group_left_bar_header h3{
+    font-size: 40px;
+}
+.group_left_bar_header_icons{
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 .group_you_manage, .group_you_joined{
     border-bottom: 1px solid var(--background-color);
@@ -28,4 +41,20 @@
 }
 .group_you_manage_text_all, .group_you_joined_text_all{
     flex: 2;
+}
+.search_bar{
+    width: 100%;
+    padding: 5px;
+    background-color: var(--background-color);
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search_bar input{
+    background-color: transparent;
+    flex: 2;
+    outline: none;
+    border: none;
+    font-size: 20px;
 }

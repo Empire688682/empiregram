@@ -11,7 +11,7 @@ const GroupLeftBar = () => {
     <div className={style.group_left_bar}>
       <div className={style.group_left_bar_header}>
         <h3>Group</h3>
-        <IoMdSettings className={style.icons} />
+        <IoMdSettings className={style.group_left_bar_header_icons} />
       </div>
       <div className={style.search_bar}>
         <label htmlFor="search">
