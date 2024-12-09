@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import style from './group.module.css';
 import GroupLeftBar from '@/component/GroupLeftBar/GroupLeftBar';
@@ -7,7 +7,7 @@ import MenuBar from '@/component/MenuBar/MenuBar';
 
 
 const Page = () => {
-    const [showGroups, setShowGroups] = useState(false)
+    const [showGroups, setShowGroups] = useState(true);
     return (
         <div className={style.group}>
             <MenuBar/>
