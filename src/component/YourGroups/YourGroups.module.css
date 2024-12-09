@@ -20,18 +20,22 @@
     flex-direction: column;
     gap: 10px;
 }
-.pending_group_cart_con{
+.pending_group_cart_con, .group_you_are_cart_con{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .pending_group_cart, .group_you_are_cart{
     flex-basis: 45%;
     width: 100%;
-    min-width: 300%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: var(--background-color);
+    border-radius: 9px;
+    padding: 20px;
 }
 .pending_group_header, .group_you_are_header{
     display: flex;
@@ -44,4 +48,23 @@
     height: 50px;
     border-radius: 9px;
     overflow: hidden;
+}
+.pending_group_footer, .group_you_are_footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pending_group_footer button, .group_you_are_footer button{
+    display: flex;
+    flex: 2;
+    padding: 20px 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.pending_group_footer .icon, .group_you_are_footer .icon{
+    cursor: pointer;
+    padding: 20px;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
 }
