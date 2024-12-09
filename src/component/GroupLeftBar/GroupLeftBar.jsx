@@ -5,6 +5,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import { FaCirclePlus } from "react-icons/fa6";
 import Image from 'next/image';
 import { MdGroups2 } from "react-icons/md";
+import { allVideoPost } from '../data';
 
 const GroupLeftBar = () => {
   return (
@@ -20,7 +21,7 @@ const GroupLeftBar = () => {
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
       <button className={style.user_group_btn}> <MdGroups2/> Your groups</button>
-      <button> <FaCirclePlus />Create new group</button>
+      <button className={style.user_group_btn}> <FaCirclePlus />Create new group</button>
       <div className={style.group_you_manage}>
       <div className={style.group_you_manage_header}>
           <h4>Groups you manage</h4>
@@ -36,21 +37,25 @@ const GroupLeftBar = () => {
           </div>
         </div>
       </div>
-      <div className={style.group_you_joined}>
+     {
+      allVideoPost.map((group, id)=>(
+        <div className={style.group_you_joined} key={id}>
         <div className={style.group_you_joined_header}>
           <h4>Groups you have joined</h4>
           <span>See all</span>
         </div>
         <div className={style.group_you_joined_cart}>
           <div className={style.group_you_joined_img}>
-            <Image src='/empiregram-hero-bg.webp' alt='IMG' fill />
+            <Image src={group.user_Img} alt='IMG' fill />
           </div>
           <div className={style.group_you_joined_text_all}>
-            <p>Amazon kindle group</p>
-            <span>Last active 2 years ago</span>
+            <p>{group.user_Name}</p>
+            <span>Last active {group.date}</span>
           </div>
         </div>
       </div>
+      ))
+     }
     </div>
   )
 }
