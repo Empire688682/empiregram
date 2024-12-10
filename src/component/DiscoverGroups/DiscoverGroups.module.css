@@ -52,8 +52,7 @@
     box-shadow: 0 0 10px var(--secondary-background-color);
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 25px;
-    padding: 3px;
+    font-size: 35px;
     border-radius: 50%;
     cursor: pointer;
 }
