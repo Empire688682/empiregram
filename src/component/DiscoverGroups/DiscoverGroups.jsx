@@ -6,8 +6,8 @@ import { BsThreeDots } from "react-icons/bs";
 
 const DiscoverGroups = () => {
     return (
-        <div className={style.discover_groups}>
-            <div>
+        <div className={style.discover_groups_container}>
+            <div className={style.discover_groups}>
             <div className={style.discover_groups_header}>
                 <div>
                 <h2>Popular near you</h2>
@@ -16,8 +16,8 @@ const DiscoverGroups = () => {
                 <span>See all</span>
             </div>
             <div className={style.discover_groups_contents}>
-                <div className={style.discover_groups_contents_img}>
-
+                <div className={style.discover_groups_contents_img_con}>
+                    <Image className={style.discover_groups_contents_img} src='/empiregram-hero-bg.webp' alt="IMG" fill />
                 </div>
                 <div className={style.discover_groups_contents_text}>
                     <h3>BYC (BackYardChickens)</h3>

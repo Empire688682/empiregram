@@ -1,0 +1,20 @@
+.discover_groups_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.discover_groups{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 400px;
+    box-shadow: 10px 10px 5px 5px var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+.discover_groups_contents_img_con{
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+}

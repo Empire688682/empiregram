@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './GroupCom.module.css';
 import YourGroups from '../YourGroups/YourGroup';
+import DiscoverGroups from '../DiscoverGroups/DiscoverGroups';
 
 const GroupCom = ({showGroups}) => {
   return (
@@ -8,6 +9,11 @@ const GroupCom = ({showGroups}) => {
       {
         showGroups === "groups" && (
         <YourGroups/>
+        )
+      }
+      {
+        showGroups === "discover" && (
+          <DiscoverGroups/>
         )
       }
     </div>
