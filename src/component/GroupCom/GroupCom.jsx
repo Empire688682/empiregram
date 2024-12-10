@@ -6,7 +6,7 @@ const GroupCom = ({showGroups}) => {
   return (
     <div className={style.group_com}>
       {
-        showGroups && (
+        showGroups === "groups" && (
         <YourGroups/>
         )
       }

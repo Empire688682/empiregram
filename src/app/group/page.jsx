@@ -7,7 +7,7 @@ import MenuBar from '@/component/MenuBar/MenuBar';
 
 
 const Page = () => {
-    const [showGroups, setShowGroups] = useState(false);
+    const [showGroups, setShowGroups] = useState("discover");
     return (
         <div className={style.group}>
             <MenuBar/>

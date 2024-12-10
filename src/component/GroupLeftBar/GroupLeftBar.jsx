@@ -6,6 +6,7 @@ import { FaCirclePlus } from "react-icons/fa6";
 import Image from 'next/image';
 import { MdGroups2 } from "react-icons/md";
 import { allVideoPost } from '../data';
+import { FaCcDiscover } from "react-icons/fa";
 
 const GroupLeftBar = ({setShowGroups}) => {
   return (
@@ -20,8 +21,9 @@ const GroupLeftBar = ({setShowGroups}) => {
         </label>
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
-      <button className={style.user_group_btn} onClick={()=>setShowGroups(true)}> <MdGroups2 /> Your groups</button>
+      <button className={style.user_group_btn} onClick={()=>setShowGroups("discover")}> <MdGroups2 /> Your groups</button>
       <button className={style.user_group_btn}> <FaCirclePlus />Create new group</button>
+      <button className={style.user_group_btn}> <FaCcDiscover />Discover</button>
       <div className={style.group_you_manage}>
         <div className={style.group_you_manage_header}>
           <h4>Groups you manage</h4>
