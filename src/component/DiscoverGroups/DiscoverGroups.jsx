@@ -23,8 +23,10 @@ const DiscoverGroups = () => {
                     <h3>BYC (BackYardChickens)</h3>
                     <span>1.2M members . 10+ posts a day</span>
                 </div>
+                <div className={style.discover_groups_contents_btn}>
+                <button>Join group</button>
+                </div>
             </div>
-            <button>Join group</button>
             </div>
         </div>
     );

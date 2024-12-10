@@ -4,17 +4,43 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-.discover_groups{
+.discover_groups_header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: yellow;
+    margin-bottom: 25px;
+}
+.discover_groups_contents button{
+    cursor: pointer;
+    color: var(--accent-color);
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.discover_groups_contents{
     display: flex;
     flex-direction: column;
     gap: 20px;
     min-width: 400px;
-    box-shadow: 10px 10px 5px 5px var(--background-color);
-    padding: 20px;
+    box-shadow: 0 0 10px var(--background-color);
     border-radius: 5px;
 }
 .discover_groups_contents_img_con{
     position: relative;
     width: 100%;
     min-height: 200px;
+    border-radius: 5px 0 5px 0;
+}
+.discover_groups_contents_text, .discover_groups_contents_btn{
+    padding: 0 20px 0 20px;
+}
+.discover_groups_contents button{
+    font-size: 20px;
+    padding: 0 10px ;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--accent-color);
+    width: 100%;
 }
