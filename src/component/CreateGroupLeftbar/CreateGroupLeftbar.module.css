@@ -1,0 +1,53 @@
+.create_group_leftbar{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--secondary-background-color);
+    border-radius: 9px;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 100px 20px 20px 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.create_group_leftbar_header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header_links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header_links p{
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+.admin{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.admin span{
+    font-size: 14px;
+}
+.group_details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.group_details p{
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.group_details input{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    padding: 5px;
+}
