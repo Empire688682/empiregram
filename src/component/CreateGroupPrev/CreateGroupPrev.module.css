@@ -1,0 +1,19 @@
+.create_group_prev{
+    width: 100%;
+    padding: 100px 20px 50px 20px;
+    box-shadow: 0 0 10px var(--text-color);
+    border-radius: 9px;
+}
+.group_prev_img_con{
+    width: 100%;
+    position: relative;
+    min-height: 250px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.group_prev_img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

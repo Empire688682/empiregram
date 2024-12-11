@@ -1,7 +1,9 @@
+'use client'
 import React from 'react';
 import style from './create.module.css'
 import CreateGroupLeftbar from '@/component/CreateGroupLeftbar/CreateGroupLeftbar';
 import MenuBar from '@/component/MenuBar/MenuBar';
+import CreateGroupPrev from '@/component/CreateGroupPrev/CreateGroupPrev';
 
 const Page = () => {
   return (
@@ -11,7 +13,7 @@ const Page = () => {
         <CreateGroupLeftbar />
       </div>
       <div className={style.create_Container}>
-        
+        <CreateGroupPrev />
       </div>
     </div>
   )

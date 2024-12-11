@@ -41,36 +41,6 @@ const CreateGroupLeftbar = () => {
                         <option value="private">Private</option>
                     </select>
                 </div>
-                <div>
-                    <p>Group category</p>
-                    <select name="group_category" id="group_category" required>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Sports">Sports</option>
-                        <option value="Music">Music</option>
-                        <option value="Science">Science</option>
-                        <option value="Politics">Politics</option>
-                        <option value="Business">Business</option>
-                        <option value="Technology">Technology</option>
-                        <option value="Health">Health</option>
-                        <option value="Travel">Travel</option>
-                        <option value="Food">Food</option>
-                        <option value="Fashion">Fashion</option>
-                        <option value="Gaming">Gaming</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div>
-                    <p>Group members</p>
-                    <input type="text" placeholder='Group members' name='group_members' required />
-                </div>
-                <div>
-                    <p>Group tags</p>
-                    <input type="text" placeholder='Group tags' name='group_tags' required />
-                </div>
-                <div>
-                    <p>Group location</p>
-                    <input type="text" placeholder='Group location' name='group_location' required />
-                </div>
                 <button>Create</button>
             </div>
         </div>
