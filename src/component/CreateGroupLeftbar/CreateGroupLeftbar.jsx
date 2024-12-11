@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './CreateGroupLeftbar.module.css';
 import Image from 'next/image';
 
@@ -7,6 +7,7 @@ const CreateGroupLeftbar = ({setGroupData, groupData}) => {
         const {name, value} = e.target;
         setGroupData((prev)=> ({...prev, [name]:value}))
     }
+    
     return (
         <div className={style.create_group_leftbar}>
             <div className={style.create_group_leftbar_header}>
