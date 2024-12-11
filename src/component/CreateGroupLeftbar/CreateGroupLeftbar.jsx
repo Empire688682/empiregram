@@ -7,7 +7,7 @@ const CreateGroupLeftbar = ({setGroupData, groupData}) => {
         const {name, value} = e.target;
         setGroupData((prev)=> ({...prev, [name]:value}))
     }
-    
+
     return (
         <div className={style.create_group_leftbar}>
             <div className={style.create_group_leftbar_header}>
@@ -42,8 +42,8 @@ const CreateGroupLeftbar = ({setGroupData, groupData}) => {
                 <div>
                     <p>Group privacy</p>
                     <select onChange={handleOnchange} value={groupData.group_privacy} name="group_privacy" id="group_privacy" required>
-                        <option value="public">Public</option>
-                        <option value="private">Private</option>
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
                     </select>
                 </div>
                 <button>Create</button>
