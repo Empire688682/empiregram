@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import style from './create.module.css'
+import CreateGroupLeftbar from '@/component/CreateGroupLeftbar/CreateGroupLeftbar';
 
 const Page = () => {
   return (
-    <div>
-      
+    <div className={style.create}>
+      <CreateGroupLeftbar/>
     </div>
   )
 }

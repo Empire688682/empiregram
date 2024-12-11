@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import style from './GroupLeftBar.module.css';
 import { IoMdSettings } from "react-icons/io";
@@ -7,8 +8,13 @@ import Image from 'next/image';
 import { MdGroups2 } from "react-icons/md";
 import { allVideoPost } from '../data';
 import { FaCcDiscover } from "react-icons/fa";
+import { useRouter } from 'next/router';
 
 const GroupLeftBar = ({setShowGroups}) => {
+const router = useRouter();
+const handleRouter = (link) =>{
+  router.push(`/${link}`)
+}
   return (
     <div className={style.group_left_bar}>
       <div className={style.group_left_bar_header}>
@@ -22,7 +28,7 @@ const GroupLeftBar = ({setShowGroups}) => {
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
       <button className={style.user_group_btn} onClick={()=>setShowGroups("group")}> <MdGroups2 /> Your groups</button>
-      <button className={style.user_group_btn}> <FaCirclePlus />Create new group</button>
+      <button className={style.user_group_btn} onClick={()=>handleRouter(create)}> <FaCirclePlus />Create new group</button>
       <button className={style.user_group_btn} onClick={()=>setShowGroups("discover")}> <FaCcDiscover />Discover</button>
       <div className={style.group_you_manage}>
         <div className={style.group_you_manage_header}>
