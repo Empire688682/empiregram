@@ -2,7 +2,11 @@ import React from 'react';
 import style from './CreateGroupLeftbar.module.css';
 import Image from 'next/image';
 
-const CreateGroupLeftbar = () => {
+const CreateGroupLeftbar = ({setGroupData, groupData}) => {
+    const handleOnchange = (e)=>{
+        const {name, value} = e.target;
+        setGroupData((prev)=> ({...prev, [name]:value}))
+    }
     return (
         <div className={style.create_group_leftbar}>
             <div className={style.create_group_leftbar_header}>
@@ -24,19 +28,19 @@ const CreateGroupLeftbar = () => {
                 <h3>Group details</h3>
                 <div>
                     <p>Group name</p>
-                    <input type="text" placeholder='Group name' name='group_name' required />
+                    <input onChange={handleOnchange} type="text" value={groupData.group_name} placeholder='Group name' name='group_name' required />
                 </div>
                 <div>
                     <p>Group description</p>
-                    <input type="text" placeholder='Group description' name='group_description' required />
+                    <input onChange={handleOnchange} type="text" value={groupData.group_description} placeholder='Group description' name='group_description' required />
                 </div>
                 <div>
                     <p>Group image</p>
-                    <input type="file" placeholder='Group image' name='group_image' required />
+                    <input onChange={handleOnchange} type="file" placeholder='Group image' name='group_img' required />
                 </div>
                 <div>
                     <p>Group privacy</p>
-                    <select name="group_privacy" id="group_privacy" required>
+                    <select onChange={handleOnchange} value={groupData.group_privacy} name="group_privacy" id="group_privacy" required>
                         <option value="public">Public</option>
                         <option value="private">Private</option>
                     </select>
