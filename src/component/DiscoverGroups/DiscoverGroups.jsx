@@ -1,9 +1,13 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import style from './DiscoverGroups.module.css';
 import Image from 'next/image';
 import { LiaTimesCircleSolid } from "react-icons/lia";
 
 const DiscoverGroups = () => {
+    const [discoverGroups, setDiscoverGroups] = useState([]);
+    const [friendGroups, setFriendGroups] = useState([]);
+    const [sugestedGroups, setSugestedGroups] = useState([]);
     return (
         <div className={style.discover_groups_container}>
             {/*Discover GROUPS*/}

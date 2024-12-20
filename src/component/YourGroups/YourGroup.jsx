@@ -1,9 +1,12 @@
+'use client'
 import React from "react";
 import style from './YourGroups.module.css';
 import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const YourGroups = () => {
+    const router = useRouter()
     return (
         <div className={style.your_groups}>
             <div className={style.pending_group_con}>
@@ -36,8 +39,8 @@ const YourGroups = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magni sunt similique unde quibusdam cupiditate modi autem ut architecto! Sapiente, repudiandae facilis dicta neque laborum ipsam quisquam vitae atque natus.</p>
                 <div className={style.group_you_are_cart_con}>
                 {
-                    Array.from({length: 10}).map((_, id) => (
-                        <div className={style.group_you_are_cart} key={id}>
+                    Array.from({length: 10}).map((group, id) => (
+                        <div className={style.group_you_are_cart} key={id} onClick={()=>router.push(`/group/groupId`)}>
                             <div className={style.group_you_are_header}>
                                 <div className={style.group_you_are_img_con}>
                                     <Image className={style.group_you_are_img} src='/img1.jpg' alt='IMG' fill />
