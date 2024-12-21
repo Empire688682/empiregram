@@ -35,8 +35,6 @@ const GroupMainCart = () => {
               <li className={style.btn}><BsThreeDots className={style.icon} /></li>
               <li className={style.btn}><IoMdArrowDropdown className={style.icon} /></li>
             </ul>
-          </div>
-          <div className={style.groupMainCart}>
             <ul className={style.inviteShareMenus}>
               <li className={style.menu}>Discussion </li>
               <li className={style.menu}>People</li>
