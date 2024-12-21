@@ -26,6 +26,9 @@
     align-items: center;
     gap: 3px;
 }
+.headerImgName .icon{
+    font-size: 15px;
+}
 .headerImg{
     border-radius: 5px;
     margin-right: 10px;
@@ -81,7 +84,7 @@
 .users_list{
     margin-top: 140px;
     padding: 60px 10px 40px 10px;
-    height: 80vh;
+    height: 75vh;
     scrollbar-width: none;
     overflow-y: scroll;
     width: 100%;

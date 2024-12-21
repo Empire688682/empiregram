@@ -4,6 +4,7 @@ import style from './cart.module.css';
 import MenuBar from '@/component/MenuBar/MenuBar';
 import { useGlobalContext } from '@/component/Context';
 import GroupLeftbarCart from '@/component/GroupLeftbarCart/GroupLeftCart';
+import GroupMainCart from '@/component/GroupMainCart/GroupMainCart';
 
 const Page = () => {
     const {friends, loading} = useGlobalContext();
@@ -15,7 +16,7 @@ const Page = () => {
                 <GroupLeftbarCart/>
                </div>
                <div className={style.groupMainCart}>
-
+                <GroupMainCart/>
                </div>
             </div>
         </div>

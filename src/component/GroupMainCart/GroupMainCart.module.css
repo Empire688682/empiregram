@@ -1,0 +1,64 @@
+.groupMainCartContainer{
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px 40px 20px;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.hero{
+    margin-bottom: 20px;
+}
+.heroImgCon{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+.heroImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.groupAdmin{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 0 0 5px 5px;
+}
+.groupAdmin p{
+   color: white;
+   font-weight: bolder;
+   cursor: pointer;
+}
+.inviteShareCon{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.groupName{
+    min-width: 300px;
+    width: 100;
+}
+.inviteShareBtns{
+    min-width: 300px;
+    width: 100;
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--secondary-background-color);
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+}
+.inviteShareBtns .icon{
+   font-size: 25px;
+   color:  var(--text-color);
+}
