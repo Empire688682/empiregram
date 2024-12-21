@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import style from './GroupLeftCart.module.css';
+import style from "./GroupLeftCart.module.css"
 import { IoIosAddCircle } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
@@ -8,13 +8,13 @@ import { useGlobalContext } from '../Context';
 import Image from 'next/image';
 
 const GroupLeftbarCart = () => {
-  const {loading,friends} = useGlobalContext();
+  const { loading, friends } = useGlobalContext();
   return (
     <div className={style.groupLeftbarCartContainer}>
-         <div className={style.groupLeftbar}>
+      <div className={style.groupLeftbarCart}>
         <div className={style.header_fixed}>
           <div className={style.header}>
-            <h2>Gfroup name here</h2>
+            <h2>Group name here</h2>
             <IoIosAddCircle className={style.icon} />
             <BsThreeDotsVertical className={style.icon} />
           </div>
@@ -29,28 +29,28 @@ const GroupLeftbarCart = () => {
           loading ? <div className={style.loading}>
             <h2>Loading...</h2>
           </div>
-          :
-          <div className={style.users_list}>
-        {
-          friends.map((friend) => (
-            <div className={style.users} key={friend.id}>
-              <div className={style.left_side}>
-                <div className={style.img_Con}>
-                  <Image src={friend.user_Img} fill alt='User' sizes='100%' />
-                </div>
-                <div className={style.name_msg}>
-                  <p>{friend.user_Name}</p>
-                  <span>{friend.currentMessage}</span>
-                </div>
-              </div>
-              <div className={style.right_side}>
-                <p>Today</p>
-                <span>1</span>
-              </div>
+            :
+            <div className={style.users_list}>
+              {
+                friends.map((friend) => (
+                  <div className={style.users} key={friend.id}>
+                    <div className={style.left_side}>
+                      <div className={style.img_Con}>
+                        <Image src={friend.user_Img} fill alt='User' sizes='100%' />
+                      </div>
+                      <div className={style.name_msg}>
+                        <p>{friend.user_Name}</p>
+                        <span>{friend.currentMessage}</span>
+                      </div>
+                    </div>
+                    <div className={style.right_side}>
+                      <p>Today</p>
+                      <span>1</span>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
-          ))
-        }
-        </div>
         }
       </div>
     </div>
