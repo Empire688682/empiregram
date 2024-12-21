@@ -1,12 +1,9 @@
 "use client"
 import React from 'react';
 import style from './cart.module.css';
-import { IoIosAddCircle } from "react-icons/io";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { IoSearchOutline } from "react-icons/io5";
-import Image from 'next/image';
 import MenuBar from '@/component/MenuBar/MenuBar';
 import { useGlobalContext } from '@/component/Context';
+import GroupLeftbarCart from '@/component/GroupLeftbarCart/GroupLeftCart';
 
 const Page = () => {
     const {friends, loading} = useGlobalContext();
@@ -15,12 +12,9 @@ const Page = () => {
             <MenuBar />
             <div className={style.groupCart}>
                <div className={style.groupLeftCart}>
-
+                <GroupLeftbarCart/>
                </div>
-               <div className={style.groupCentralCart}>
-
-               </div>
-               <div className={style.groupRightCart}>
+               <div className={style.groupMainCart}>
 
                </div>
             </div>
