@@ -6,6 +6,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { useGlobalContext } from '../Context';
 import Image from 'next/image';
+import { MdOutlinePublic } from "react-icons/md";
 
 const GroupLeftbarCart = () => {
   const { loading, friends } = useGlobalContext();
@@ -14,15 +15,14 @@ const GroupLeftbarCart = () => {
       <div className={style.groupLeftbarCart}>
         <div className={style.header_fixed}>
           <div className={style.header}>
-            <h2>Group name here</h2>
-            <IoIosAddCircle className={style.icon} />
+            <div className={style.headerImgName}>
+              <Image className={style.headerImg} src="/empiregram-hero-bg.webp" sizes="100%" alt="Img" width={40} height={40} />
+              <div>
+                <p>Group name here</p>
+                <span><MdOutlinePublic className={style.icon}/> Public group .40k members</span>
+              </div>
+            </div>
             <BsThreeDotsVertical className={style.icon} />
-          </div>
-          <div className={style.search_bar}>
-            <label htmlFor="search">
-              <IoSearchOutline className={style.search_bar_icon} />
-            </label>
-            <input type="text" id='search' placeholder='Search' name='search' required />
           </div>
         </div>
         {
@@ -38,14 +38,10 @@ const GroupLeftbarCart = () => {
                       <div className={style.img_Con}>
                         <Image src={friend.user_Img} fill alt='User' sizes='100%' />
                       </div>
-                      <div className={style.name_msg}>
+                      <div className={style.addUser}>
                         <p>{friend.user_Name}</p>
-                        <span>{friend.currentMessage}</span>
+                        <button>Add user</button>
                       </div>
-                    </div>
-                    <div className={style.right_side}>
-                      <p>Today</p>
-                      <span>1</span>
                     </div>
                   </div>
                 ))
