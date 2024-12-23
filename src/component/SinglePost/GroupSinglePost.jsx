@@ -50,9 +50,11 @@ const GroupSinglePost = () => {
                         </div>
                         <p className={style.post_text}>{post.text}</p>
                         <div className={style.post_images}>
-                            <div className={style.img_big_Con}>
-                                <Image className={style.post_img} src={post.big_Img} fill alt='Img' sizes='100%' />
-                            </div>
+                            {
+                                post.big_Img && <div className={style.img_big_Con}>
+                                    <Image className={style.post_img} src={post.big_Img} fill alt='Img' sizes='100%' />
+                                </div>
+                            }
                             <div className={style.small_img_Cons}>
                                 {
                                     post.small_Img1 && <div className={style.img_small_Con}>

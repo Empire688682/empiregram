@@ -7,11 +7,6 @@ import StatusBar from '../StatusBar/StatusBar';
 import SinglePost from '../SinglePost/SinglePost';
 import PeopleYMK from '../PeopleYMK/PeopleYMK';
 import GroupYML from '../GroupYML/GroupYML';
-import { IoMdHome } from "react-icons/io";
-import { MdOutlineVideoLibrary } from "react-icons/md";
-import { FaUserGroup } from "react-icons/fa6";
-import { MdNotifications   } from "react-icons/md";
-import Link from 'next/link'
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
