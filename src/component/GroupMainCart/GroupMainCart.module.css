@@ -45,6 +45,12 @@
     display: flex;
     gap: 10px;
 }
+.parentBtn{
+    position: relative;
+}
+.childrenBtn{
+    position: absolute;
+}
 .btn{
     list-style: none;
     cursor: pointer;

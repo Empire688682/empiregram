@@ -8,6 +8,9 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { IoIosShareAlt } from "react-icons/io";
+import { IoIosNotifications } from "react-icons/io";
+import { RiUserUnfollowLine } from "react-icons/ri";
+import { AiOutlineLogout } from "react-icons/ai";
 
 const GroupMainCart = () => {
   return (
@@ -29,7 +32,14 @@ const GroupMainCart = () => {
             </div>
             <ul className={style.inviteShareBtns}>
               <li className={style.btn}><FaPlus className={style.icon} /> <span>Invite</span> </li>
+              <div className={style.parentBtn}>
               <li className={style.btn}><IoIosShareAlt className={style.icon} /> <span>Joined</span></li>
+              <div className={style.childrenBtn}>
+                <li><IoIosNotifications className={style.icon} /> <span>Manage notification</span></li>
+                <li><RiUserUnfollowLine className={style.icon} /> <span>Unfollow group</span></li>
+                <li><AiOutlineLogout className={style.icon} /> <span>Leave group</span></li>
+              </div>
+              </div>
               <li className={style.btn}><MdGroups2 className={style.icon} /> <span>Joined</span> <IoMdArrowDropdown className={style.icon} /></li>
               <li className={style.btn}><CiSearch className={style.icon} /></li>
               <li className={style.btn}><BsThreeDots className={style.icon} /></li>
