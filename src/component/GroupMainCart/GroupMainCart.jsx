@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./GroupMainCart.module.css";
 import Image from "next/image";
 import { MdOutlinePublic } from "react-icons/md";
@@ -13,6 +13,7 @@ import { RiUserUnfollowLine } from "react-icons/ri";
 import { AiOutlineLogout } from "react-icons/ai";
 
 const GroupMainCart = () => {
+  const {showCenBtn, setChldrenBtn} = useState(false); 
   return (
     <div className={style.groupMainCartContainer}>
       <div className={style.groupMainCart}>
@@ -35,11 +36,9 @@ const GroupMainCart = () => {
               <li className={style.btn}><IoIosShareAlt className={style.icon} /> <span>Share</span></li>
               <div className={style.parentBtn}>
               <li className={style.btn}><MdGroups2 className={style.icon} /> <span>Joined</span> <IoMdArrowDropdown className={style.icon} /></li>
-              <div className={style.childrenBtn}>
-                <li><IoIosNotifications className={style.icon} /> <span>Manage notification</span></li>
-                <li><RiUserUnfollowLine className={style.icon} /> <span>Unfollow group</span></li>
-                <li><AiOutlineLogout className={style.icon} /> <span>Leave group</span></li>
-              </div>
+              {
+                
+              }
               </div>
               <li className={style.btn}><CiSearch className={style.icon} /></li>
               <li className={style.btn}><BsThreeDots className={style.icon} /></li>
