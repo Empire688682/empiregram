@@ -78,6 +78,7 @@
     align-items: center;
     gap: 5px;
     border-radius: 5px;
+    height: 100%;
 }
 .inviteShareBtns .icon{
    font-size: 22px;
@@ -92,5 +93,7 @@
 .inviteShareMenus .menu{
     list-style: none;
     cursor: pointer;
+}
+.menu.active{
     border-bottom: 2px solid var(--accent-color);
 }

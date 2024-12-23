@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useState } from "react";
 import style from "./GroupMainCart.module.css";
 import Image from "next/image";
 import { MdOutlinePublic } from "react-icons/md";
@@ -11,9 +12,13 @@ import { IoIosShareAlt } from "react-icons/io";
 import { IoIosNotifications } from "react-icons/io";
 import { RiUserUnfollowLine } from "react-icons/ri";
 import { AiOutlineLogout } from "react-icons/ai";
+import { IoMdArrowDropup } from "react-icons/io";
+import GroupPost from "../GroupPost/GroupPost";
+
 
 const GroupMainCart = () => {
-  const {showCenBtn, setChldrenBtn} = useState(false); 
+  const [showChildrenBtn, setShowChildrenBtn] = useState(false);
+  const [inviteShareMenus, setInviteShareMenus] = useState("discussion")
   return (
     <div className={style.groupMainCartContainer}>
       <div className={style.groupMainCart}>
@@ -35,9 +40,13 @@ const GroupMainCart = () => {
               <li className={style.btn}><FaPlus className={style.icon} /> <span>Invite</span> </li>
               <li className={style.btn}><IoIosShareAlt className={style.icon} /> <span>Share</span></li>
               <div className={style.parentBtn}>
-              <li className={style.btn}><MdGroups2 className={style.icon} /> <span>Joined</span> <IoMdArrowDropdown className={style.icon} /></li>
+              <li className={style.btn} onClick={()=>setShowChildrenBtn(!showChildrenBtn)}><MdGroups2 className={style.icon} /> <span>Joined</span>{showChildrenBtn? <IoMdArrowDropup className={style.icon}/> : <IoMdArrowDropdown className={style.icon} />}</li>
               {
-                
+               showChildrenBtn && <div className={style.childrenBtn}>
+                              <li className={style.btn}><IoIosNotifications className={style.icon} /> <span>Manage notificatiuon</span></li>
+                              <li className={style.btn}><RiUserUnfollowLine className={style.icon} /> <span>Unfollow group</span></li>
+                              <li className={style.btn}><AiOutlineLogout className={style.icon} /> <span>Leave group</span></li>
+               </div>
               }
               </div>
               <li className={style.btn}><CiSearch className={style.icon} /></li>
@@ -45,12 +54,15 @@ const GroupMainCart = () => {
               <li className={style.btn}><IoMdArrowDropdown className={style.icon} /></li>
             </div>
             <ul className={style.inviteShareMenus}>
-              <li className={style.menu}>Discussion </li>
-              <li className={style.menu}>People</li>
-              <li className={style.menu}>Events</li>
-              <li className={style.menu}>Media</li>
-              <li className={style.menu}>Files</li>
+              <li className={inviteShareMenus === "discussion" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("discussion")}>Discussion </li>
+              <li className={inviteShareMenus === "people" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("people")}>People</li>
+              <li className={inviteShareMenus === "event" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("event")}>Events</li>
+              <li className={inviteShareMenus === "media" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("media")}>Media</li>
+              <li className={inviteShareMenus === "file" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("file")}>Files</li>
             </ul>
+            {
+              inviteShareMenus === "discussion" && <GroupPost/>
+            }
           </div>
         </div>
       </div>
