@@ -50,6 +50,20 @@
 }
 .childrenBtn{
     position: absolute;
+    padding: 15px;
+    background-color: var(--secondary-background-color);
+    box-shadow: 0 0 10px var(--secondary-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+}
+.childrenBtn li{
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
 }
 .btn{
     list-style: none;
