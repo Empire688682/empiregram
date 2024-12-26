@@ -14,11 +14,12 @@ import { RiUserUnfollowLine } from "react-icons/ri";
 import { AiOutlineLogout } from "react-icons/ai";
 import { IoMdArrowDropup } from "react-icons/io";
 import GroupPost from "../GroupPost/GroupPost";
+import GroupEvent from "../GroupEvent/GroupEvent";
 
 
 const GroupMainCart = () => {
   const [showChildrenBtn, setShowChildrenBtn] = useState(false);
-  const [inviteShareMenus, setInviteShareMenus] = useState("discussion")
+  const [inviteShareMenus, setInviteShareMenus] = useState("event")
   return (
     <div className={style.groupMainCartContainer}>
       <div className={style.groupMainCart}>
@@ -61,6 +62,9 @@ const GroupMainCart = () => {
             </ul>
             {
               inviteShareMenus === "discussion" && <GroupPost/>
+            }
+            {
+              inviteShareMenus === "event" && <GroupEvent/>
             }
           </div>
         </div>
