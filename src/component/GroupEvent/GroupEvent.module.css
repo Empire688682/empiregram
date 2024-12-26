@@ -26,6 +26,7 @@
     box-shadow: 0 0 10px var(--secondary-background-color);
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 .findEventBtn {
@@ -35,6 +36,7 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 .findEventBtn:hover {
@@ -44,6 +46,20 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.ifUpcomingEvent{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 0 10px var(--secondary-background-color);
+    border-radius: 5px;
+}
+
+.upcomingIcon{
+    font-size: 50px;
 }
 
 .imgCon {
