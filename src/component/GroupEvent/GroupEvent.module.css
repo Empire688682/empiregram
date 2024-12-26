@@ -109,9 +109,10 @@
     border: 1px solid var(--secondary-background-color);
 }
 .seeMoreBtn{
-    max-width: 50px;
+    max-width: 50%;
     margin: 0 auto;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
 }

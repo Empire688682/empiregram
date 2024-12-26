@@ -19,7 +19,7 @@ import GroupEvent from "../GroupEvent/GroupEvent";
 
 const GroupMainCart = () => {
   const [showChildrenBtn, setShowChildrenBtn] = useState(false);
-  const [inviteShareMenus, setInviteShareMenus] = useState("event")
+  const [inviteShareMenus, setInviteShareMenus] = useState("discussion")
   return (
     <div className={style.groupMainCartContainer}>
       <div className={style.groupMainCart}>
