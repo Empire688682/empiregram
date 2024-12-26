@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import style from './GroupEvent.module.css';
 import { MdOutlineEventBusy } from "react-icons/md";
 import Image from 'next/image';
-import { PiDotsThree } from "react-icons/pi";
+import { BsThreeDots } from "react-icons/bs";
 
 const GroupEvent = () => {
     const [upcomingEvent, setUpcomingEvent] = useState(false);
@@ -25,23 +25,27 @@ const GroupEvent = () => {
                     </div>
                 }
                 <div className={style.pastEvents}>
-                    <div className={style.pastEventCart}>
-                        <div className={style.imgCon}>
-                            <Image className={style.img} src="/empiregram-logo.webp" alt='IMG' fill />
-                        </div>
-                        <div className={style.pastEventText}>
-                            <span>Wed, Jul 17</span>
-                            <h3>PRECIOUS CARNIVAL</h3>
-                            <div className={style.pastEventAuthor}>
-                            <Image className={style.img} src="/profile_enrique.png" alt='IMG' width={30} height={30} />
-                            <p>Shared by Olamide Gudoo</p>
+                    {
+                        Array.from({ length: 10 }).fill("").map((_, id) => (
+                            <div className={style.pastEventCart} key={id}>
+                                <div className={style.imgCon}>
+                                    <Image className={style.img} src="/empiregram-logo.webp" alt='IMG' fill />
+                                </div>
+                                <div className={style.pastEventText}>
+                                    <span>Wed, Jul 17</span>
+                                    <h3>PRECIOUS CARNIVAL</h3>
+                                    <div className={style.pastEventAuthor}>
+                                        <Image className={style.img} src="/profile_enrique.png" alt='IMG' width={30} height={30} />
+                                        <p>Shared by Olamide Gudoo</p>
+                                    </div>
+                                    <BsThreeDots className={style.icon} />
+                                </div>
                             </div>
-                            <PiDotsThree className={style.icon} />
-                        </div>
-                    </div>
+                        ))
+                    }
                 </div>
                 {
-                    ifMore && <button>See more</button>
+                    ifMore && <button className={style.seeMoreBtn}>See more</button>
                 }
             </div>
         </div>

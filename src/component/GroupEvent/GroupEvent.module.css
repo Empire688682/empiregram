@@ -63,6 +63,7 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    flex-direction: column;
 }
 
 .upcomingIcon{
@@ -82,8 +83,10 @@
 
 .pastEventCart{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    border-bottom: 2px solid var(--background-color);
+    padding-bottom: 10px;
+    width: 100%;
 }
 
 .pastEventText{
@@ -100,15 +103,15 @@
 
 .icon{
     cursor: pointer;
-    font-size: 20px;
-    padding: 10px 15px;
+    font-size: 40px;
     border-radius: 5px;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s;
+    border: 1px solid var(--secondary-background-color);
 }
-.icon:hover{
+.seeMoreBtn{
+    max-width: 50px;
+    margin: 0 auto;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 20px;
-    padding: 10px 15px;
-    border: 1px solid var(--secondary-background-color);
-    border-radius: 5px;
 }
