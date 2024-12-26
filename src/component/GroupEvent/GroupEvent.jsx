@@ -25,6 +25,7 @@ const GroupEvent = () => {
                     </div>
                 }
                 <div className={style.pastEvents}>
+                    <h1>Past events</h1>
                     {
                         Array.from({ length: 10 }).fill("").map((_, id) => (
                             <div className={style.pastEventCart} key={id}>
