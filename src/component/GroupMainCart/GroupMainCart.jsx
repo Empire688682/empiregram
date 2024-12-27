@@ -15,6 +15,7 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { IoMdArrowDropup } from "react-icons/io";
 import GroupPost from "../GroupPost/GroupPost";
 import GroupEvent from "../GroupEvent/GroupEvent";
+import GroupMedia from "../GroupMedia/GroupMedia";
 
 
 const GroupMainCart = () => {
@@ -65,6 +66,9 @@ const GroupMainCart = () => {
             }
             {
               inviteShareMenus === "event" && <GroupEvent/>
+            }
+            {
+              inviteShareMenus === "media" && <GroupMedia/>
             }
           </div>
         </div>
