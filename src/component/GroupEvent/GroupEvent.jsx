@@ -21,7 +21,7 @@ const GroupEvent = () => {
                 {
                     !upcomingEvent && <div className={style.ifUpcomingEvent}>
                         <MdOutlineEventBusy className={style.upcomingIcon} />
-                        <p>No upcomning evets</p>
+                        <p>No upcomning evets for now</p>
                     </div>
                 }
                 <div className={style.pastEvents}>
