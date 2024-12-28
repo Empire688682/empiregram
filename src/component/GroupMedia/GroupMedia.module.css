@@ -36,3 +36,6 @@
     cursor: pointer;
     padding-bottom: 15px;
 }
+.displayMenu .active{
+    border-bottom: 2px solid var(--accent-color);
+}

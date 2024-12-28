@@ -16,9 +16,9 @@ const GroupMedia = () => {
           </ul>
         </div>
         <div className={style.displayMenu}>
-          <li onClick={()=> setDisplayMenu("photos")}>Photos</li>
-          <li  onClick={()=> setDisplayMenu("videos")}>Videos</li>
-          <li  onClick={()=> setDisplayMenu("albums")}>Albums</li>
+          <li className={displayMenu === "photos"? `${style.active}` : ""} onClick={()=> setDisplayMenu("photos")}>Photos</li>
+          <li className={displayMenu === "videos"? `${style.active}` :""}  onClick={()=> setDisplayMenu("videos")}>Videos</li>
+          <li className={displayMenu === "albums"? `${style.active}` :""} onClick={()=> setDisplayMenu("albums")}>Albums</li>
         </div>
         <div className={style.displayContent}>
           {
