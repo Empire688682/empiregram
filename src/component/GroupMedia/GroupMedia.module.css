@@ -24,6 +24,15 @@
 }
 .header ul li{
     list-style: none;
-    color: var(--anccent-color);
+    color: var(--accent-color);
     cursor: pointer;
+}
+.displayMenu{
+    display:flex;
+    gap:25px;
+}
+.displayMenu li{
+    list-style:none;
+    cursor: pointer;
+    padding-bottom: 15px;
 }
