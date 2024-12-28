@@ -1,4 +1,29 @@
 .groupMediaContainer{
     width: 100%;
     height: 100%;
+    padding:30px;
+    border: 1px solid var(--background-color);
+    border-radius: 9px;
+    box-shadow: 0 0 10px var(--background-color);
+}
+.groupMedia{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.header ul li{
+    list-style: none;
+    color: var(--anccent-color);
+    cursor: pointer;
 }
