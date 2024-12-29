@@ -1,5 +1,6 @@
 .notificationComCon {
     min-width: 300px;
+    max-width: 600px;
     height: 100%;
     background-color: var(--background-color);
     padding-top: 90px;
