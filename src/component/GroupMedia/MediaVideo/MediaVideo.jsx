@@ -7,7 +7,7 @@ const MediaVideo = () => {
       <div className={style.mediaVideo}>
         {
             Array.from({length:30}).map((_, id)=>(
-                <video src="/video.3.mp4" controls key={id} className={style.video}></video>
+                <video src="/video.3.mp4" key={id} onClick={(e)=>e.target.controls = !e.target.controls} className={style.video}></video>
             ))
         }
       </div>
