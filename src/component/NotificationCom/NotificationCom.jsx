@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import style from "./NotificationCom.module.css";
 import { BsThreeDots } from "react-icons/bs";
+import Image from "next/image";
+import { GoDotFill } from "react-icons/go";
 
 
 const NotificationCom = () => {
@@ -16,6 +18,19 @@ const NotificationCom = () => {
         <div className={style.btns}>
            <li className={btn === "all"? `${style.active}`:""} onClick={()=>setBtn("all")}>All</li>
            <li className={btn === "unread"? `${style.active}`:""} onClick={()=>setBtn("unread")}>Unread</li>
+        </div>
+        <div className={style.notifications}>
+            <h3>New</h3>
+            <div className={style.notificationsCart}>
+                <div className={style.imgCon}>
+                    <Image alt='' src="/img1.jpg" fill/>
+                </div>
+                <div className={style.details}>
+                    <p>You have a memory to look back on today</p>
+                    <span>4 hours ago</span>
+                </div>
+                <GoDotFill className={style.icon}/>
+            </div>
         </div>
       </div>
     </div>

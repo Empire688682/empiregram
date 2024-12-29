@@ -10,9 +10,11 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
 import RightBar from '../RightBar/RightBar';
 import { IoIosArrowDown } from "react-icons/io";
+import { useRouter } from 'next/navigation';
 
 const MenuBar = () => {
-    const [showProfile, setShowProfile] = useState(false)
+    const [showProfile, setShowProfile] = useState(false);
+    const router = useRouter()
     return (
         <div className={style.menu_bar}>
             <Image className={style.logo} src='/empiregram-logo.webp' width={50} height={50} sizes='100%' alt='Logo' />
@@ -29,7 +31,7 @@ const MenuBar = () => {
             </div>
             <div className={style.user_menus}>
                 <Image className={style.user_img} onClick={()=> setShowProfile(!showProfile)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
-                <IoNotifications className={style.icon} />
+                <IoNotifications className={style.icon} onClick={()=>router.push("/notification")} />
                 <FaFacebookMessenger className={style.icon} />
                 <IoIosArrowDown className={style.icon_arrow_down} onClick={()=> setShowProfile(!showProfile)} />
             </div>
