@@ -6,8 +6,8 @@ const MediaPhotos = () => {
   return (
     <div className={style.mediaPhotos}>
       {
-        Array.from({length:35}).map((_, id)=>(
-           <Image key={id} alt='Img' src="/profile_richard.png" className={style.img} width={80} height={80} sizes='100%'/>
+        Array.from({length:50}).map((_, id)=>(
+           <Image key={id} alt='Img' src="/profile_richard.png" className={style.img} width={100} height={100} sizes='100%'/>
         ))
       }
     </div>

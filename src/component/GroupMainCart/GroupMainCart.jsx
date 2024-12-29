@@ -59,7 +59,6 @@ const GroupMainCart = () => {
               <li className={inviteShareMenus === "discussion" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("discussion")}>Discussion </li>
               <li className={inviteShareMenus === "event" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("event")}>Events</li>
               <li className={inviteShareMenus === "media" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("media")}>Media</li>
-              <li className={inviteShareMenus === "file" ? `${style.menu} ${style.active}`: style.menu} onClick={()=>setInviteShareMenus("file")}>Files</li>
             </ul>
             {
               inviteShareMenus === "discussion" && <GroupPost/>
