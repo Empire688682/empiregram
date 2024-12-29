@@ -1,14 +1,14 @@
 import React from 'react';
-import style from "./MideaAlbum.module.css";
+import style from "./MediaAlbum.module.css";
 
-const MideaAlbum = () => {
+const MediaAlbum = () => {
   return (
     <div className={style.mideaAlbumCon}>
       <div className={style.mideaAlbum}>
-        <p>No result</p>
+        <p>No results</p>
       </div>
     </div>
   )
 }
 
-export default MideaAlbum
+export default MediaAlbum

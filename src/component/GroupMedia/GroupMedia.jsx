@@ -3,6 +3,7 @@ import style from './GroupMedia.module.css';
 import { FaPlus } from "react-icons/fa6";
 import MediaPhotos from './MediaPhotos/MediaPhotos';
 import MediaVideo from './MediaVideo/MediaVideo';
+import MediaAlbum from './MediaAlbum/MediaAlbum';
 
 const GroupMedia = () => {
   const [displayMenu, setDisplayMenu] = useState("photos");
@@ -27,6 +28,9 @@ const GroupMedia = () => {
           }
           {
              displayMenu === "videos" && <MediaVideo/>
+          }
+          {
+             displayMenu === "albums" && <MediaAlbum/>
           }
         </div>
       </div>
