@@ -17,6 +17,18 @@
     justify-content: space-between;
 }
 
+.notificationsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notificationsHeader p{
+    color: var(--accent-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
 .btns {
     display: flex;
     gap: 20px;

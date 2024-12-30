@@ -62,10 +62,13 @@
 }
 .user_notification{
     position: absolute;
-    z-index: 88;
-    top: 90px;
+    top: 0;
     right: 0;
     transition: max-height .1s ease-in-out;
+    padding: 0 20px;
+    border-radius: 9px;
+    min-width: 300px;
+    max-width:300px;
 }
 .user_profile.active{
     max-height: 100vh;
