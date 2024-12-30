@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 const NotificationToggleCom = () =>{
     const [btn, setBtn] = useState("unread");
-    const router = useRouter
+    const router = useRouter();
     return (
         <div className={style.notificationToggleComCon}>
             <div className={style.notificationCom}>
