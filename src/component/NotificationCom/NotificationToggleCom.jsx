@@ -10,7 +10,7 @@ const NotificationToggleCom = () =>{
     const [btn, setBtn] = useState("unread");
     const router = useRouter
     return (
-        <div className={style.notificationComCon}>
+        <div className={style.notificationToggleComCon}>
             <div className={style.notificationCom}>
                 <div className={style.header}>
                     <h2>Notifications</h2>

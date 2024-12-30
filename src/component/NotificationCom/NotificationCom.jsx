@@ -8,7 +8,7 @@ import { GoDotFill } from "react-icons/go";
 const NotificationCom = () => {
     const [btn, setBtn] = useState("unread");
     return (
-        <div className={style.notificationToggleComCon}>
+        <div className={style.notificationComCon}>
             <div className={style.notificationCom}>
                 <div className={style.header}>
                     <h2>Notifications</h2>

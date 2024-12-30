@@ -65,14 +65,15 @@
     top: 90px;
     right: 0;
     transition: max-height .1s ease-in-out;
-    padding: 0 20px;
-    border-radius: 9px;
+    padding: 20px;
+    border-radius: 9px 0 0 0;
     min-width: 300px;
     max-width:300px;
-    height: 80vh;
+    height: 100vh;
     overflow-y: scroll;
     scrollbar-width: none;
     margin-right:30px;
+    background-color: var(--background-color);
 }
 .user_profile.active{
     max-height: 100vh;
