@@ -6,6 +6,12 @@
     padding-top: 90px;
 }
 
+.notificationToggleComCon{
+    min-width: 300px;
+    max-width: 300px;
+    background-color: var(--background-color);
+}
+
 .notificationCom {
     display: flex;
     flex-direction: column;

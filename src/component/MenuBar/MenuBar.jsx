@@ -11,6 +11,7 @@ import Link from 'next/link';
 import RightBar from '../RightBar/RightBar';
 import { IoIosArrowDown } from "react-icons/io";
 import NotificationCom from '../NotificationCom/NotificationCom';
+import NotificationToggleCom from '../NotificationCom/NotificationToggleCom';
 
 const MenuBar = () => {
     const [showProfile, setShowProfile] = useState(false);
@@ -56,7 +57,7 @@ const MenuBar = () => {
             {
                 showNotification && !showProfile && (
                     <div className={style.user_notification}>
-                <NotificationCom/>
+                <NotificationToggleCom/>
             </div>
                 )
             }

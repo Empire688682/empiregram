@@ -4,11 +4,13 @@ import style from "./NotificationCom.module.css";
 import { BsThreeDots } from "react-icons/bs";
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
+import { useRouter } from 'next/navigation';
 
-const NotificationCom = () => {
+const NotificationToggleCom = () =>{
     const [btn, setBtn] = useState("unread");
+    const router = useRouter
     return (
-        <div className={style.notificationToggleComCon}>
+        <div className={style.notificationComCon}>
             <div className={style.notificationCom}>
                 <div className={style.header}>
                     <h2>Notifications</h2>
@@ -20,8 +22,8 @@ const NotificationCom = () => {
                 </div>
                 <div className={style.notifications}>
                     <div className={style.notificationsHeader}>
-                    <h3>New</h3>
-                    <p>See all</p>
+                        <h3>New</h3>
+                        <p onClick={() => router.push("/notification")}>See all</p>
                     </div>
                     {
                         Array.from({ length: 10 }).map((_, id) => (
@@ -43,4 +45,4 @@ const NotificationCom = () => {
     )
 }
 
-export default NotificationCom
+export default NotificationToggleCom
