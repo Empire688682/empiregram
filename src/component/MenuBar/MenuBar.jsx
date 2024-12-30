@@ -47,14 +47,14 @@ const MenuBar = () => {
                 <IoIosArrowDown className={style.icon_arrow_down} onClick={handleProfileClick} />
             </div>
             {
-                showProfile || !showNotification && (
+                showProfile && !showNotification && (
                     <div className={style.user_profile}>
                 <RightBar/>
             </div>
                 )
             }
             {
-                showNotification || showProfile && (
+                showNotification && !showProfile && (
                     <div className={style.user_notification}>
                 <NotificationCom/>
             </div>
