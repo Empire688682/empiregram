@@ -53,13 +53,13 @@
     cursor:pointer;
 }
 
-.user_profile, .user_notification{
+.user_profile{
     position: absolute;
     z-index: 88;
     top: 90px;
     right: 0;
     transition: max-height .1s ease-in-out;
 }
-.user_profile.active, .user_notification.active{
+.user_profile.active{
     max-height: 100vh;
 }

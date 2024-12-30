@@ -22,8 +22,8 @@ const MenuBar = () => {
     };
 
     function handleProfileClick(){
-        setShowNotification(!showNotification);
-        setShowProfile(false);
+        setShowNotification(false);
+        setShowProfile(!showProfile);
     };
 
     return (
