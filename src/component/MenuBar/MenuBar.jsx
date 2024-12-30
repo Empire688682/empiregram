@@ -15,6 +15,17 @@ import NotificationCom from '../NotificationCom/NotificationCom';
 const MenuBar = () => {
     const [showProfile, setShowProfile] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
+
+    function handleNotificationClick(){
+        setShowNotification(!showNotification);
+        setShowProfile(false);
+    };
+
+    function handleProfileClick(){
+        setShowNotification(!showNotification);
+        setShowProfile(false);
+    };
+
     return (
         <div className={style.menu_bar}>
             <Image className={style.logo} src='/empiregram-logo.webp' width={50} height={50} sizes='100%' alt='Logo' />
@@ -31,9 +42,9 @@ const MenuBar = () => {
             </div>
             <div className={style.user_menus}>
                 <Image className={style.user_img} onClick={()=> setShowProfile(!showProfile)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
-                <IoNotifications className={style.icon} onClick={()=> setShowNotification(!showNotification)} />
+                <IoNotifications className={style.icon} onClick={handleNotificationClick} />
                 <FaFacebookMessenger className={style.icon} />
-                <IoIosArrowDown className={style.icon_arrow_down} onClick={()=> setShowProfile(!showProfile)} />
+                <IoIosArrowDown className={style.icon_arrow_down} onClick={handleProfileClick} />
             </div>
             {
                 showProfile || !showNotification && (
