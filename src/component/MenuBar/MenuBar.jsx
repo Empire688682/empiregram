@@ -10,8 +10,8 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import Link from 'next/link';
 import RightBar from '../RightBar/RightBar';
 import { IoIosArrowDown } from "react-icons/io";
-import NotificationCom from '../NotificationCom/NotificationCom';
 import NotificationToggleCom from '../NotificationCom/NotificationToggleCom';
+import { useRouter } from 'next/navigation';
 
 const MenuBar = () => {
     const [showProfile, setShowProfile] = useState(false);
@@ -26,6 +26,8 @@ const MenuBar = () => {
         setShowNotification(false);
         setShowProfile(!showProfile);
     };
+
+    const router = useRouter();
 
     return (
         <div className={style.menu_bar}>
@@ -44,7 +46,7 @@ const MenuBar = () => {
             <div className={style.user_menus}>
                 <Image className={style.user_img} onClick={()=> setShowProfile(!showProfile)} src='/avatar_icon.png' width={40} height={40} sizes='100%' alt='Logo' />
                 <IoNotifications className={style.icon} onClick={handleNotificationClick} />
-                <FaFacebookMessenger className={style.icon} />
+                <FaFacebookMessenger className={style.icon} onClick={()=>router.push("/chat")} />
                 <IoIosArrowDown className={style.icon_arrow_down} onClick={handleProfileClick} />
             </div>
             {
