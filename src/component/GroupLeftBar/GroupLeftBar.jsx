@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import style from './GroupLeftBar.module.css';
 import { IoMdSettings } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
@@ -11,10 +11,14 @@ import { FaCcDiscover } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 
 const GroupLeftBar = ({setShowGroups}) => {
+
 const router = useRouter();
+const [group, setGroup] = useState("discover")
+
 const handleRouter = (link) =>{
   router.push(`/${link}`);
-}
+};
+
   return (
     <div className={style.group_left_bar}>
       <div className={style.group_left_bar_header}>
