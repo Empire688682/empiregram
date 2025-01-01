@@ -48,12 +48,20 @@
 .user_group_btn{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     font-size: 18px;
     cursor: pointer;
     padding: 10px;
     justify-content: center;
     border-radius: 9px;
+}
+.user_group_btn.active{
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+}
+.user_group_btn.active .groupBtnIcon{
+    color: var(--accent-color);
+    font-size: 30px;
 }
 .group_you_manage{
     border-bottom: 1px solid var(--secondary-background-color);

@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 const GroupLeftBar = ({setShowGroups}) => {
 
 const router = useRouter();
-const [group, setGroup] = useState("discover")
+const [groupBtn, setGroupBtn] = useState("discover")
 
 const handleRouter = (link) =>{
   router.push(`/${link}`);
@@ -31,9 +31,9 @@ const handleRouter = (link) =>{
         </label>
         <input type="text" id='search' placeholder='Search groups' name='search' required />
       </div>
-      <button className={style.user_group_btn} onClick={()=>setShowGroups("group")}> <MdGroups2 /> Your groups</button>
-      <button className={style.user_group_btn} onClick={()=>handleRouter("create")}> <FaCirclePlus />Create new group</button>
-      <button className={style.user_group_btn} onClick={()=>setShowGroups("discover")}> <FaCcDiscover />Discover</button>
+      <button className={groupBtn === "yourG"? `${style.user_group_btn} ${style.active}`: style.user_group_btn} onClick={()=>{setShowGroups("group");setGroupBtn("yourG")}}> <MdGroups2 className={style.groupBtnIcon} /> Your groups</button>
+      <button className={groupBtn === "createNG"? `${style.user_group_btn} ${style.active}`: style.user_group_btn} onClick={()=>{handleRouter("create");setGroupBtn("createNG")}}> <FaCirclePlus className={style.groupBtnIcon} />Create new group</button>
+      <button className={groupBtn === "discover"? `${style.user_group_btn} ${style.active}`: style.user_group_btn} onClick={()=>{setShowGroups("discover");setGroupBtn("discover")}}> <FaCcDiscover className={style.groupBtnIcon} />Discover</button>
       <div className={style.group_you_manage}>
         <div className={style.group_you_manage_header}>
           <h4>Groups you manage</h4>
