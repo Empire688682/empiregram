@@ -17,8 +17,8 @@ const GroupCom = ({showGroups}) => {
         )
       }
       {
-        showGroups === "discover" && (
-          <YourGroups/>
+        showGroups === "allYourGroup" && (
+          <YourGroups showGroups={showGroups}/>
         )
       }
     </div>
