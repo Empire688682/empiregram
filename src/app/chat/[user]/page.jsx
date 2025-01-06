@@ -17,7 +17,7 @@ const Page = () => {
                 <div className={style.userHeader}>
                     <div className={style.headerImgCon}>
                         <Image className={style.userImg} src='/img1.jpg' alt='IMG' width={50} height={50} sizes='100%' />
-                        <div className={style.userText_all}>
+                        <div className={style.headerText}>
                             <p>{user.user}</p>
                             <span>Active now</span>
                         </div>

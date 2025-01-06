@@ -27,6 +27,13 @@
 .userImg{
     border-radius: 50%;
 }
+.headerText p{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.headerText span{
+    font-size: 15px;
+}
 .headerIconsCon{
     display: flex;
     gap: 10px;
