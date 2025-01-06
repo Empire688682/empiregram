@@ -39,11 +39,10 @@
 .headerIconsCon{
     display: flex;
     gap: 10px;
-
 }
 .icon{
     cursor: pointer;
-    font-size: 25px;
+    font-size: 23px;
 }
 .userCenter{
     width: 100%;

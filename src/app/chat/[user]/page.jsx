@@ -23,17 +23,16 @@ const Page = () => {
                         </div>
                     </div>
                     <div className={style.headerIconsCon}>
-                        <FiMinus className={style.Icon} />
-                        <LiaTimesSolid className={style.Icon} />
-                        <IoCall className={style.Icon} />
-                        <FaVideo className={style.Icon} />
+                        <FiMinus className={style.icon} />
+                        <LiaTimesSolid className={style.icon} />
+                        <IoCall className={style.icon} />
+                        <FaVideo className={style.icon} />
                     </div>
                 </div>
                 <div className={style.userCenter}>
                     <Image className={style.userImg} src='/img1.jpg' alt='IMG' width={80} height={80} sizes='100%' />
                     <div className={style.headerText}>
                         <p>{user.user}</p>
-                        <span>Active now</span>
                     </div>
                 </div>
             </div>
