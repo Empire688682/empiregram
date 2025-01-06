@@ -16,8 +16,9 @@
     padding: 20px 20px 20px 10px;
     background-color: var(--secondary-background-color);
     width: 100%;
+    align-items: center;
 }
-.userImgCon{
+.headerImgCon{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -26,11 +27,12 @@
 .userImg{
     border-radius: 50%;
 }
-.userIconsCon{
+.headerIconsCon{
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+
 }
 .icon{
-    
+    cursor: pointer;
+    font-size: 25px;
 }
