@@ -17,6 +17,7 @@
     background-color: var(--secondary-background-color);
     width: 100%;
     align-items: center;
+    box-shadow: 0 0 15px var(--background-color);
 }
 .headerImgCon{
     display: flex;
@@ -28,11 +29,12 @@
     border-radius: 50%;
 }
 .headerText p{
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bolder;
+    text-transform: capitalize;
 }
 .headerText span{
-    font-size: 15px;
+    font-size: 14px;
 }
 .headerIconsCon{
     display: flex;
@@ -42,4 +44,13 @@
 .icon{
     cursor: pointer;
     font-size: 25px;
+}
+.user{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    text-align: center;
 }
