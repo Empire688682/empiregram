@@ -29,8 +29,8 @@ const Page = () => {
                         <FaVideo className={style.Icon} />
                     </div>
                 </div>
-                <div className={style.user}>
-                    <Image className={style.userImg} src='/img1.jpg' alt='IMG' width={50} height={50} sizes='100%' />
+                <div className={style.userCenter}>
+                    <Image className={style.userImg} src='/img1.jpg' alt='IMG' width={80} height={80} sizes='100%' />
                     <div className={style.headerText}>
                         <p>{user.user}</p>
                         <span>Active now</span>
