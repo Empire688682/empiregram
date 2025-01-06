@@ -4,57 +4,33 @@
     position: relative;
     background-color: var(--secondary-background-color);
 }
-.user_Con{
+.userCon{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
     scrollbar-width: none;
 }
-.user_header{
+.userHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 10px;
+    background-color: var(--secondary-background-color);
+    width: 100%;
+}
+.userImgCon{
     display: flex;
     align-items: center;
     gap: 20px;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px 20px 20px 10px;
-    background-color: var(--secondary-background-color);
-    width: 100%;
 }
-.user_img_con{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-}
-.user_img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.userImg{
     border-radius: 50%;
 }
-.user_text_all{
+.userIconsCon{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.user_text_all p{
-    color: var(--text-color);
-    font-weight: 600;
-}
-.user_text_all span{
-    color: var(--text-color);
-    font-size: 12px;
-}
-.user_footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 20px 20px 10px;
-    background-color: var(--secondary-background-color);
+.icon{
+    
 }
