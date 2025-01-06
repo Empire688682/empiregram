@@ -15,7 +15,7 @@ const Signup = () => {
   return (
     <div className={style.signup}>
         <div className={style.form_Con}>
-            <h2>{currentState === "Create acct" ? "Create account" :"Login"}</h2>
+            <h2 onClick={()=>router.push("/chat")}>{currentState === "Create acct" ? "Create account" :"Login"}</h2>
             <p>Continue with</p>
             <div className={style.login_options}>
                 <div className={style.login_option}>
@@ -44,7 +44,7 @@ const Signup = () => {
                 {
                     currentState === "Create acct" ? <input type="text" name="phone" placeholder='Phone' required /> : ""
                 }
-                <button onClick={()=>router.push("/chat")} type="submit">{currentState === "Create acct"? "Register":"Login"}</button>
+                <button type="submit">{currentState === "Create acct"? "Register":"Login"}</button>
                 {
                     currentState === "Login" && <p style={{cursor: "pointer", textDecoration: "underline"}}>Forgotten password?</p>
                 }
