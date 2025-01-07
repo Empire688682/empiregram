@@ -64,7 +64,11 @@
     margin-right: 10px;
     padding-top: 10px;
 }
-.users_list, .loading{
+.users_list{
+    margin-top: 120px;
+    padding-bottom: 40px;
+}
+.loading{
     margin-top: 120px;
     padding-bottom: 40px;
 }

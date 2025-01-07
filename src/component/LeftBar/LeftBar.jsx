@@ -7,9 +7,11 @@ import { IoSearchOutline } from "react-icons/io5";
 import ChatMenu from '../ChatMenu/ChatMenu';
 import Image from 'next/image';
 import { useGlobalContext } from '../Context';
+import UserChatDisplay from '../UserChatDisplay/UserChatDisplay';
 
 const LeftBar = () => {
   const {friends, loading} = useGlobalContext();
+  const [openUser, setOpenUser] = React.useState(true);
   return (
     <div className={style.left_bar}>
       <div className={style.left_bar_Con}>
@@ -35,7 +37,10 @@ const LeftBar = () => {
           <div className={style.users_list}>
         {
           friends.map((friend) => (
-            <div className={style.users} key={friend.id}>
+            <div onClick={()=>setOpenUser(true)} className={style.users} key={friend.id}>
+              {
+                openUser ? <UserChatDisplay /> : null
+              }
               <div className={style.left_side}>
                 <div className={style.img_Con}>
                   <Image src={friend.user_Img} fill alt='User' sizes='100%' />
