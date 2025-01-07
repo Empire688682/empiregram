@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import style from "./user.module.css";
+import style from "./UserChatDisplay.module.css";
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { FaVideo } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { IoCall } from "react-icons/io5";
 import { FiMinus } from "react-icons/fi";
 import { LiaTimesSolid } from "react-icons/lia";
 
-const Page = () => {
+const UserChatDisplay = () => {
     const user = useParams();
     console.log("user", user);
     return (
@@ -40,4 +40,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default UserChatDisplay
