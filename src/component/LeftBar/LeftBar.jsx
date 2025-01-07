@@ -39,7 +39,7 @@ const LeftBar = () => {
           friends.map((friend) => (
             <div onClick={()=>setOpenUser(true)} className={style.users} key={friend.id}>
               {
-                openUser ? <UserChatDisplay /> : null
+                openUser ? <UserChatDisplay user={friend} /> : null
               }
               <div className={style.left_side}>
                 <div className={style.img_Con}>
