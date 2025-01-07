@@ -27,10 +27,19 @@ export const AppProvider = ({ children }) => {
           user_Img: user.picture.thumbnail,
           currentMessage: "Hello",
           id: user.login.uuid,
-          allMessages: {},
-          newMessages: 0,
+          allMessages: [
+            { sender: "user", text: "hello how are you", timestamp: "2025-01-07T12:00:00Z" },
+            { sender: "friend", text: "Hello", timestamp: "2025-01-07T12:02:00Z" },
+            { sender: "user", text: "when are you coming", timestamp: "2025-01-07T12:05:00Z" },
+            { sender: "friend", text: "later today", timestamp: "2025-01-07T12:10:00Z" },
+            { sender: "user", text: "hello how are you", timestamp: "2025-01-07T12:00:00Z" },
+            { sender: "friend", text: "Hello", timestamp: "2025-01-07T12:02:00Z" },
+            { sender: "user", text: "when are you coming", timestamp: "2025-01-07T12:05:00Z" },
+            { sender: "friend", text: "later today", timestamp: "2025-01-07T12:10:00Z" },
+          ],
+          newMessages: 2,
           seenMessages: 0,
-          lastMessage: "",
+          lastMessage: "Say hi",
           date: Date.now(),
         }));
         setFriends(friends);
