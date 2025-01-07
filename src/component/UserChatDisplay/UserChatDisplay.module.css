@@ -1,13 +1,15 @@
 .user {
   width: 100%;
-  height: 100vh;
   position: absolute;
   background-color: var(--secondary-background-color);
   z-index: 99;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 800px;
+  border: 2px solid var(--background-color);
+  border-radius: 9px;
 }
 .userCon {
   width: 100%;
@@ -18,7 +20,7 @@
 .userHeader {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 20px 10px;
+  padding: 10px;
   background-color: var(--secondary-background-color);
   width: 100%;
   align-items: center;
@@ -34,12 +36,12 @@
   border-radius: 50%;
 }
 .headerText p {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: bolder;
   text-transform: capitalize;
 }
 .headerText span {
-  font-size: 14px;
+  font-size: 10px;
 }
 .headerIconsCon {
   display: flex;
@@ -47,7 +49,7 @@
 }
 .icon {
   cursor: pointer;
-  font-size: 23px;
+  font-size: 18px;
 }
 .userCenter {
   width: 100%;
@@ -58,4 +60,5 @@
   cursor: pointer;
   text-align: center;
   margin-top: 40px;
+  padding-bottom: 30px;
 }

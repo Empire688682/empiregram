@@ -72,7 +72,7 @@ const LeftBar = () => {
         )}
       </div>
       <div className={style.usersChatDisplay}>
-        {selectedUser && <UserChatDisplay user={selectedUser} />}
+        {selectedUser && <UserChatDisplay setSelectedUser={setSelectedUser} user={selectedUser} />}
       </div>
     </div>
   );

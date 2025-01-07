@@ -7,7 +7,7 @@ import { IoCall } from "react-icons/io5";
 import { FiMinus } from "react-icons/fi";
 import { LiaTimesSolid } from "react-icons/lia";
 
-const UserChatDisplay = ({ user }) => {
+const UserChatDisplay = ({ user, setSelectedUser }) => {
   return (
     <div className={style.user}>
       <div className={style.userCon}>
@@ -17,8 +17,8 @@ const UserChatDisplay = ({ user }) => {
               className={style.userImg}
               src={user.user_Img}
               alt="IMG"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               sizes="100%"
             />
             <div className={style.headerText}>
@@ -27,8 +27,8 @@ const UserChatDisplay = ({ user }) => {
             </div>
           </div>
           <div className={style.headerIconsCon}>
-            <FiMinus className={style.icon} />
-            <LiaTimesSolid className={style.icon} />
+            <FiMinus className={style.icon} onClick={()=>setSelectedUser(null)} />
+            <LiaTimesSolid className={style.icon} onClick={()=>setSelectedUser(null)} />
             <IoCall className={style.icon} />
             <FaVideo className={style.icon} />
           </div>
@@ -38,8 +38,8 @@ const UserChatDisplay = ({ user }) => {
             className={style.userImg}
             src={user.user_Img}
             alt="IMG"
-            width={80}
-            height={80}
+            width={50}
+            height={50}
             sizes="100%"
           />
           <div className={style.headerText}>
