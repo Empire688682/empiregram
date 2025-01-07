@@ -75,7 +75,9 @@ const LeftBar = () => {
           </div>
         )}
       </div>
-      {selectedUser && <UserChatDisplay user={selectedUser} />}
+      <div>
+        {selectedUser && <UserChatDisplay user={selectedUser} />}
+      </div>
     </div>
   );
 };
