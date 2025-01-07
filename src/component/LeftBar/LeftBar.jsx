@@ -1,18 +1,18 @@
-'use client';
-import React, { useState } from 'react';
-import style from './LeftBar.module.css';
-import { IoIosAddCircle } from 'react-icons/io';
-import { BsThreeDotsVertical } from 'react-icons/bs';
-import { IoSearchOutline } from 'react-icons/io5';
-import ChatMenu from '../ChatMenu/ChatMenu';
-import Image from 'next/image';
-import { useGlobalContext } from '../Context';
-import UserChatDisplay from '../UserChatDisplay/UserChatDisplay';
+"use client";
+import React, { useState } from "react";
+import style from "./LeftBar.module.css";
+import { IoIosAddCircle } from "react-icons/io";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { IoSearchOutline } from "react-icons/io5";
+import ChatMenu from "../ChatMenu/ChatMenu";
+import Image from "next/image";
+import { useGlobalContext } from "../Context";
+import UserChatDisplay from "../UserChatDisplay/UserChatDisplay";
 
 const LeftBar = () => {
   const { friends, loading } = useGlobalContext();
   const [selectedUser, setSelectedUser] = useState(null);
-  console.log("selectedUser:", selectedUser)
+  console.log("selectedUser:", selectedUser);
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
@@ -55,12 +55,7 @@ const LeftBar = () => {
               >
                 <div className={style.left_side}>
                   <div className={style.img_Con}>
-                    <Image
-                      src={friend.user_Img}
-                      fill
-                      alt="User"
-                      sizes="100%"
-                    />
+                    <Image src={friend.user_Img} fill alt="User" sizes="100%" />
                   </div>
                   <div className={style.name_msg}>
                     <p>{friend.user_Name}</p>

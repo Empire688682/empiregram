@@ -1,80 +1,80 @@
 .menu_bar {
-    width: 100%;
-    padding: 20px;
-    position: fixed;
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    padding-left: 10px;
-    background-color: var(--background-color);
-    box-shadow: 0 0 10px var(--secondary-background-color);
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px var(--secondary-background-color);
 }
 
 .logo {
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid var(--background-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--background-color);
 }
 
 .menu_icons {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .icon {
-    font-size: 30px;
-    cursor: pointer;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.icon_arrow_down{
-    position: absolute;
-    font-size: 22px;
-    bottom: 0;
-    margin-left: 10px;
-    color: black;
-    cursor: pointer;
-    background-color: white;
-    padding: 2px;
-    border-radius: 50%;
+.icon_arrow_down {
+  position: absolute;
+  font-size: 22px;
+  bottom: 0;
+  margin-left: 10px;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+  padding: 2px;
+  border-radius: 50%;
 }
 
 .user_menus {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    position: relative;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: relative;
 }
 
-.user_img{
-    cursor:pointer;
+.user_img {
+  cursor: pointer;
 }
 
-.user_profile{
-    position: absolute;
-    z-index: 88;
-    top: 90px;
-    right: 0;
-    transition: max-height .1s ease-in-out;
+.user_profile {
+  position: absolute;
+  z-index: 88;
+  top: 90px;
+  right: 0;
+  transition: max-height 0.1s ease-in-out;
 }
-.user_notification{
-    position: absolute;
-    top: 90px;
-    right: 0;
-    transition: max-height .1s ease-in-out;
-    padding: 20px;
-    border-radius: 9px 0 0 0;
-    min-width: 300px;
-    max-width:300px;
-    height: 100vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    margin-right:30px;
-    background-color: var(--background-color);
+.user_notification {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  transition: max-height 0.1s ease-in-out;
+  padding: 20px;
+  border-radius: 9px 0 0 0;
+  min-width: 300px;
+  max-width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-right: 30px;
+  background-color: var(--background-color);
 }
-.user_profile.active{
-    max-height: 100vh;
+.user_profile.active {
+  max-height: 100vh;
 }

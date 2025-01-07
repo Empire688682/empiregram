@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import style from "./MediaAlbum.module.css";
 
 const MediaAlbum = () => {
@@ -8,7 +8,7 @@ const MediaAlbum = () => {
         <p>No results</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MediaAlbum
+export default MediaAlbum;

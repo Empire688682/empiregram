@@ -1,19 +1,19 @@
-.video{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--secondary-background-color);
-    position: relative;
+.video {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--secondary-background-color);
+  position: relative;
 }
-.video_Con{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.video_Con {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
-.left_bar{
-    flex-basis: 25%;
-    width: 100%;
-    background-color: var(--background-color);
+.left_bar {
+  flex-basis: 25%;
+  width: 100%;
+  background-color: var(--background-color);
 }
-.video_box{
-    flex-basis: 75%;
+.video_box {
+  flex-basis: 75%;
 }

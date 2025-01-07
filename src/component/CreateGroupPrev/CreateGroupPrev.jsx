@@ -1,7 +1,7 @@
-'use client'
-import React from 'react';
-import style from './CreateGroupPrev.module.css';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import style from "./CreateGroupPrev.module.css";
+import Image from "next/image";
 import { MdPublic } from "react-icons/md";
 import { MdVisibility } from "react-icons/md";
 
@@ -11,12 +11,12 @@ const CreateGroupPrev = ({ groupData }) => {
       <div className={style.group_prev_con}>
         <h2>Group preview</h2>
         <div className={style.group_prev_img_con}>
-          <Image 
-            className={style.group_prev_img} 
-            src={groupData.group_image || "/group_creation_placeholder.webp"} 
-            alt='Group Image' 
-            fill 
-            sizes='100%' 
+          <Image
+            className={style.group_prev_img}
+            src={groupData.group_image || "/group_creation_placeholder.webp"}
+            alt="Group Image"
+            fill
+            sizes="100%"
           />
         </div>
         <div className={style.group_prev_details}>
@@ -44,7 +44,9 @@ const CreateGroupPrev = ({ groupData }) => {
                 <span>Anyone can see whatever is going on in this group.</span>
               )}
               {groupData.group_privacy === "Private" && (
-                <span>Only the members can see whatever is going on in this group.</span>
+                <span>
+                  Only the members can see whatever is going on in this group.
+                </span>
               )}
               {!groupData.group_privacy && (
                 <span>Anyone can see whatever is going on in this group.</span>

@@ -1,5 +1,6 @@
-.page{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/empiregram-hero-bg.webp');
+.page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/empiregram-hero-bg.webp");
   background-position: center;
   background-size: cover;
   min-height: 100vh;
@@ -8,7 +9,7 @@
   padding-left: 5%;
   padding-right: 5%;
 }
-.col_Con{
+.col_Con {
   background-color: transparent;
   max-width: 400px;
   margin: 0 auto;
@@ -18,7 +19,7 @@
   justify-content: space-between;
   gap: 30px;
 }
-.img_Con{
+.img_Con {
   position: relative;
   min-height: 550px;
   width: 100%;

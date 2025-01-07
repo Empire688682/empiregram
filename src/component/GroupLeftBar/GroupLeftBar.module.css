@@ -1,106 +1,110 @@
-.group_left_bar{
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 100px 20px 30px 20px;
+.group_left_bar {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px 20px 30px 20px;
 }
-.group_left_bar_header{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+.group_left_bar_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
-.group_left_bar_header h3{
-    font-size: 25px;
+.group_left_bar_header h3 {
+  font-size: 25px;
 }
-.group_left_bar_header_icons{
-    font-size: 40px;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: var(--background-color);
-    color: var(--text-color);
+.group_left_bar_header_icons {
+  font-size: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
-.search_bar{
-    width: 100%;
-    padding: 5px;
-    background-color: var(--background-color);
-    border-radius: 9px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.search_bar {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--background-color);
+  border-radius: 9px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.search_bar_icon{
-    font-size: 18px;
+.search_bar_icon {
+  font-size: 18px;
 }
-.search_bar input{
-    background-color: transparent;
-    flex: 2;
-    outline: none;
-    border: none;
-    font-size: 18px;
+.search_bar input {
+  background-color: transparent;
+  flex: 2;
+  outline: none;
+  border: none;
+  font-size: 18px;
 }
-.user_group_btn{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-    justify-content: center;
-    border-radius: 9px;
+.user_group_btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 9px;
 }
-.user_group_btn.active{
-    background-color: var(--background-color);
-    border: 1px solid var(--text-color);
+.user_group_btn.active {
+  background-color: var(--background-color);
+  border: 1px solid var(--text-color);
 }
-.user_group_btn.active .groupBtnIcon{
-    color: var(--accent-color);
-    font-size: 30px;
+.user_group_btn.active .groupBtnIcon {
+  color: var(--accent-color);
+  font-size: 30px;
 }
-.group_you_manage{
-    border-bottom: 1px solid var(--secondary-background-color);
+.group_you_manage {
+  border-bottom: 1px solid var(--secondary-background-color);
 }
-.group_you_manage_header,.group_you_joined_header{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
+.group_you_manage_header,
+.group_you_joined_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
 }
-.group_you_manage_header span,.group_you_joined_header span{
-    color:var(--accent-color) ;
-    cursor: pointer;
+.group_you_manage_header span,
+.group_you_joined_header span {
+  color: var(--accent-color);
+  cursor: pointer;
 }
-.group_you_manage_cart{
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+.group_you_manage_cart {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
 }
-.group_you_joined_cart{
-    display: flex;
-    gap: 20px;
-    border-bottom: 1px solid var(--secondary-background-color);
-    margin-bottom: 20px;
-    padding-bottom :20px;
+.group_you_joined_cart {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--secondary-background-color);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.group_you_manage_img, .group_you_joined_img_con{
-    position: relative;
-    width: 100%;
-    min-height: 80px;
-    flex: 1;
-    border-radius:5px;
-    overflow: hidden;
+.group_you_manage_img,
+.group_you_joined_img_con {
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+  flex: 1;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.group_you_joined_img{
-    object-fit: cover;
-    height: 100%;
-    width:100%;
+.group_you_joined_img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
-.group_you_manage_text_all, .group_you_joined_text_all{
-    flex: 2;
+.group_you_manage_text_all,
+.group_you_joined_text_all {
+  flex: 2;
 }

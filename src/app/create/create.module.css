@@ -1,17 +1,17 @@
-.create{
-    display: flex;
-    width: 100%;
-    gap: 20px;
-    
-    height: 100vh;
+.create {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+
+  height: 100vh;
 }
-.create_leftbar{
-    flex-basis: 30%;
-    min-width: 300px;
-    width: 100%;
+.create_leftbar {
+  flex-basis: 30%;
+  min-width: 300px;
+  width: 100%;
 }
-.create_Container{
-    flex-basis: 70%;
-    min-width: 300px;
-    width: 100%;
+.create_Container {
+  flex-basis: 70%;
+  min-width: 300px;
+  width: 100%;
 }
