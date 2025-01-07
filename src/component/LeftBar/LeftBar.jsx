@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import style from './LeftBar.module.css';
 import { IoIosAddCircle } from 'react-icons/io';
 import { BsThreeDotsVertical } from 'react-icons/bs';
@@ -11,7 +11,8 @@ import UserChatDisplay from '../UserChatDisplay/UserChatDisplay';
 
 const LeftBar = () => {
   const { friends, loading } = useGlobalContext();
-  const [selectedUser, setSelectedUser] = React.useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
+  console.log("selectedUser:", selectedUser)
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
