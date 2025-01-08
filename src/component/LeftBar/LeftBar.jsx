@@ -18,6 +18,11 @@ const LeftBar = () => {
     setSelectedUser(user);
   };
 
+  const handleMinimizeClick = (img) => {
+    const updatedUser = friends.find((data)=> data.user_Img === img);
+    console.log(":", updatedUser);
+  };
+
   console.log("minimizeUser:", minimizeUser);
 
   const handleMinimizeChats = (user) => {
@@ -96,11 +101,12 @@ const LeftBar = () => {
         {Object.keys(minimizeUser).length > 0 && (
           <div className={style.usersChatMinimized}>
            {
-            Object.keys(minimizeUser).map((user) => (
+            Object.keys(minimizeUser).map((img) => (
               <Image
               key={img}
+              onClick={()=>handleMinimizeClick(img)}
               className={style.img}
-              src={user.user_Img}
+              src={img}
               width={50}
               height={50}
               alt="User"

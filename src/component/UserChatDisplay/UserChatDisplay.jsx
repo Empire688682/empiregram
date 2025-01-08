@@ -34,7 +34,7 @@ const UserChatDisplay = ({
           <div className={style.headerIconsCon}>
             <FiMinus
               className={style.icon}
-              onClick={() => handleMinimizeChats(user)}
+              onClick={() => handleMinimizeChats(user.user_Img)}
             />
             <LiaTimesSolid
               className={style.icon}
