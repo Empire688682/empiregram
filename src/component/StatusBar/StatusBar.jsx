@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useGlobalContext } from "../Context";
 
-const StatusBar = () => {
+const StatusBar = ({setPostDisplay}) => {
   const { posts, loading } = useGlobalContext();
   return (
     <div className={style.status_bar}>

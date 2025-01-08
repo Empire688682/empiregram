@@ -7,9 +7,11 @@ import StatusBar from "../StatusBar/StatusBar";
 import SinglePost from "../SinglePost/SinglePost";
 import PeopleYMK from "../PeopleYMK/PeopleYMK";
 import GroupYML from "../GroupYML/GroupYML";
+import PostDisplay from "../PostDisplay/PostDisplay";
 
 const ChatBox = () => {
   const [createPost, setCreatePost] = useState(false);
+  const [postDisplay, setPostDisplay] = useState(true);
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
@@ -26,7 +28,7 @@ const ChatBox = () => {
           )}
           {createPost && <PostCreator setCreatePost={setCreatePost} />}
           <div className={style.status_page}>
-            <StatusBar />
+            <StatusBar setPostDisplay={setPostDisplay} />
           </div>
           <div className={style.single_post}>
             <SinglePost />
@@ -42,6 +44,9 @@ const ChatBox = () => {
           </div>
         </div>
       </div>
+      {
+        postDisplay && <PostDisplay/>
+      }
     </div>
   );
 };
