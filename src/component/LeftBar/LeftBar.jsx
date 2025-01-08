@@ -20,7 +20,7 @@ const LeftBar = () => {
 
   const handleMinimizeClick = (img) => {
     const updatedUser = friends.find((data)=> data.user_Img === img);
-    console.log(":", updatedUser);
+    setSelectedUser(updatedUser);
   };
 
   console.log("minimizeUser:", minimizeUser);
