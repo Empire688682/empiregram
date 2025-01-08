@@ -12,10 +12,24 @@ import UserChatDisplay from "../UserChatDisplay/UserChatDisplay";
 const LeftBar = () => {
   const { friends, loading } = useGlobalContext();
   const [selectedUser, setSelectedUser] = useState(null);
-  console.log("selectedUser:", selectedUser);
+  const [minimizeUser, setMinimizeUsers] = useState({});
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
+  };
+
+  console.log("minimizeUser:", minimizeUser);
+
+  const handleMinimizeChats = (user) => {
+    setSelectedUser(null);
+    setMinimizeUsers((prev) => {
+      if (!prev[user]) {
+        return { ...prev, [user]: true };
+      } else {
+        const { [user]: removed, ...rest } = prev;
+        return rest;
+      }
+    });
   };
 
   return (
@@ -72,7 +86,30 @@ const LeftBar = () => {
         )}
       </div>
       <div className={style.usersChatDisplay}>
-        {selectedUser && <UserChatDisplay setSelectedUser={setSelectedUser} user={selectedUser} />}
+        {selectedUser && (
+          <UserChatDisplay
+            handleMinimizeChats={handleMinimizeChats}
+            setSelectedUser={setSelectedUser}
+            user={selectedUser}
+          />
+        )}
+        {Object.keys(minimizeUser).length > 0 && (
+          <div className={style.usersChatMinimized}>
+           {
+            Object.keys(minimizeUser).map((user) => (
+              <Image
+              key={img}
+              className={style.img}
+              src={user.user_Img}
+              width={50}
+              height={50}
+              alt="User"
+              sizes="100%"
+            />
+            ))
+           }
+          </div>
+        )}
       </div>
     </div>
   );
