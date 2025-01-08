@@ -10,11 +10,12 @@ import Image from "next/image";
 import { LiaTimesSolid } from "react-icons/lia";
 
 const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
-  if (!postDisplayData) {
-    return null; // Return null if there is no data to display
-  }
 
-  const { picture, login } = postDisplayData;
+    if (!postDisplayData) {
+        return null; // Return null if there is no data to display
+      }
+    
+      const { picture, login } = postDisplayData;
 
   return (
     <div className={style.postDisplay}>
@@ -49,7 +50,7 @@ const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
           scrollbar={true}
           loop={true}
         >
-          {picture.map((_, id) => (
+          {Object.keys(postDisplayData).map((_, id) => (
             <SwiperSlide key={id} className={style.post_slider}>
               <div className={style.posts}>
                 <div className={style.posts_img_wrapper}>
