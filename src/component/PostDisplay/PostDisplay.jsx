@@ -48,7 +48,7 @@ const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
             clickable: true,
           }}
           scrollbar={true}
-          loop={true}
+          loop={false}
         >
           {Object.keys(postDisplayData).map((_, id) => (
             <SwiperSlide key={id} className={style.post_slider}>
