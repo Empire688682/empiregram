@@ -8,13 +8,25 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useGlobalContext } from "../Context";
 import Image from 'next/image';
+import { LiaTimesSolid } from "react-icons/lia";
 
-const PostDisplay = () => {
+const PostDisplay = ({setPostDisplayData, postDisplayData}) => {
     const { posts } = useGlobalContext();
 
     return (
         <div className={style.postDisplay}>
             <div className={style.postDisplayCon}>
+            <LiaTimesSolid  className={style.cancelIcon} onClick={()=>setPostDisplayData(null)}/>
+                <div className={style.userImgCon}>
+                    <Image
+                        className={style.userImg}
+                        src={Object.keys(postDisplayData).picture.medium}
+                        width={50}
+                        height={50}
+                        alt="Img"
+                        sizes="100%"
+                    />
+                </div>
                 {/* Custom Navigation Buttons */}
                 <div className={`${style.customButton} ${style.customPrev}`} >-</div>
                 <div className={`${style.customButton} ${style.customNext}`} >+</div>
@@ -31,25 +43,15 @@ const PostDisplay = () => {
                     scrollbar={true}
                     loop={true}
                 >
-                    {posts.map((post) => (
+                    {Object.keys(postDisplayData).map((post) => (
                         <SwiperSlide key={post.login.uuid} className={style.post_slider}>
                             <div className={style.posts}>
                                 <div className={style.posts_img_wrapper}>
                                     <Image
                                         className={style.posts_img}
-                                        src={post.picture.large}
+                                        src={postDisplayData.picture.large}
                                         fill
                                         alt={`Post image for ${post.login.username}`}
-                                        sizes="100%"
-                                    />
-                                </div>
-                                <div className={style.posts_post_Con}>
-                                    <Image
-                                        className={style.secondary_posts_img}
-                                        src={post.picture.thumbnail}
-                                        width={50}
-                                        height={50}
-                                        alt={`Thumbnail image for ${post.login.username}`}
                                         sizes="100%"
                                     />
                                 </div>

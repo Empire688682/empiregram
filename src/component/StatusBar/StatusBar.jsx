@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useGlobalContext } from "../Context";
 
-const StatusBar = ({setPostDisplay}) => {
+const StatusBar = ({handleGetPostId}) => {
   const { posts, loading } = useGlobalContext();
   return (
     <div className={style.status_bar}>
@@ -42,7 +42,7 @@ const StatusBar = ({setPostDisplay}) => {
             loop={false}
           >
             {posts.map((post) => (
-              <SwiperSlide key={post.login.uuid} className={style.post_slider}>
+              <SwiperSlide key={post.login.uuid} onClick={()=>handleGetPostId(post.login.uuid)} className={style.post_slider}>
                 <div className={style.friends}>
                   <Image
                     className={style.friends_img}

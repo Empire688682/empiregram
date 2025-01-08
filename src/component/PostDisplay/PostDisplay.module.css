@@ -21,6 +21,23 @@
     justify-content: center;
     position: relative;
 }
+.cancelIcon{
+    position: absolute;
+    font-size: 35px;
+    color: rgb(218, 200, 200);
+    cursor: pointer;
+    left: -50%;
+    top: 10px;
+}
+.userImgCon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.userImg{
+    border-radius: 50px;
+    border: 3px solid black;
+}
 .post_slider {
     display: flex;
     justify-content: center;
@@ -36,16 +53,6 @@
   
   .posts_img {
     object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Secondary Post Image */
-  .secondary_posts_img {
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 20px;
-    left: 20px;
   }
   
   /* Custom Navigation Buttons */

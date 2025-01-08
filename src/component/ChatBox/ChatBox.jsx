@@ -8,10 +8,20 @@ import SinglePost from "../SinglePost/SinglePost";
 import PeopleYMK from "../PeopleYMK/PeopleYMK";
 import GroupYML from "../GroupYML/GroupYML";
 import PostDisplay from "../PostDisplay/PostDisplay";
+import { useGlobalContext } from "../Context";
 
 const ChatBox = () => {
+  const { posts} = useGlobalContext();
   const [createPost, setCreatePost] = useState(false);
-  const [postDisplay, setPostDisplay] = useState(true);
+  const [postDisplayData, setPostDisplayData] = useState(null);
+  console.log("postDisplayData:", postDisplayData)
+  
+  const handleGetPostId = (id) =>{
+    if(id){
+      const updatedPostData = posts.find((post)=> post.login.uuid === id);
+      setPostDisplayData(updatedPostData);
+    };
+  }
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
@@ -28,7 +38,7 @@ const ChatBox = () => {
           )}
           {createPost && <PostCreator setCreatePost={setCreatePost} />}
           <div className={style.status_page}>
-            <StatusBar setPostDisplay={setPostDisplay} />
+            <StatusBar handleGetPostId={handleGetPostId} />
           </div>
           <div className={style.single_post}>
             <SinglePost />
@@ -45,7 +55,7 @@ const ChatBox = () => {
         </div>
       </div>
       {
-        postDisplay && <PostDisplay/>
+        postDisplayData && <PostDisplay postDisplayData={postDisplayData} setPostDisplayData={setPostDisplayData}/>
       }
     </div>
   );
