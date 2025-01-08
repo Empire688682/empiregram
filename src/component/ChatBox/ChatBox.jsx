@@ -11,17 +11,17 @@ import PostDisplay from "../PostDisplay/PostDisplay";
 import { useGlobalContext } from "../Context";
 
 const ChatBox = () => {
-  const { posts} = useGlobalContext();
+  const { posts } = useGlobalContext();
   const [createPost, setCreatePost] = useState(false);
   const [postDisplayData, setPostDisplayData] = useState(null);
-  console.log("postDisplayData:", postDisplayData)
-  
-  const handleGetPostId = (id) =>{
-    if(id){
-      const updatedPostData = posts.find((post)=> post.login.uuid === id);
+  console.log("postDisplayData:", postDisplayData);
+
+  const handleGetPostId = (id) => {
+    if (id) {
+      const updatedPostData = posts.find((post) => post.login.uuid === id);
       setPostDisplayData(updatedPostData);
-    };
-  }
+    }
+  };
   return (
     <div className={style.chat_box}>
       <div className={style.chat_box_Con}>
@@ -54,9 +54,12 @@ const ChatBox = () => {
           </div>
         </div>
       </div>
-      {
-        postDisplayData && <PostDisplay postDisplayData={postDisplayData} setPostDisplayData={setPostDisplayData}/>
-      }
+      {postDisplayData && (
+        <PostDisplay
+          postDisplayData={postDisplayData}
+          setPostDisplayData={setPostDisplayData}
+        />
+      )}
     </div>
   );
 };
