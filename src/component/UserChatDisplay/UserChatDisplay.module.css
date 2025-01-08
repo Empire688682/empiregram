@@ -69,10 +69,21 @@
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    align-items: stretch;
+  }
+  .userMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align user messages to the right */
+  }
+  
+  .friendMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align friend messages to the left */
   }
   .usertext {
     padding: 5px;
-    align-items: flex-end;
     max-width: 60%;
     background-color: #007bff;
     color: white;
@@ -80,7 +91,6 @@
     font-size: 0.9rem;
   }
   .friendText {
-    align-items: flex-start;
     padding: 5px;
     background-color: #f1f1f1;
     color: #333;
