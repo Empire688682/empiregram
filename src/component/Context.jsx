@@ -7,9 +7,7 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
   const [showSignup, setShowSignup] = useState(true);
-  const [defaultMode, setDefaultMode] = useState(
-    localStorage.getItem("colorMode") || "light",
-  );
+  const [defaultMode, setDefaultMode] = useState("light");
   const [friends, setFriends] = useState([]);
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -86,8 +84,21 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("colorMode", defaultMode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("colorMode", JSON.stringify(defaultMode));
+    }
   }, [defaultMode]);
+
+  useEffect(() => {
+    const storedMode = localStorage.getItem("colorMode");
+    if (storedMode) {
+      setDefaultMode(JSON.parse(storedMode));
+    }
+    console.log("storedMode:", storedMode);
+  }, []);
+
+  console.log("defaultMode:", defaultMode)
+
 
   return (
     <AppContext.Provider
