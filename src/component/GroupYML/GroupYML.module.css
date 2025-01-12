@@ -37,8 +37,7 @@
 }
 .group {
   position: relative;
-  min-width: 300px;
-  max-width: 400px;
+  width: 400px;
   height: 300px;
   overflow: hidden;
   border-radius: 9px;
@@ -112,13 +111,12 @@
   }
   .group {
     position: relative;
-    width: 50px;
+    width: 200px;
     height: 250px;
     overflow: hidden;
     border-radius: 9px;
     box-shadow: 0 0 2.5px var(--text-color);
     cursor: pointer;
-    margin-right: 10px;
   }
   .group_img {
     width: 100%;
