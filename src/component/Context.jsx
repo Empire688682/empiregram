@@ -86,16 +86,15 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("colorMode");
-      if(storedTheme){
+      if (storedTheme) {
         setDefaultMode(storedTheme);
-      }
-      else{
+      } else {
         setDefaultMode(defaultMode);
       }
     }
   }, []);
 
-  const colorModeToggle = () =>{
+  const colorModeToggle = () => {
     const newTheme = defaultMode === "light" ? "dark" : "light";
     setDefaultMode(newTheme);
     localStorage.setItem("colorMode", newTheme);
@@ -111,7 +110,7 @@ export const AppProvider = ({ children }) => {
         friends,
         posts,
         loading,
-        colorModeToggle
+        colorModeToggle,
       }}
     >
       {children}

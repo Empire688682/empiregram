@@ -10,12 +10,11 @@ import Image from "next/image";
 import { LiaTimesSolid } from "react-icons/lia";
 
 const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
+  if (!postDisplayData) {
+    return null; // Return null if there is no data to display
+  }
 
-    if (!postDisplayData) {
-        return null; // Return null if there is no data to display
-      }
-    
-      const { picture, login } = postDisplayData;
+  const { picture, login } = postDisplayData;
 
   return (
     <div className={style.postDisplay}>
