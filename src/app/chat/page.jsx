@@ -7,18 +7,20 @@ import MenuBar from "@/component/MenuBar/MenuBar";
 import { useGlobalContext } from "@/component/Context";
 
 const Page = () => {
-  const {mobileChatClick} = useGlobalContext();
+  const { mobileChatClick } = useGlobalContext();
   return (
     <div className={style.chat}>
       <MenuBar />
       <div className={style.chat_Con}>
-        {
-          mobileChatClick && <div className={style.left_bar}>
-          <LeftBar />
+        <div className={style.left_bar}>
+          {
+            mobileChatClick && <LeftBar />
+          }
         </div>
-        }
         <div className={style.chat_box}>
-          <ChatBox />
+          {
+            !mobileChatClick && <ChatBox />
+          }
         </div>
         <div className={style.right_bar}></div>
       </div>

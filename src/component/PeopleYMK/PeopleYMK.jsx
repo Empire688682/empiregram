@@ -42,8 +42,8 @@ const PeopleYMK = () => {
           pagination={{ clickable: true }}
           scrollbar={false}
           loop={false}
-          slidesPerView={5}
-          spaceBetween={10}
+          slidesPerView={3}
+          spaceBetween={1}
         >
           {allPeople.map((people, id) => (
             <SwiperSlide key={id}>

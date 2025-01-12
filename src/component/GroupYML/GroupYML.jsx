@@ -39,7 +39,6 @@ const GroupYML = () => {
                   alt="IMG"
                   sizes="100%"
                 />
-                <LiaTimesSolid className={style.icon} />
                 <div className={style.group_details}>
                   <p className={style.name}>{group.name}</p>
                   <div className={style.add_btn}>

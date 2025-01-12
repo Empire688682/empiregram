@@ -12,9 +12,11 @@ import RightBar from "../RightBar/RightBar";
 import { IoIosArrowDown } from "react-icons/io";
 import NotificationToggleCom from "../NotificationCom/NotificationToggleCom";
 import { useRouter } from "next/navigation";
+import { useGlobalContext } from "../Context";
 
 const MenuBar = () => {
-  const [showProfile, setShowProfile, setMobileChatClick, mobileChatClick] = useState(false);
+  const {setMobileChatClick, mobileChatClick} = useGlobalContext()
+  const [showProfile, setShowProfile] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
   function handleNotificationClick() {
