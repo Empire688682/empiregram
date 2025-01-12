@@ -85,20 +85,21 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("colorMode", JSON.stringify(defaultMode));
+      const storedTheme = localStorage.getItem("colorMode");
+      if(storedTheme){
+        setDefaultMode(storedTheme);
+      }
+      else{
+        setDefaultMode(defaultMode);
+      }
     }
-  }, [defaultMode]);
-
-  useEffect(() => {
-    const storedMode = localStorage.getItem("colorMode");
-    if (storedMode) {
-      setDefaultMode(JSON.parse(storedMode));
-    }
-    console.log("storedMode:", storedMode);
   }, []);
 
-  console.log("defaultMode:", defaultMode)
-
+  const colorModeToggle = () =>{
+    const newTheme = defaultMode === "light" ? "dark" : "light";
+    setDefaultMode(newTheme);
+    localStorage.setItem("colorMode", newTheme);
+  };
 
   return (
     <AppContext.Provider
@@ -110,6 +111,7 @@ export const AppProvider = ({ children }) => {
         friends,
         posts,
         loading,
+        colorModeToggle
       }}
     >
       {children}

@@ -20,10 +20,7 @@ import { useGlobalContext } from "../Context";
 import { useRouter } from "next/navigation";
 
 const RightBar = () => {
-  const { defaultMode, setDefaultMode } = useGlobalContext();
-  const handleModeClick = () => {
-    setDefaultMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-  };
+  const { defaultMode, colorModeToggle } = useGlobalContext();
 
   const router = useRouter();
 
@@ -61,7 +58,7 @@ const RightBar = () => {
               )}
               <p>Display Mode</p>
             </div>
-            <div className={style.mode_right} onClick={handleModeClick}>
+            <div className={style.mode_right} onClick={colorModeToggle}>
               <span
                 className={
                   defaultMode === "light"
