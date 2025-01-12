@@ -14,7 +14,7 @@ import NotificationToggleCom from "../NotificationCom/NotificationToggleCom";
 import { useRouter } from "next/navigation";
 
 const MenuBar = () => {
-  const [showProfile, setShowProfile] = useState(false);
+  const [showProfile, setShowProfile, setMobileChatClick, mobileChatClick] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
   function handleNotificationClick() {
@@ -66,7 +66,7 @@ const MenuBar = () => {
         />
         <FaFacebookMessenger
           className={style.icon}
-          onClick={() => router.push("/chat")}
+          onClick={() => {router.push("/chat"); setMobileChatClick(!mobileChatClick)}}
         />
         <IoIosArrowDown
           className={style.icon_arrow_down}

@@ -5,19 +5,35 @@
   padding-top: 90px;
   position: relative;
 }
+
 .chat_Con {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .left_bar {
   position: relative;
   flex-basis: 25%;
 }
+
 .chat_box {
   flex-basis: 50%;
 }
+
 .right_bar {
   position: relative;
   flex-basis: 25%;
+}
+
+@media (max-width:1040px) {
+  .left_bar.active {
+    position: relative;
+    flex-basis: 100%;
+    display: block;
+  }
+
+  .chat_box {
+    flex-basis: 100%;
+  }
 }

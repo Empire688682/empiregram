@@ -100,6 +100,8 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem("colorMode", newTheme);
   };
 
+  const [mobileChatClick, setMobileChatClick ] = useState(false)
+
   return (
     <AppContext.Provider
       value={{
@@ -111,6 +113,8 @@ export const AppProvider = ({ children }) => {
         posts,
         loading,
         colorModeToggle,
+        mobileChatClick,
+        setMobileChatClick
       }}
     >
       {children}
