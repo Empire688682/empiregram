@@ -12,16 +12,16 @@ const Page = () => {
     <div className={style.chat}>
       <MenuBar />
       <div className={style.chat_Con}>
-        {
-          mobileChatClick && <div className={style.left_bar}>
-            <LeftBar />
-          </div>
-        }
-        {
-          !mobileChatClick && <div className={style.chat_box}>
-            <ChatBox />
-          </div>
-        }
+        <div className={style.left_bar}>
+          {
+            mobileChatClick && <LeftBar />
+          }
+        </div>
+        <div className={style.chat_box}>
+          {
+            !mobileChatClick && <ChatBox />
+          }
+        </div>
         <div className={style.right_bar}></div>
       </div>
     </div>
