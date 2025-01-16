@@ -1,8 +1,12 @@
 import bcryptjs from "bcryptjs";
 import userModel from "@/app/api/models/user";
 import connectDb from "@/app/api/utils/dbConnect";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+import { NextResponse } from "next/server";
+dotenv.config();
 
-const registerUser = async (req, res) => {
+const registerUser = async (req) => {
     if (req.method === "POST") {
         try {
             // Establish database connection
@@ -32,11 +36,17 @@ const registerUser = async (req, res) => {
                 mediaAttachments = [],
             } = req.body; // Extract data from the request body
 
+            if(!name || !username || !email || !password){
+                return NextResponse.json({success:false, message:"All fields are required"},{status:400});
+            }
+
+            const hashedPassword = await bcryptjs.hash(password, 10);
+
             const newUser = new userModel({
                 name,
                 username,
                 email,
-                password,
+                password:hashedPassword,
                 profilePicture,
                 bio,
                 status,
@@ -59,7 +69,7 @@ const registerUser = async (req, res) => {
             await newUser.save()
         } catch (error) {
             console.log("Unable to save user:", error);
-            return res.json({success:false, message:"Creating user error"},{status:500})
+            return NextResponse.json({success:false, message:"Creating user error"},{status:500})
         }
     }
 }
