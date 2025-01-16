@@ -136,3 +136,7 @@ const registerUser = async (req) => {
         }
     }
 };
+
+export async function POST(req) {
+    return registerUser(req);
+}
