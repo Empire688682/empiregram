@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 import { useGlobalContext } from "../Context";
 
 const MenuBar = () => {
-  const {setMobileChatClick, mobileChatClick} = useGlobalContext()
+  const { setMobileChatClick, mobileChatClick } = useGlobalContext();
   const [showProfile, setShowProfile] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
@@ -68,7 +68,10 @@ const MenuBar = () => {
         />
         <FaFacebookMessenger
           className={style.icon}
-          onClick={() => {router.push("/chat"); setMobileChatClick(!mobileChatClick)}}
+          onClick={() => {
+            router.push("/chat");
+            setMobileChatClick(!mobileChatClick);
+          }}
         />
         <IoIosArrowDown
           className={style.icon_arrow_down}

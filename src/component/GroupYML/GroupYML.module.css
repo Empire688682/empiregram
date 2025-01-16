@@ -101,12 +101,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .Con {
     width: 100%;
     width: 450px;
     display: flex;
-    gap:18px;
+    gap: 18px;
     overflow: hidden;
   }
   .group {

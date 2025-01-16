@@ -41,22 +41,30 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: Date.now, // Timestamp of the last time the user was active
     },
-    friends: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Users", // References other users for a "friends" relationship
-    }],
-    messages: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Messages", // References a messages collection (if you're separating messages into a different model)
-    }],
-    conversations: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Conversations", // Conversations that the user is part of
-    }],
-    notifications: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Notifications", // Notifications for the user
-    }],
+    friends: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Users", // References other users for a "friends" relationship
+      },
+    ],
+    messages: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Messages", // References a messages collection (if you're separating messages into a different model)
+      },
+    ],
+    conversations: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Conversations", // Conversations that the user is part of
+      },
+    ],
+    notifications: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Notifications", // Notifications for the user
+      },
+    ],
     deviceToken: {
       type: String,
       default: "", // To store device token for push notifications
@@ -98,25 +106,30 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false, // Indicates if the user is typing in a conversation
     },
-    readReceipts: [{
-      messageId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Messages",
+    readReceipts: [
+      {
+        messageId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Messages",
+        },
+        readAt: {
+          type: Date,
+          default: Date.now,
+        },
       },
-      readAt: {
-        type: Date,
-        default: Date.now,
+    ],
+    mediaAttachments: [
+      {
+        type: String,
+        default: "", // Store media file URLs for chat
       },
-    }],
-    mediaAttachments: [{
-      type: String,
-      default: "", // Store media file URLs for chat
-    }],
+    ],
   },
   {
     minimize: true, // Minimizes empty objects
     timestamps: true, // Automatically adds createdAt and updatedAt fields
-  }
+  },
 );
 
-export const userModel = mongoose.models.Users || mongoose.model("Users", userSchema);
+export const userModel =
+  mongoose.models.Users || mongoose.model("Users", userSchema);

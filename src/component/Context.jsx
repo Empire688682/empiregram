@@ -100,7 +100,7 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem("colorMode", newTheme);
   };
 
-  const [mobileChatClick, setMobileChatClick ] = useState(false)
+  const [mobileChatClick, setMobileChatClick] = useState(false);
 
   return (
     <AppContext.Provider
@@ -114,7 +114,7 @@ export const AppProvider = ({ children }) => {
         loading,
         colorModeToggle,
         mobileChatClick,
-        setMobileChatClick
+        setMobileChatClick,
       }}
     >
       {children}
