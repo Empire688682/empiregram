@@ -7,6 +7,14 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Signup = () => {
   const [currentState, setCurrentState] = useState("Create acct");
+  const [userData, setUserData] = useState({
+    name:"",
+    password:"",
+    passwordRepeat:"",
+    username:"",
+    email:"",
+  });
+ 
 
   return (
     <div className={style.signup}>
