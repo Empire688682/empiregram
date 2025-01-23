@@ -37,7 +37,7 @@ const Signup = () => {
             <input
               type="password"
               name="Rpwd"
-              placeholder="Confirm Password"
+              placeholder="Comfirm password"
               required
             />
           ) : (
