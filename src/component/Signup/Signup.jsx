@@ -4,17 +4,14 @@ import style from "./Signup.module.css";
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { useGlobalContext } from "../Context";
-import { useRouter } from "next/navigation";
 
 const Signup = () => {
-  const { setShowSignup } = useGlobalContext();
   const [currentState, setCurrentState] = useState("Create acct");
-  const router = useRouter();
+
   return (
     <div className={style.signup}>
       <div className={style.form_Con}>
-        <h2 onClick={() => router.push("/chat")}>
+        <h2>
           {currentState === "Create acct" ? "Create account" : "Login"}
         </h2>
         <p>Continue with</p>
