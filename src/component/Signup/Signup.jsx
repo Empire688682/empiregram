@@ -17,7 +17,6 @@ const Signup = () => {
     passwordRepeat: "",
     username: "",
     email: "",
-    phone: "",
   });
 
   const handleOnchange = (e) => {
@@ -38,7 +37,6 @@ const Signup = () => {
           passwordRepeat: "",
           username: "",
           email: "",
-          phone: "",
         })
       }
     } catch (error) {
@@ -132,18 +130,6 @@ const Signup = () => {
               onChange={handleOnchange}
               value={userData.email}
               placeholder="Email"
-              required
-            />
-          ) : (
-            ""
-          )}
-          {currentState === "Create acct" ? (
-            <input
-              type="text"
-              name="phone"
-              onChange={handleOnchange}
-              value={userData.phone}
-              placeholder="Phone"
               required
             />
           ) : (

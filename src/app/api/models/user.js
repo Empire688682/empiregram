@@ -135,5 +135,5 @@ const userSchema = new mongoose.Schema(
   },
 );
 
-export const userModel =
+export const usersModel =
   mongoose.models.Users || mongoose.model("Users", userSchema);

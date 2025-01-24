@@ -1,17 +1,18 @@
 import bcryptjs from "bcryptjs";
-import {userModel} from "@/app/api/models/user";
-import connectDb from "@/app/api/utils/dbConnect";
+import {usersModel} from "@/app/api/models/user";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { NextResponse } from "next/server";
+import { connectDB } from "../../utils/dbConnect";
+import validator from "validator";
 dotenv.config();
 
 const registerUser = async (req) => {
   if (req.method === "POST") {
-    const reqBody = await req.json()
+    const reqBody = await req.json();
     try {
       // Establish database connection
-      await connectDb();
+      await connectDB();
       const {
         firstname,
         lastname,
@@ -40,26 +41,23 @@ const registerUser = async (req) => {
         mediaAttachments = [],
       } = reqBody;
 
-      if (firstname || lastname || !username || !email || !password) {
+      if (!firstname || !lastname || !username || !email || !password) {
         return NextResponse.json(
           { success: false, message: "All fields are required" },
           { status: 400 },
         );
       }
 
-      const userExist = await userModel.findOne({ email });
+      const userExist = await usersModel.findOne({ email });
       if (userExist) {
-        return NextResponse.json(
-          { success: false, message: "User already exist" },
-          { status: 400 },
-        );
+          return NextResponse.json({ success: false, message: "User already exists" },{ status: 400 });
       }
 
-      const userNameTaken = await userModel.findOne({ username });
+      const userNameTaken = await usersModel.findOne({ username });
       if (userNameTaken) {
         return NextResponse.json(
           { success: false, message: "UserName taken" },
-          { status: 400 },
+          { status: 400 }
         );
       }
 
@@ -87,7 +85,7 @@ const registerUser = async (req) => {
 
       const hashedPassword = await bcryptjs.hash(password, 10);
 
-      const newUser = new userModel({
+      const newUser = new usersModel({
         firstname,
         lastname,
         username,
@@ -115,7 +113,7 @@ const registerUser = async (req) => {
       });
       await newUser.save();
 
-      const token = jwt.sign({ id: newUser._id }, process.env.EMPIREGRAM_KEY);
+      const token = jwt.sign({ id: newUser._id }, "juwon");
 
       const res = NextResponse.json(
         { success: true, message: "User signed up", user: newUser },
