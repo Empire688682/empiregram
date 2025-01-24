@@ -26,10 +26,12 @@ const Signup = () => {
   const createUser = async () => {
     setLoading(true)
     try {
-      const response = await axios.post("/api/auth/register", userData);
+      const response = await axios.post("api/auth/register", userData);
       if (response.data.success) {
         setUserResponse(response.data.user);
         setUserData({
+          firstname: "",
+          lastname: "",
           password: "",
           passwordRepeat: "",
           username: "",
@@ -71,6 +73,28 @@ const Signup = () => {
         </div>
         <p>or</p>
         <form onSubmit={handleFormSubmision}>
+          {
+            currentState === "Create acct" && (
+              <>
+                <input
+                  type="text"
+                  onChange={handleOnchange}
+                  value={userData.firstname}
+                  name="firstname"
+                  placeholder="Firstname"
+                  required
+                />
+                <input
+                  type="text"
+                  onChange={handleOnchange}
+                  value={userData.lastname}
+                  name="lastname"
+                  placeholder="Lastname"
+                  required
+                />
+              </>
+            )
+          }
           <input
             type="text"
             onChange={handleOnchange}

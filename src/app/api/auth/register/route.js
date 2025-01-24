@@ -1,5 +1,5 @@
 import bcryptjs from "bcryptjs";
-import userModel from "@/app/api/models/user";
+import {userModel} from "@/app/api/models/user";
 import connectDb from "@/app/api/utils/dbConnect";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
@@ -71,7 +71,7 @@ const registerUser = async (req) => {
         );
       }
 
-      if (password.lenght < 8) {
+      if (password.length < 8) {
         return NextResponse.json(
           { success: false, message: "Password too short" },
           { status: 400 },
