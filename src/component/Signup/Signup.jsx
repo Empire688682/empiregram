@@ -11,6 +11,8 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
   const [userData, setUserData] = useState({
+    firstname:"",
+    lastname:"",
     password: "",
     passwordRepeat: "",
     username: "",
