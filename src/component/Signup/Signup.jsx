@@ -40,17 +40,18 @@ const Signup = () => {
           email: "",
         })
       }
-      else {
-        setApiErrorMsg(response.data.message);
-      }
     } catch (error) {
-      setApiErrorMsg("Server error");
       console.log("Error:", error);
+      setApiErrorMsg(error.response.data.message);
+      setInterval(()=>{
+        setApiErrorMsg("")
+      }, 2000)
     } finally {
       setLoading(false)
     }
-    console.log("userResponse:", userResponse);
   };
+
+  console.log("userResponse:", userResponse);
 
   const handleFormSubmision = (e) => {
     e.preventDefault();
