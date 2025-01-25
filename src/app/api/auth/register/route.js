@@ -122,8 +122,8 @@ const registerUser = async (req) => {
 
       res.cookies.set("EmpireGToken", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        maxAge: 2 * 24 * 60 * 60,
+        secure: process.env.NODE_ENV === "production" ? true : false,
+        maxAge: 2 * 24 * 60 * 60, // 2 days
         sameSite: "lax",
         path: "/",
       });

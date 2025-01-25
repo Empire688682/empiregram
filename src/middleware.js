@@ -1,7 +1,9 @@
+"use strict"
 import { NextResponse } from "next/server";
 
 export function middleware(req) {
   const path = req.nextUrl.pathname;
+
   const token = req.cookies.get("EmpireGToken")?.value || "";
 
   const isPublic = path === "/";
@@ -9,7 +11,8 @@ export function middleware(req) {
     return NextResponse.redirect(new URL("/chat", req.url));
   }
 
-  const usersOnly = path === "/chat";
+  const protectedPaths = ["/chat", "/create", "/group", "/notification", "/settings", "/video"];
+  const userOnly = protectedPaths.includes(path);
   if (!token && usersOnly) {
     return NextResponse.redirect(new URL("/", req.url));
   }
@@ -19,7 +22,16 @@ export function middleware(req) {
   }
 }
 
+
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/", "chat", "notification"],
+  matcher: [
+    "/",
+    "/chat",
+    "/notification",
+    "/create",
+    "/group",
+    "/settings",
+    "/video"
+  ],
 };
