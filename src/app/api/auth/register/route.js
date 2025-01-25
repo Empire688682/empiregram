@@ -50,7 +50,7 @@ const registerUser = async (req) => {
 
       const userExist = await usersModel.findOne({ email });
       if (userExist) {
-          return NextResponse.json({ success: false, message: `User already exists:${email} `},{ status: 400 });
+          return NextResponse.json({ success: false, message: "User already exists"},{ status: 400 });
       }
 
       const userNameTaken = await usersModel.findOne({ username });

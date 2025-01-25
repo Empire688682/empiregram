@@ -10,9 +10,10 @@ const Signup = () => {
   const [currentState, setCurrentState] = useState("Create acct");
   const [loading, setLoading] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
+  const [apiErrorMsg, setApiErrorMsg] = useState("");
   const [userData, setUserData] = useState({
-    firstname:"",
-    lastname:"",
+    firstname: "",
+    lastname: "",
     password: "",
     passwordRepeat: "",
     username: "",
@@ -39,7 +40,11 @@ const Signup = () => {
           email: "",
         })
       }
+      else {
+        setApiErrorMsg(response.data.message);
+      }
     } catch (error) {
+      setApiErrorMsg("Server error");
       console.log("Error:", error);
     } finally {
       setLoading(false)
@@ -135,6 +140,11 @@ const Signup = () => {
           ) : (
             ""
           )}
+          {
+            apiErrorMsg && (
+              <p>{apiErrorMsg}</p>
+            )
+          }
           <button type="submit">
             {
               loading ? "Loading....."
