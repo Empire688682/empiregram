@@ -12,7 +12,7 @@ export function middleware(req) {
   }
 
   const protectedPaths = ["/chat", "/create", "/group", "/notification", "/settings", "/video"];
-  const userOnly = protectedPaths.includes(path);
+  const usersOnly = protectedPaths.includes(path);
   if (!token && usersOnly) {
     return NextResponse.redirect(new URL("/", req.url));
   }
