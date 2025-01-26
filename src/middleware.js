@@ -1,10 +1,15 @@
-"use strict"
 import { NextResponse } from "next/server";
 
 export function middleware(req) {
   const path = req.nextUrl.pathname;
 
-  const token = req.cookies.get("EmpireGToken")?.value || "";
+  const cookieHeader = req.headers.get("cookie");
+  const token = cookieHeader
+    ? cookieHeader
+      .split("; ")
+      .find((c) => c.startsWith("EmpireGToken="))
+      ?.split("=")[1]
+    : "";
 
   const isPublic = path === "/";
   if (token && isPublic) {
@@ -12,26 +17,17 @@ export function middleware(req) {
   }
 
   const protectedPaths = ["/chat", "/create", "/group", "/notification", "/settings", "/video"];
-  const usersOnly = protectedPaths.includes(path);
-  if (!token && usersOnly) {
+  const isProtected = protectedPaths.some((protectedPath) => path.startsWith(protectedPath));
+  if (!token && isProtected) {
     return NextResponse.redirect(new URL("/", req.url));
   }
 
-  if (!token) {
+  // Prevent redirect loop for public paths
+  if (!token && path !== "/") {
     return NextResponse.redirect(new URL("/", req.url));
   }
 }
 
-
-// See "Matching Paths" below to learn more
 export const config = {
-  matcher: [
-    "/",
-    "/chat",
-    "/notification",
-    "/create",
-    "/group",
-    "/settings",
-    "/video"
-  ],
+  matcher: ["/", "/chat", "/notification", "/create", "/group", "/settings", "/video"],
 };
