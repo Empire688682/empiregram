@@ -113,7 +113,7 @@ const registerUser = async (req) => {
       });
       await newUser.save();
 
-      const token = jwt.sign({ id: newUser._id }, "juwon");
+      const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET);
 
       const res = NextResponse.json(
         { success: true, message: "User signed up", user: newUser },
