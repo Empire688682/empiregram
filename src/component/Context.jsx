@@ -11,6 +11,13 @@ export const AppProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const generateDefaultMessages = () => [
+    { sender: "user", text: "hello how are you", timestamp: "2025-01-07T12:00:00Z" },
+    { sender: "friend", text: "Hello", timestamp: "2025-01-07T12:02:00Z" },
+    { sender: "user", text: "when are you coming", timestamp: "2025-01-07T12:05:00Z" },
+    { sender: "friend", text: "later today", timestamp: "2025-01-07T12:10:00Z" },
+  ];
+
   const fetchFriends = async () => {
     try {
       setLoading(true);
@@ -21,51 +28,10 @@ export const AppProvider = ({ children }) => {
         setLoading(false);
         const friends = data.map((user) => ({
           user_Name: `${user.name.first} ${user.name.last}`,
-          user_Img: user.picture.thumbnail,
+          user_Img: user.picture.thumbnail || "/profile_alison.png",
           currentMessage: "Hello",
           id: user.login.uuid,
-          allMessages: [
-            {
-              sender: "user",
-              text: "hello how are you",
-              timestamp: "2025-01-07T12:00:00Z",
-            },
-            {
-              sender: "friend",
-              text: "Hello",
-              timestamp: "2025-01-07T12:02:00Z",
-            },
-            {
-              sender: "user",
-              text: "when are you coming",
-              timestamp: "2025-01-07T12:05:00Z",
-            },
-            {
-              sender: "friend",
-              text: "later today",
-              timestamp: "2025-01-07T12:10:00Z",
-            },
-            {
-              sender: "user",
-              text: "hello how are you",
-              timestamp: "2025-01-07T12:00:00Z",
-            },
-            {
-              sender: "friend",
-              text: "Hello",
-              timestamp: "2025-01-07T12:02:00Z",
-            },
-            {
-              sender: "user",
-              text: "when are you coming",
-              timestamp: "2025-01-07T12:05:00Z",
-            },
-            {
-              sender: "friend",
-              text: "later today",
-              timestamp: "2025-01-07T12:10:00Z",
-            },
-          ],
+          allMessages: generateDefaultMessages,
           newMessages: 2,
           seenMessages: 0,
           lastMessage: "Say hi",

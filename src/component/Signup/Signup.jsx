@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
   const [currentState, setCurrentState] = useState("Create acct");
@@ -19,6 +20,7 @@ const Signup = () => {
     username: "",
     email: "",
   });
+  const router = useRouter();
 
   const handleOnchange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +40,8 @@ const Signup = () => {
           passwordRepeat: "",
           username: "",
           email: "",
-        })
+        });
+        router.refresh();
       }
     } catch (error) {
       console.log("Error:", error);

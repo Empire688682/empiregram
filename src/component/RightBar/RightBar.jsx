@@ -28,8 +28,9 @@ const RightBar = () => {
   const logoutUser = async () => {
     try {
         const response = await axios.get("/api/auth/logout");  // Ensure the path starts with '/'
-        if (response) {
+        if (response.data.success) {
             console.log("User logged out");
+            router.refresh();
         }
     } catch (error) {
         console.error("Logout failed", error);
