@@ -18,12 +18,23 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IoLogOut } from "react-icons/io5";
 import { useGlobalContext } from "../Context";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const RightBar = () => {
   const { defaultMode, colorModeToggle } = useGlobalContext();
 
   const router = useRouter();
 
+  const logoutUser = async () => {
+    try {
+        const response = await axios.get("/api/auth/logout");  // Ensure the path starts with '/'
+        if (response) {
+            console.log("User logged out");
+        }
+    } catch (error) {
+        console.error("Logout failed", error);
+    }
+};
   return (
     <div className={style.right_bar}>
       <div className={style.right_bar_Con}>
@@ -100,7 +111,7 @@ const RightBar = () => {
             <AiOutlineInfoCircle className={style.icons} />
             <p>About</p>
           </div>
-          <div className={style.user_cart}>
+          <div className={style.user_cart} onClick={logoutUser}>
             <IoLogOut className={style.icons} />
             <p>Sign out</p>
           </div>
