@@ -56,7 +56,7 @@ const registerUser = async (req) => {
       const userNameTaken = await usersModel.findOne({ username });
       if (userNameTaken) {
         return NextResponse.json(
-          { success: false, message: "UserName taken" },
+          { success: false, message: "Username taken" },
           { status: 400 }
         );
       }
