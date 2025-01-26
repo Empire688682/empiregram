@@ -43,7 +43,7 @@ const Signup = () => {
     } catch (error) {
       console.log("Error:", error);
       setApiErrorMsg(error.response?.data?.message || "Something went wrong");
-      setInterval(()=>{
+      setTimeout(()=>{
         setApiErrorMsg("")
       }, 2000)
     } finally {
