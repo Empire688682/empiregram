@@ -26,9 +26,9 @@ const Signup = () => {
   };
 
   const createUser = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const response = await axios.post("api/auth/register", userData);
+      const response = await axios.post(currentState === "Create acct"? "api/auth/register":"api/auth/login", userData);
       if (response.data.success) {
         setUserResponse(response.data.user);
         setUserData({
@@ -42,7 +42,7 @@ const Signup = () => {
       }
     } catch (error) {
       console.log("Error:", error);
-      setApiErrorMsg(error.response.data.message);
+      setApiErrorMsg(error.response?.data?.message || "Something went wrong");
       setInterval(()=>{
         setApiErrorMsg("")
       }, 2000)
@@ -55,6 +55,10 @@ const Signup = () => {
 
   const handleFormSubmision = (e) => {
     e.preventDefault();
+    if (currentState === "Create acct" && userData.password !== userData.passwordRepeat) {
+      setApiErrorMsg("Passwords do not match");
+      return;
+    }
     createUser();
   };
 
@@ -147,13 +151,7 @@ const Signup = () => {
             )
           }
           <button type="submit">
-            {
-              loading ? "Loading....."
-                :
-                <>
-                  {currentState === "Create acct" ? "Register" : "Login"}
-                </>
-            }
+          {loading ? "Loading....." : currentState === "Create acct" ? "Register" : "Login"}
           </button>
           {currentState === "Login" && (
             <p style={{ cursor: "pointer", textDecoration: "underline" }}>
