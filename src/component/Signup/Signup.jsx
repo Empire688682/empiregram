@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Signup.module.css";
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
@@ -21,6 +21,12 @@ const Signup = () => {
     email: "",
   });
   const router = useRouter();
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setApiErrorMsg("");
+    }, 2000);
+  },[apiErrorMsg])
 
   const handleOnchange = (e) => {
     const { name, value } = e.target;
@@ -46,9 +52,6 @@ const Signup = () => {
     } catch (error) {
       console.log("Error:", error);
       setApiErrorMsg(error.response?.data?.message || "Something went wrong");
-      setTimeout(()=>{
-        setApiErrorMsg("")
-      }, 2000)
     } finally {
       setLoading(false)
     }
