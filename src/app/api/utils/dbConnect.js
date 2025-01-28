@@ -8,7 +8,7 @@ export const connectDB = async () =>{
     return;
   }
     try {
-        const response = await mongoose.connect(process.env.MONGO_URI);
+        const response = await mongoose.connect(process.env.MONGODB_URI);
         if(response){
             console.log("DB: connection successfully");
         }
