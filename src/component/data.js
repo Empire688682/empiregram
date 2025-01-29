@@ -270,7 +270,7 @@ export const groupPosts = [
     small_Img3: "",
     comment_No: 0,
     forward_No: 28,
-    like_No: 80,
+    like_No: 88,
   },
   {
     user_Name: "Alison Joe",
