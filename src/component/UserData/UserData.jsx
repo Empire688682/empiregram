@@ -18,7 +18,6 @@ const UserData = () => {
           sizes="100%"
         />
         <button aria-label="Edit cover photo" className={style.editCoverBtn}>
-          {" "}
           <IoIosCamera /> <span>Edit cover photo</span>
         </button>
       </div>
@@ -33,7 +32,9 @@ const UserData = () => {
               fill
               sizes="100%"
             />
-            <IoIosCamera className={style.userProfileImgIcon} />
+            <div className={style.userProfileImgIcon}>
+              <IoIosCamera />
+            </div>
           </div>
           <div className={style.userProfileNamesNfriends}>
             <div className={style.userProfileName}>
