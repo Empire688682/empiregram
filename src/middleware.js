@@ -29,5 +29,5 @@ export function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/", "/chat", "/notification", "/create", "/group", "/settings", "/video"],
+  matcher: ["/", "/chat", "/notification", "/@:username*","/create", "/group", "/settings", "/video"],
 };
