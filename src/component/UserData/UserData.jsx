@@ -43,7 +43,7 @@ const UserData = () => {
               <span>505 friends</span>
             </div>
             <div className={style.userProfileFriends}>
-              {Array.from({ length: 10 }).map((_, id) => (
+              {Array.from({ length: 8 }).map((_, id) => (
                 <Image
                   style={{ borderRadius: "50%", cursor: "pointer" }}
                   key={id}
@@ -70,6 +70,14 @@ const UserData = () => {
           <button>
             <FaAngleDown />
           </button>
+        </div>
+      </div>
+      <div className={style.userProfileBioNuserPost}>
+        <div className={style.userProfileBio}>
+
+        </div>
+        <div className={style.userProfilePost}>
+
         </div>
       </div>
     </div>

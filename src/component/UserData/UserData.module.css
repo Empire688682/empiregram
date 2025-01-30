@@ -43,7 +43,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  min-width: 300px;
+  min-width: 250px;
 }
 .userProfileNamesNfriends {
   display: flex;
@@ -78,7 +78,7 @@
 .userProfileEdit {
   display: flex;
   gap: 10px;
-  min-width: 300px;
+  min-width: 250px;
 }
 .userProfileEdit button {
   display: flex;
@@ -92,11 +92,11 @@
   font-size: 18px;
 }
 
-@media screen and (max-width: 820px){
+@media screen and (max-width: 890px){
   .userProfileCon {
     transform: translateY(-100px);
     gap: 30px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 0 20px;
   }
   .editCoverBtn {
     font-size: 20px;
