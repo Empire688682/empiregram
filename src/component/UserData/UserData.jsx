@@ -50,8 +50,8 @@ const UserData = () => {
                   className={style.userfriendsImg}
                   src="/profile_enrique.png"
                   alt=""
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   sizes="100%"
                 />
               ))}
@@ -72,30 +72,6 @@ const UserData = () => {
           </button>
         </div>
       </div>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor vero
-        adipisci, rerum inventore in est saepe, natus obcaecati architecto,
-        dolorem veritatis amet reiciendis. Necessitatibus quam porro blanditiis
-        ducimus maiores impedit.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor vero
-        adipisci, rerum inventore in est saepe, natus obcaecati architecto,
-        dolorem veritatis amet reiciendis. Necessitatibus quam porro blanditiis
-        ducimus maiores impedit.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor vero
-        adipisci, rerum inventore in est saepe, natus obcaecati architecto,
-        dolorem veritatis amet reiciendis. Necessitatibus quam porro blanditiis
-        ducimus maiores impedit.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor vero
-        adipisci, rerum inventore in est saepe, natus obcaecati architecto,
-        dolorem veritatis amet reiciendis. Necessitatibus quam porro blanditiis
-        ducimus maiores impedit.
-      </p>
     </div>
   );
 };
