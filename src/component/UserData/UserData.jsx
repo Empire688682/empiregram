@@ -10,7 +10,7 @@ const UserData = () => {
     return (
         <div className={style.userData}>
             <div className={style.userBanner}>
-                <Image style={{ objectFit: "cover" }} src="/pic3.png" alt="" fill sizes="100%" />
+                <Image style={{ objectFit: "cover" }} src="/my_banner.jpg" alt="" fill sizes="100%" />
                 <button aria-label="Edit cover photo" className={style.editCoverBtn}> <IoIosCamera /> <span>Edit cover photo</span></button>
             </div>
             <div className={style.userProfileCon}>
