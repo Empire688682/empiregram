@@ -31,6 +31,8 @@
   color: black;
   font-size: 15px;
 }
+
+/*Userprofile*/
 .userProfileCon {
   display: flex;
   padding: 20px 20px 50px 20px;
@@ -92,6 +94,7 @@
   font-size: 18px;
 }
 
+/*Userprofile Media query*/
 @media screen and (max-width: 890px){
   .userProfileCon {
     transform: translateY(-100px);
@@ -127,5 +130,41 @@
     justify-content: space-around;
     font-size: 15px;
     gap: 2px;
+  }
+}
+
+/*Userprofile Bio&Post*/
+.userProfileBioNuserPost{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 10px;
+}
+.userProfileBio{
+  flex-basis: 40%;
+  min-width: 300px;
+  height: 500px;
+  background-color: blue;
+}
+.userProfilePost{
+  min-width: 300px;
+  flex-basis: 55%;
+  height: 500px;
+  background-color: red;
+}
+
+/*Userprofile Bio&Post Query*/
+@media screen and (max-width: 890px){
+  .userProfileBioNuserPost{
+    justify-content: center;
+  }
+  .userProfileBio{
+    flex-basis: 100%;
+    max-width: 600px;
+  }
+  .userProfilePost{
+    flex-basis: 100%;
+    max-width: 600px;
   }
 }
