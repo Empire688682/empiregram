@@ -28,24 +28,52 @@
 .editCoverBtn span{
     color: black;
 }
+.userProfileCon{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+}
 .userProfile{
     width: 100%;
     display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.userProfileNamesNfriends{
+    display: flex;
+    flex-direction: column;
+}
+.userProfileName{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .userProfileImg{
     width: 150px;
     height: 150px;
     position: relative;
-    overflow: hidden;
-}
-.userProfileImg{
     border-radius: 50%;
 }
 .userProfileImgIcon{
     position: absolute;
-    bottom: 15px;
-    right: 30px;
-    border: 3px solid rgb(133, 130, 130);
-    font-size: 20px;
+    bottom: 10px;
+    right: 20px;
+    border: 3px solid var(--white);
+    font-size: 25px;
     cursor: pointer;
+    border-radius: 50%;
+}
+.userProfileEdit{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.userProfileEdit button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: center;
 }
