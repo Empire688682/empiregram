@@ -27,15 +27,15 @@ const RightBar = () => {
 
   const logoutUser = async () => {
     try {
-        const response = await axios.get("/api/auth/logout");  // Ensure the path starts with '/'
-        if (response.data.success) {
-            console.log("User logged out");
-            router.refresh();
-        }
+      const response = await axios.get("/api/auth/logout"); // Ensure the path starts with '/'
+      if (response.data.success) {
+        console.log("User logged out");
+        router.refresh();
+      }
     } catch (error) {
-        console.error("Logout failed", error);
+      console.error("Logout failed", error);
     }
-};
+  };
   return (
     <div className={style.right_bar}>
       <div className={style.right_bar_Con}>

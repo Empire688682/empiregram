@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 import style from "./Username.module.css";
-import UserData from '@/component/UserData/UserData';
-import MenuBar from '@/component/MenuBar/MenuBar';
+import UserData from "@/component/UserData/UserData";
+import MenuBar from "@/component/MenuBar/MenuBar";
 
 const page = () => {
   return (
     <div className={style.username}>
-      <MenuBar/>
+      <MenuBar />
       <div className={style.userData}>
-        <UserData/>
+        <UserData />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

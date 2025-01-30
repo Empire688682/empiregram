@@ -22,11 +22,11 @@ const Signup = () => {
   });
   const router = useRouter();
 
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setApiErrorMsg("");
     }, 2000);
-  },[apiErrorMsg])
+  }, [apiErrorMsg]);
 
   const handleOnchange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +36,10 @@ const Signup = () => {
   const createUser = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(currentState === "Create acct"? "api/auth/register":"api/auth/login", userData);
+      const response = await axios.post(
+        currentState === "Create acct" ? "api/auth/register" : "api/auth/login",
+        userData,
+      );
       if (response.data.success) {
         setUserResponse(response.data.user);
         setUserData({
@@ -53,7 +56,7 @@ const Signup = () => {
       console.log("Error:", error);
       setApiErrorMsg(error.response?.data?.message || "Something went wrong");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
 
@@ -61,7 +64,10 @@ const Signup = () => {
 
   const handleFormSubmision = (e) => {
     e.preventDefault();
-    if (currentState === "Create acct" && userData.password !== userData.passwordRepeat) {
+    if (
+      currentState === "Create acct" &&
+      userData.password !== userData.passwordRepeat
+    ) {
       setApiErrorMsg("Passwords do not match");
       return;
     }
@@ -89,28 +95,26 @@ const Signup = () => {
         </div>
         <p>or</p>
         <form onSubmit={handleFormSubmision}>
-          {
-            currentState === "Create acct" && (
-              <>
-                <input
-                  type="text"
-                  onChange={handleOnchange}
-                  value={userData.firstname}
-                  name="firstname"
-                  placeholder="Firstname"
-                  required
-                />
-                <input
-                  type="text"
-                  onChange={handleOnchange}
-                  value={userData.lastname}
-                  name="lastname"
-                  placeholder="Lastname"
-                  required
-                />
-              </>
-            )
-          }
+          {currentState === "Create acct" && (
+            <>
+              <input
+                type="text"
+                onChange={handleOnchange}
+                value={userData.firstname}
+                name="firstname"
+                placeholder="Firstname"
+                required
+              />
+              <input
+                type="text"
+                onChange={handleOnchange}
+                value={userData.lastname}
+                name="lastname"
+                placeholder="Lastname"
+                required
+              />
+            </>
+          )}
           <input
             type="text"
             onChange={handleOnchange}
@@ -151,13 +155,13 @@ const Signup = () => {
           ) : (
             ""
           )}
-          {
-            apiErrorMsg && (
-              <p>{apiErrorMsg}</p>
-            )
-          }
+          {apiErrorMsg && <p>{apiErrorMsg}</p>}
           <button type="submit">
-          {loading ? "Loading....." : currentState === "Create acct" ? "Register" : "Login"}
+            {loading
+              ? "Loading....."
+              : currentState === "Create acct"
+                ? "Register"
+                : "Login"}
           </button>
           {currentState === "Login" && (
             <p style={{ cursor: "pointer", textDecoration: "underline" }}>

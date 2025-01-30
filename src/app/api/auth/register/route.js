@@ -1,5 +1,5 @@
 import bcryptjs from "bcryptjs";
-import {usersModel} from "@/app/api/models/user";
+import { usersModel } from "@/app/api/models/user";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { NextResponse } from "next/server";
@@ -50,14 +50,17 @@ const registerUser = async (req) => {
 
       const userExist = await usersModel.findOne({ email });
       if (userExist) {
-          return NextResponse.json({ success: false, message: "User already exists"},{ status: 400 });
+        return NextResponse.json(
+          { success: false, message: "User already exists" },
+          { status: 400 },
+        );
       }
 
       const userNameTaken = await usersModel.findOne({ username });
       if (userNameTaken) {
         return NextResponse.json(
           { success: false, message: "Username taken" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
