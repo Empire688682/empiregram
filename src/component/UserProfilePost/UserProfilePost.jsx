@@ -26,8 +26,8 @@ const UserProfilePost = () => {
           )}
           {createPost && <PostCreator setCreatePost={setCreatePost} />}
           <div className={style.postView}>
-            <p className={postView === "grid" ? `${style.active}` : ""} onClick={() => setPostView("grid")}> <span>List view</span> <FaListUl /></p>
-            <p className={postView === "list" ? `${style.active}` : ""} onClick={() => setPostView("list")}> <span>Grid view</span> <IoGridSharp /></p>
+            <p className={postView === "list" ? `${style.active}` : ""} onClick={() => setPostView("list")}> <span>List view</span> <FaListUl /></p>
+            <p className={postView === "grid" ? `${style.active}` : ""} onClick={() => setPostView("grid")}> <span>Grid view</span> <IoGridSharp /></p>
           </div>
           {
             postView === "grid" && (
