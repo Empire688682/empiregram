@@ -14,7 +14,6 @@ const ChatBox = () => {
   const { posts } = useGlobalContext();
   const [createPost, setCreatePost] = useState(false);
   const [postDisplayData, setPostDisplayData] = useState(null);
-  console.log("postDisplayData:", postDisplayData);
 
   const handleGetPostId = (id) => {
     if (id) {
