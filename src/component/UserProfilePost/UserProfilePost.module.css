@@ -52,6 +52,9 @@
   .gridViewCon{
     width: 100%;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .gridView{
     display: flex;
@@ -60,13 +63,13 @@
     border-radius: 9px;
     flex-basis: 48%;
     min-width: 200px;
+    overflow: hidden;
   }
   .imgCon{
     border-bottom: 2px solid var(--text-color);
     position: relative;
     width: 100%;
     min-height: 200px;
-    overflow: hidden;
     cursor: pointer;
   }
   .gridViewContent{
