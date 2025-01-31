@@ -26,3 +26,17 @@
     cursor: pointer;
     flex: 1;
   }
+  .postView{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .postView p{
+    padding-bottom: 5px;
+    border: 2px solid gray;
+    flex-basis: 50%;
+  }
+  .postView .active{
+    border-bottom: 3px solid var(--text-color);
+  }

@@ -5,6 +5,8 @@ import Image from "next/image";
 import PostCreator from '../PostCreator/PostCreator';
 import GridView from './GridView';
 import ListView from './ListView';
+import { FaListUl } from "react-icons/fa";
+import { IoGridSharp } from "react-icons/io5";
 
 const UserProfilePost = () => {
     const [createPost, setCreatePost] = useState(false);
@@ -24,8 +26,8 @@ const UserProfilePost = () => {
           )}
           {createPost && <PostCreator setCreatePost={setCreatePost} />}
           <div className={style.postView}>
-            <p className={postView === "grid" ? `${style.active}` : ""} onClick={() => setPostView("grid")}>Grid</p>
-            <p className={postView === "list" ? `${style.active}` : ""} onClick={() => setPostView("list")}>List</p>
+            <p className={postView === "grid" ? `${style.active}` : ""} onClick={() => setPostView("grid")}> <span>Grid</span> <FaListUl /></p>
+            <p className={postView === "list" ? `${style.active}` : ""} onClick={() => setPostView("list")}> <span>List</span> <IoGridSharp /></p>
           </div>
           {
             postView === "grid" && (
