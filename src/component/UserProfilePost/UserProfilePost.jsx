@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "./UserProfilePost.module.css"
 import Image from "next/image";
+import PostCreator from '../PostCreator/PostCreator';
 
 const UserProfilePost = () => {
     const [createPost, setCreatePost] = useState(false);
@@ -16,6 +17,7 @@ const UserProfilePost = () => {
               </p>
             </div>
           )}
+          {createPost && <PostCreator setCreatePost={setCreatePost} />}
     </div>
   )
 }
