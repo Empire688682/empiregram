@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import style from "./UserProfilePost.module.css";
+import style from "./UserProfileSinglePost.module.css";
 import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -9,14 +9,15 @@ import { BiMessage } from "react-icons/bi";
 import { TiArrowForward } from "react-icons/ti";
 import { MdOutlinePublic } from "react-icons/md";
 import { LiaUserFriendsSolid } from "react-icons/lia";
-import { allPosts } from "../data";
 import { RxAvatar } from "react-icons/rx";
 import { MdInsertEmoticon } from "react-icons/md";
 import { IoCamera } from "react-icons/io5";
 import { MdSend } from "react-icons/md";
+import { allPosts } from "@/component/data";
 
 const UserProfileSinglePost = () => {
   const [posts, setAllPost] = useState([]);
+  const [showIputIcons, setShowIputIcons] = useState(null);
 
   useEffect(() => {
     setAllPost(allPosts);
@@ -36,10 +37,11 @@ const UserProfileSinglePost = () => {
           <div className={style.header}>
             <div className={style.header_left}>
               <Image
+              style={{objectFit:"cover"}}
                 className={style.user_img}
                 src={post.user_Img}
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Img"
                 sizes="100%"
               />
@@ -67,6 +69,7 @@ const UserProfileSinglePost = () => {
           <div className={style.post_images}>
             <div className={style.img_big_Con}>
               <Image
+              style={{objectFit:"cover"}}
                 className={style.post_img}
                 src={post.big_Img}
                 fill
@@ -78,6 +81,7 @@ const UserProfileSinglePost = () => {
               {post.small_Img1 && (
                 <div className={style.img_small_Con}>
                   <Image
+                  style={{objectFit:"cover"}}
                     className={style.post_img}
                     src={post.small_Img1}
                     fill
@@ -89,6 +93,7 @@ const UserProfileSinglePost = () => {
               {post.small_Img2 && (
                 <div className={style.img_small_Con}>
                   <Image
+                  style={{objectFit:"cover"}}
                     className={style.post_img}
                     src={post.small_Img2}
                     fill
@@ -132,16 +137,19 @@ const UserProfileSinglePost = () => {
           <div className={style.userCommentCon}>
             <div className={style.userComment}>
             <Image
+            style={{objectFit:"cover"}}
                 className={style.user_img}
                 src={post.user_Img}
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Img"
                 sizes="100%"
               />
               <div className={style.inputNicons}>
-                <input aria-details="comment" type="text" placeholder={`Comment as ${post.user_Name}`} />
-                <div className={style.iconsBoxCon}>
+                <input onClick={()=>setShowIputIcons(post.id)} aria-details="comment" type="text" placeholder={`Comment as ${post.user_Name}`} />
+                {
+                    showIputIcons === post.id  && (
+                        <div className={style.iconsBoxCon}>
                     <div className={style.iconsBox}>
                     <RxAvatar className={style.icon} />
                     <MdInsertEmoticon  className={style.icon} />
@@ -151,6 +159,8 @@ const UserProfileSinglePost = () => {
                     <MdSend className={style.icon} />
                     </div>
                 </div>
+                    )
+                }
               </div>
             </div>
           </div>
