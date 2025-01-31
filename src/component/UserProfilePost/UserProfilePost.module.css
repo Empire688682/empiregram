@@ -1,0 +1,28 @@
+
+
+.home_user_post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--text-color);
+  }
+  .img_Con {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgb(139, 131, 131);
+  }
+  .home_user_post p {
+    padding: 10px;
+    background-color: rgb(228, 224, 224);
+    color: rgb(88, 86, 86);
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 1;
+  }
