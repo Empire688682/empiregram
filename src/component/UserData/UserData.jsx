@@ -5,6 +5,7 @@ import { IoIosCamera } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa";
+import UserProfilePost from "../UserProfilePost/UserProfilePost";
 
 const UserData = () => {
   return (
@@ -77,7 +78,7 @@ const UserData = () => {
 
         </div>
         <div className={style.userProfilePost}>
-
+          <UserProfilePost/>
         </div>
       </div>
     </div>
