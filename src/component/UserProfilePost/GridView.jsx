@@ -7,9 +7,10 @@ import { MdGroups } from "react-icons/md";
 import { MdOutlinePublic } from "react-icons/md";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { allPosts } from "@/component/data";
+import SingleGridDisplay from './SingleGridDisplay/SingleGridDisplay';
 
 const GridView = () => {
-  const [singleGridId, setSingleGridId] = useState({});
+  const [singleGridId, setSingleGridId] = useState(null);
   return (
     <div className={style.gridViewCon}>
       {
@@ -45,6 +46,13 @@ const GridView = () => {
             </div>
           </div>
         ))
+      }
+      {
+        singleGridId && (
+          <div className={style.singleGridDisplay}>
+            <SingleGridDisplay data={singleGridId}/>
+          </div>
+        )
       }
     </div>
   )
