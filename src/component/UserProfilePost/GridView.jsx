@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import style from "./UserProfilePost.module.css";
 import Image from "next/image";
 import { FaLock } from "react-icons/fa";
@@ -9,11 +9,12 @@ import { LiaUserFriendsSolid } from "react-icons/lia";
 import { allPosts } from "@/component/data";
 
 const GridView = () => {
+  const [singleGridId, setSingleGridId] = useState({});
   return (
     <div className={style.gridViewCon}>
       {
         allPosts.map((post) => (
-          <div className={style.gridView} key={post.id}>
+          <div className={style.gridView} key={post.id} onClick={()=>setSingleGridId(post.id)}>
             <div className={style.imgCon}>
               <Image
                 src={post.big_Img}
