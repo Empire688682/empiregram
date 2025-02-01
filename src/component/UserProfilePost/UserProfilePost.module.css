@@ -100,11 +100,11 @@
 
 .singleGridDisplay {
   position: fixed;
-  max-width: 500px;
+  max-width: 400px;
   min-width: 300px;
-  height: inherit;
-  right: 10%;
-  left: 10%;
-  top: 70px;
   background-color: gray;
+  height: 450px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

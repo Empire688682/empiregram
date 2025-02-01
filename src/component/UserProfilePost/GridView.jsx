@@ -11,6 +11,7 @@ import SingleGridDisplay from './SingleGridDisplay/SingleGridDisplay';
 
 const GridView = () => {
   const [singleGridId, setSingleGridId] = useState(null);
+  console.log("singleGridId:",singleGridId);
   return (
     <div className={style.gridViewCon}>
       {
@@ -50,7 +51,7 @@ const GridView = () => {
       {
         singleGridId && (
           <div className={style.singleGridDisplay}>
-            <SingleGridDisplay data={singleGridId}/>
+            <SingleGridDisplay id={singleGridId} setSingleGridId={setSingleGridId}/>
           </div>
         )
       }
