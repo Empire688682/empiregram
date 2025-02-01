@@ -45,6 +45,7 @@
   justify-content: center;
   gap: 15px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .postView .active {
@@ -102,9 +103,13 @@
   position: fixed;
   max-width: 400px;
   min-width: 300px;
-  background-color: gray;
-  height: 450px;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: var(--background-color);
+  height: 70vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  border-radius: 9px;
+  padding: 20px;
 }

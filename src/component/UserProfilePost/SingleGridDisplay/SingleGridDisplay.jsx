@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, {useState} from 'react';
 import style from "./SingleGridDisplay.module.css";
 import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
@@ -14,28 +15,28 @@ import { IoCamera } from "react-icons/io5";
 import { MdSend } from "react-icons/md";
 import { allPosts } from '@/component/data';
 
-const SingleGridDisplay = ({ id:post, setSingleGridId }) => {
+const SingleGridDisplay = ({ id, setSingleGridId }) => {
     const data = allPosts.find((post) => post.id === id);
-    console.log("Data:", data);
+    const [showIputIcons, setShowIputIcons] = useState(false);
     return (
         <div className={style.singleGridDisplay}>
-            <div className={style.single_post_Con} key={post.id}>
+            <div className={style.single_post_Con} >
                 <div className={style.header}>
                     <div className={style.header_left}>
                         <Image
                             style={{ objectFit: "cover" }}
                             className={style.user_img}
-                            src={post.user_Img}
+                            src={data.user_Img}
                             width={40}
                             height={40}
                             alt="Img"
                             sizes="100%"
                         />
                         <div className={style.user_name_time}>
-                            <p className={style.user_name}>{post.user_Name}</p>
+                            <p className={style.user_name}>{data.user_Name}</p>
                             <div className={style.date_privacy}>
-                                <p className={style.date}>{post.date}</p>
-                                {post.privacy === "public" ? (
+                                <p className={style.date}>{data.date}</p>
+                                {data.privacy === "public" ? (
                                     <MdOutlinePublic className={style.icon} />
                                 ) : (
                                     <LiaUserFriendsSolid className={style.icon} />
@@ -51,37 +52,37 @@ const SingleGridDisplay = ({ id:post, setSingleGridId }) => {
                         />
                     </div>
                 </div>
-                <p className={style.post_text}>{post.text}</p>
+                <p className={style.post_text}>{data.text}</p>
                 <div className={style.post_images}>
                     <div className={style.img_big_Con}>
                         <Image
                             style={{ objectFit: "cover" }}
                             className={style.post_img}
-                            src={post.big_Img}
+                            src={data.big_Img}
                             fill
                             alt="Img"
                             sizes="100%"
                         />
                     </div>
                     <div className={style.small_img_Cons}>
-                        {post.small_Img1 && (
+                        {data.small_Img1 && (
                             <div className={style.img_small_Con}>
                                 <Image
                                     style={{ objectFit: "cover" }}
                                     className={style.post_img}
-                                    src={post.small_Img1}
+                                    src={data.small_Img1}
                                     fill
                                     alt="Img"
                                     sizes="100%"
                                 />
                             </div>
                         )}
-                        {post.small_Img2 && (
+                        {data.small_Img2 && (
                             <div className={style.img_small_Con}>
                                 <Image
                                     style={{ objectFit: "cover" }}
                                     className={style.post_img}
-                                    src={post.small_Img2}
+                                    src={data.small_Img2}
                                     fill
                                     alt="Img"
                                     sizes="100%"
@@ -93,15 +94,15 @@ const SingleGridDisplay = ({ id:post, setSingleGridId }) => {
                 <div className={style.post_reaction_header}>
                     <div className={style.post_reaction_header_left}>
                         <AiOutlineLike className={style.icon} />
-                        <p>{post.like_No}</p>
+                        <p>{data.like_No}</p>
                     </div>
                     <div className={style.post_reaction_header_right}>
                         <div className={style.comment}>
-                            <p>{post.comment_No}</p>
+                            <p>{data.comment_No}</p>
                             <BiMessage className={style.icon} />
                         </div>
                         <div className={style.forward}>
-                            <p>{post.forward_No}</p>
+                            <p>{data.forward_No}</p>
                             <TiArrowForward className={style.icon} />
                         </div>
                     </div>
@@ -125,16 +126,16 @@ const SingleGridDisplay = ({ id:post, setSingleGridId }) => {
                         <Image
                             style={{ objectFit: "cover" }}
                             className={style.user_img}
-                            src={post.user_Img}
+                            src={data.user_Img}
                             width={40}
                             height={40}
                             alt="Img"
                             sizes="100%"
                         />
                         <div className={style.inputNicons}>
-                            <input onClick={() => setShowIputIcons(post.id)} aria-details="comment" type="text" placeholder={`Comment as ${post.user_Name}`} />
+                            <input onClick={() => setShowIputIcons(true)} aria-details="comment" type="text" placeholder={`Comment as ${data.user_Name}`} />
                             {
-                                showIputIcons === post.id && (
+                                showIputIcons && (
                                     <div className={style.iconsBoxCon}>
                                         <div className={style.iconsBox}>
                                             <RxAvatar className={style.icon} />
