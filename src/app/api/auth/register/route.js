@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import { NextResponse } from "next/server";
 import { connectDB } from "../../utils/dbConnect";
 import validator from "validator";
+import { emailTransporter } from "../../emailSender/route";
 dotenv.config();
 
 const registerUser = async (req) => {
@@ -33,7 +34,6 @@ const registerUser = async (req) => {
         isAdmin = false,
         isBanned = false,
         isVerified = false,
-        verificationToken = "",
         recoveryPasswordToken = "",
         role = "user",
         typingStatus = false,
@@ -87,6 +87,7 @@ const registerUser = async (req) => {
       }
 
       const hashedPassword = await bcryptjs.hash(password, 10);
+      const verificationToken = jwt.sign({ email }, process.env.SECRET_KEY);
 
       const newUser = new usersModel({
         firstname,
@@ -107,31 +108,22 @@ const registerUser = async (req) => {
         isAdmin,
         isBanned,
         isVerified,
-        verificationToken,
+        verificationToken:verificationToken,
         recoveryPasswordToken,
         role,
         typingStatus,
         readReceipts,
         mediaAttachments,
       });
+
       await newUser.save();
-
-      const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET);
-
-      const res = NextResponse.json(
+      const verificationLink =
+      `${process.env.BASE_URL}/verify-email?token=${verificationToken}&username=${newUser.username}`
+      await emailTransporter(email, verificationLink);
+      return NextResponse.json(
         { success: true, message: "User signed up", user: newUser },
         { status: 200 },
       );
-
-      res.cookies.set("EmpireGToken", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production" ? true : false,
-        maxAge: 2 * 24 * 60 * 60, // 2 days
-        sameSite: "lax",
-        path: "/",
-      });
-
-      return res;
     } catch (error) {
       console.log("Unable to save user:", error);
       return NextResponse.json(
