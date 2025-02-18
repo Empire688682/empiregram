@@ -40,7 +40,21 @@ const Signup = () => {
         currentState === "Create acct" ? "api/auth/register" : "api/auth/login",
         userData,
       );
-      if (response.data.success) {
+      if (currentState === "Create acct" && response.data.success) {
+        setUserResponse(response.data.user);
+        setUserData({
+          firstname: "",
+          lastname: "",
+          password: "",
+          passwordRepeat: "",
+          username: "",
+          email: "",
+        });
+        alert("An email has been sent to you to verify your account.");
+        setCurrentState("Login");
+      }
+
+      if ( response.data.success) {
         setUserResponse(response.data.user);
         setUserData({
           firstname: "",
