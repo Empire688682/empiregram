@@ -93,11 +93,11 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false, // If the user's email or phone is verified
     },
-    verificationCode: {
+    verificationToken: {
       type: String,
       default: "", // Temporary code for email or phone verification
     },
-    recoveryEmail: {
+    recoveryPasswordToken: {
       type: String,
       default: "", // Used for password recovery
     },
