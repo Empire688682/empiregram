@@ -30,6 +30,9 @@ const RightBar = () => {
       const response = await axios.get("/api/auth/logout"); // Ensure the path starts with '/'
       if (response.data.success) {
         console.log("User logged out");
+        if(typeof window !== "undefined"){
+          localStorage.removeItem("userData");
+        }
         router.refresh();
       }
     } catch (error) {

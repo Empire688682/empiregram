@@ -42,7 +42,7 @@ const VerifyEmailPage = () => {
       {loading ? (
         <div className={style.loadingContainer}>
           <LoadingSpinner />
-          <p>Verifying {username}'s email...</p>
+          <p>Verifying {username} email...</p>
         </div>
       ) : (
         <h1>{message}</h1>
