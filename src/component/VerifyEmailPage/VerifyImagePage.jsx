@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
-import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "@/component/LoadingSpinner/LoadingSpinner";
 import style from "./VerifyImage.module.css";
 
 const VerifyEmailPage = () => {
@@ -22,7 +22,7 @@ const VerifyEmailPage = () => {
           localStorage.setItem("userData", JSON.stringify(userData));
           setMessage("Email verified successfully! Redirecting...");
           setTimeout(() => {
-            window.location.reload();
+            router.push(`/chat`);
           }, 2000);
         } else {
           setMessage("Verification failed. Please try again.");
