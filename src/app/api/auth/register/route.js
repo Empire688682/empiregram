@@ -84,10 +84,10 @@ const registerUser = async (req) => {
           { success: false, message: "Password not match" },
           { status: 400 },
         );
-      }
+      };
 
       const hashedPassword = await bcryptjs.hash(password, 10);
-      const verificationToken = jwt.sign({ email }, process.env.SECRET_KEY);
+      const verificationToken = jwt.sign({ email }, process.env.JWT_SECRET);
 
       const newUser = new usersModel({
         firstname,
@@ -117,6 +117,7 @@ const registerUser = async (req) => {
       });
 
       await newUser.save();
+      
       const verificationLink =
       `${process.env.BASE_URL}/verify-email?token=${verificationToken}&username=${newUser.username}`
       await emailTransporter(email, verificationLink);

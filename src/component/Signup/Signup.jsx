@@ -25,7 +25,7 @@ const Signup = () => {
   useEffect(() => {
     setTimeout(() => {
       setApiErrorMsg("");
-    }, 2000);
+    }, 4000);
   }, [apiErrorMsg]);
 
   const handleOnchange = (e) => {
@@ -52,9 +52,9 @@ const Signup = () => {
         });
         alert("An email has been sent to you to verify your account.");
         setCurrentState("Login");
-      }
+      };
 
-      if ( response.data.success) {
+      if (response.data.success) {
         setUserResponse(response.data.user);
         setUserData({
           firstname: "",
