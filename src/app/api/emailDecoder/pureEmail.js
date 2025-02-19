@@ -6,8 +6,8 @@ dotenv.config();
 
 export const emailDecoder = async (token) => {
     try {
-        if (!email) {
-            return NextResponse.json({ success: false, message: "No email found" })
+        if (!token) {
+            return NextResponse.json({ success: false, message: "No token found" })
         }
         const decodedEmail = jwt.verify(token, process.env.JWT_SECRET);
         return decodedEmail.email;

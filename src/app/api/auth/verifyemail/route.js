@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { usersModel } from "../../models/user";
 import { connectDB } from "../../utils/dbConnect";
 import { emailDecoder } from "../../emailDecoder/pureEmail";
+import jwt from "jsonwebtoken"
 
 export async function POST(req) {
     try {
@@ -24,7 +25,7 @@ export async function POST(req) {
         const browserToken =  jwt.sign({ id: verifiedUser._id }, process.env.JWT_SECRET);
 
         const res = NextResponse.json({ success: true, message: "user verified, login", data: verifiedUser });
-        
+
         res.cookies.set("EmpireGToken", browserToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production" ? true : false,
