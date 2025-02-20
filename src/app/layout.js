@@ -3,11 +3,26 @@
 import { AppProvider, useGlobalContext } from "@/component/Context";
 import "./globals.css";
 import Head from "next/head";
+import MenuBar from "@/component/MenuBar/MenuBar";
+import { usePathname } from "next/navigation";
+import { useState, useEffect  } from "react";
 
 export default function RootLayout({ children }) {
+  const pathName = usePathname();
+  const [showMenu, setShowMenu] = useState(pathName !== "/");
+  useEffect(()=>{
+    setShowMenu(pathName !== "/"); 
+  },[pathName]);
+
+  console.log("showMenu", pathName);
   return (
     <AppProvider>
-      <InnerLayout>{children}</InnerLayout>
+      <InnerLayout>
+      {
+        showMenu && <MenuBar/>
+      }
+        {children}
+      </InnerLayout>
     </AppProvider>
   );
 }

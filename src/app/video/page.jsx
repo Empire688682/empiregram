@@ -3,14 +3,12 @@ import React, { useState } from "react";
 import style from "./video.module.css";
 import VideoLeftBar from "@/component/VideoLeftBar/VideoLeftBar";
 import Video from "@/component/Video/Video";
-import MenuBar from "@/component/MenuBar/MenuBar";
 import SavedVideo from "@/component/SavedVideo/SavedVideo";
 
 const Page = () => {
   const [videoTag, setVideoTag] = useState("savedVideos");
   return (
     <div className={style.video}>
-      <MenuBar />
       <div className={style.video_Con}>
         <div className={style.left_bar}>
           <VideoLeftBar videoTag={videoTag} setVideoTag={setVideoTag} />
