@@ -57,7 +57,7 @@ const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
                     className={style.posts_img}
                     src={postDisplayData.picture.large}
                     fill
-                    alt="Img"
+                    alt="IMG"
                     sizes="100%"
                   />
                 </div>
