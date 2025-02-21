@@ -6,7 +6,7 @@ import Head from "next/head";
 import MenuBar from "@/component/MenuBar/MenuBar";
 import { usePathname } from "next/navigation";
 import { useState, useEffect  } from "react";
-
+import Footer from "@/component/Footer/Footer";
 export default function RootLayout({ children }) {
   const pathName = usePathname();
   const [showMenu, setShowMenu] = useState(pathName !== "/");
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
         showMenu && <MenuBar/>
       }
         {children}
+        <Footer />
       </InnerLayout>
     </AppProvider>
   );
