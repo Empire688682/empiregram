@@ -8,9 +8,10 @@
 .group_prev_con {
   box-shadow: 0 0 10px var(--text-color);
   border-radius: 9px;
-  padding: 20px;
+  
   display: flex;
   flex-direction: column;
+  gap: 15px;
   background-color: var(--secondary-background-color);
 }
 .group_prev_img_con {
