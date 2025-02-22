@@ -53,7 +53,7 @@
 .group_about_cart {
   display: flex;
   align-items: flex-start;
-  gap: ;
+  gap: 10px;
 }
 .icon {
   font-size: 20px;
