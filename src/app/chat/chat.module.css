@@ -7,7 +7,6 @@
 .chat_Con {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
   justify-content: flex-start;
   height: 100vh;
   overflow-y: scroll;
@@ -35,5 +34,18 @@
 
   .chat_box {
     flex-basis: 100%;
+  }
+}
+@media (max-width: 1159px) {
+  .left_bar {
+    display: none;
+  }
+
+  .chat_box {
+    flex-basis: 100%;
+  }
+
+  .right_bar {
+    display: none;
   }
 }
