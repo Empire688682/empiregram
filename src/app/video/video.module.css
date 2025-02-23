@@ -7,7 +7,6 @@
 .video_Con {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
 }
 .left_bar {
   flex-basis: 25%;
@@ -16,4 +15,10 @@
 }
 .video_box {
   flex-basis: 75%;
+}
+
+@media screen and (max-width: 900px) {
+  .video_Con {
+    flex-direction: column;
+  }
 }

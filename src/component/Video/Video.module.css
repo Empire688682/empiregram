@@ -104,3 +104,9 @@
   cursor: pointer;
   font-size: 12px;
 }
+
+@media screen and (max-width:900px){
+  .video{
+    padding: 0 20px 50px 20px;
+  }
+}
