@@ -38,7 +38,9 @@ const ChatBox = () => {
           <div className={style.post_creator}>
           {createPost && <PostCreator setCreatePost={setCreatePost} />}
           </div>
-          
+          <div className={style.status_page}>
+            <StatusBar handleGetPostId={handleGetPostId} />
+          </div>
           <div className={style.single_post}>
             <SinglePost />
           </div>
