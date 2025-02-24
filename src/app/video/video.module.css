@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: var(--secondary-background-color);
   position: relative;
+  padding-bottom: 60px;
 }
 .video_Con {
   width: 100%;

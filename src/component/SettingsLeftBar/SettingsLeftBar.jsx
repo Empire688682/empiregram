@@ -16,59 +16,61 @@ const SettingsLeftBar = ({ setSettingTag }) => {
         <div className={style.header}>
           <h3>Settings & privacy</h3>
         </div>
-        <div className={style.settings_cart_Con}>
-          <div className={style.settings_cart_Conheader}>
+        <div className={style.settings_menu_Con}>
+          <div className={style.settings_menu_Conheader}>
             <h4>Preferences</h4>
             <p>Customise your experience</p>
           </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("notifications")}
-          >
-            <IoNotifications className={style.icons} />
-            <p>Notification settings</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("tags")}
-          >
-            <FaTags className={style.icons} />
-            <p>Tags</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("profiles")}
-          >
-            <CgProfile className={style.icons} />
-            <p>Profile details</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("posts")}
-          >
-            <MdPostAdd className={style.icons} />
-            <p>Post</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("friends")}
-          >
-            <GiThreeFriends className={style.icons} />
-            <p>Friends Requests</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("birthdays")}
-          >
-            <LiaBirthdayCakeSolid className={style.icons} />
-            <p>Birthdays</p>
-          </div>
-          <div
-            className={style.settings_cart}
-            onClick={() => setSettingTag("reels")}
-          >
-            <BsCameraReels className={style.icons} />
-            <p>Reels</p>
+          <div className={style.menus}>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("notifications")}
+            >
+              <IoNotifications className={style.icons} />
+              <p>Notification settings</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("tags")}
+            >
+              <FaTags className={style.icons} />
+              <p>Tags</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("profiles")}
+            >
+              <CgProfile className={style.icons} />
+              <p>Profile details</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("posts")}
+            >
+              <MdPostAdd className={style.icons} />
+              <p>Post</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("friends")}
+            >
+              <GiThreeFriends className={style.icons} />
+              <p>Friends Requests</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("birthdays")}
+            >
+              <LiaBirthdayCakeSolid className={style.icons} />
+              <p>Birthdays</p>
+            </div>
+            <div
+              className={style.settings_menu}
+              onClick={() => setSettingTag("reels")}
+            >
+              <BsCameraReels className={style.icons} />
+              <p>Reels</p>
+            </div>
           </div>
         </div>
       </div>
