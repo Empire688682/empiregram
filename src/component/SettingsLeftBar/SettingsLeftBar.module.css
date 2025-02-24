@@ -70,18 +70,34 @@
 }
 
 @media screen and (max-width: 900px) {
+  .settings_left_bar {
+    height: 300px;
+  }
+  .settings_menu_Conheader {
+    display: none;
+  }
+  .settings_menu_Con {
+    height: 100%;
+    width: 100%;
+    overflow: none;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
  .menus {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
   }
-  .menu{
-    min-width: 80px;
-    max-width: 80px;
+  .settings_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .settings_menu p{
+    display:none;
   }
   .icons {
-    display:none;
+    font-size: 20px;
   }
 }

@@ -168,4 +168,12 @@
     flex-direction: column;
     gap: 40px;
   }
+  .Settings_Content {
+    flex-basis: 70%;
+    padding: 0 20px 0 50px;
+    min-width: 300px;
+    height: 100%;
+    overflow: none;
+    scrollbar-width: none;
+  }
 }
