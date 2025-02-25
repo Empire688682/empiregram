@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 900px) {
   .settings_left_bar {
-    height: 300px;
+    max-height: 250px;
   }
   .settings_menu_Conheader {
     display: none;
