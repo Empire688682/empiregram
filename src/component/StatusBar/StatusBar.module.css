@@ -14,10 +14,25 @@
   gap: 10px;
 }
 
+.style.user_Con{
+  flex-basis: 20%;
+}
+
 .user {
+  width: 100%;
+  min-width: 120px;
+  height: 200px;
   position: relative;
+  border-radius: 9px;
+  box-shadow: 0 0 2.5px var(--text-color);
+  cursor: pointer;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.freiend {
   width: 120px;
   height: 200px;
+  position: relative;
   border-radius: 9px;
   box-shadow: 0 0 2.5px var(--text-color);
   cursor: pointer;
@@ -68,8 +83,15 @@
 }
 
 .post_slider_Con{
-  background-color: yellow;
   display: flex;
   overflow-x:scroll ;
-  
+  flex-basis: 80%;
+  scrollbar-width: 50%;
+}
+.freiend{
+  width: 100%;
+  width: 100%;
+  min-width: 120px;
+  height: 200px;
+  position: relative;
 }

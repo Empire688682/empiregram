@@ -8,7 +8,8 @@ const StatusBar = ({ handleGetPostId }) => {
   return (
     <div className={style.status_bar}>
       <div className={style.status_bar_Con}>
-        <div className={style.user}>
+      <div className={style.user_Con}>
+      <div className={style.user}>
           <Image
             className={style.user_img}
             src="/avatar_icon.png"
@@ -21,6 +22,7 @@ const StatusBar = ({ handleGetPostId }) => {
             <span>Create story</span>
           </div>
         </div>
+      </div>
 
         {//loading && (
           //<div className={style.loading}>
@@ -31,8 +33,8 @@ const StatusBar = ({ handleGetPostId }) => {
 
         <div className={style.post_slider_Con}>
           {
-            Array.from({ length: 10 }).map((_, i) => (
-              <div className={style.user} key={i}>
+            Array.from({ length: 100 }).map((_, i) => (
+              <div className={style.freiend} key={i}>
                 <Image
                   className={style.user_img}
                   src="/avatar_icon.png"
