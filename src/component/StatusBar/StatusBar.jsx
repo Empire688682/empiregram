@@ -21,44 +21,33 @@ const StatusBar = ({ handleGetPostId }) => {
             <span>Create story</span>
           </div>
         </div>
-        {loading ? (
-          <div className={style.loading}>
-            <h2>Loading...</h2>
-          </div>
-        ) : (
-          <div className={style.post_slider_Con}>
-            {posts.map((post) => (
-              <div
-                key={post.login.uuid}
-                onClick={() => handleGetPostId(post.login.uuid)}
-                className={style.post_slider}
-              >
-                <div className={style.friends}>
-                  <Image
-                    className={style.friends_img}
-                    src={post.picture.large}
-                    fill
-                    alt="IMG"
-                    sizes="100%"
-                  />
-                  <div className={style.friends_post_Con}>
-                    <Image
-                      className={style.secondary_friends_img}
-                      src={post.picture.thumbnail}
-                      width={50}
-                      height={50}
-                      alt="IMG"
-                      sizes="100%"
-                    />
-                  </div>
-                  <p
-                    className={style.friends_name}
-                  >{`${post.name.first} ${post.name.last}`}</p>
+
+        {//loading && (
+          //<div className={style.loading}>
+          //  <h2>Loading...</h2>
+          //</div>
+          // )
+        }
+
+        <div className={style.post_slider_Con}>
+          {
+            Array.from({ length: 10 }).map((_, i) => (
+              <div className={style.user} key={i}>
+                <Image
+                  className={style.user_img}
+                  src="/avatar_icon.png"
+                  fill
+                  alt="IMG"
+                  sizes="100%"
+                />
+                <div className={style.user_plus}>
+                  <p>+</p>
+                  <span>Create story</span>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+            ))
+          }
+        </div>
       </div>
     </div>
   );
