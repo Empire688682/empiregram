@@ -32,7 +32,6 @@ const loginUser = async (req) => {
       };
 
       const verificationToken = user.verificationToken;
-      console.log("VerifyToken")
 
       const isVerified = user.isVerified;
       if (!isVerified) {

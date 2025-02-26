@@ -18,9 +18,8 @@
 
 .user {
   position: relative;
-  min-width: 130px;
-  max-width: 130px;
-  height: 250px;
+  width: 180px;
+  height: 200px;
   overflow: hidden;
   border-radius: 9px;
   box-shadow: 0 0 2.5px var(--text-color);
@@ -84,8 +83,8 @@
 
 .friends {
   position: relative;
-  width: 140px;
-  height: 250px;
+  width: 120px;
+  height: 200px;
   overflow: hidden;
   border-radius: 9px;
   box-shadow: 0 0 2.5px var(--text-color);
@@ -101,34 +100,15 @@
   text-shadow: 2px 2px 2px black;
 }
 
+.post_slider_Con{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  scrollbar-width: 20px;
+  background-color: yellow;
+}
+
 .post_slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 300px;
-}
-
-.status_bar_Con :global(.swiper-button-next::after),
-.status_bar_Con :global(.swiper-button-prev::after) {
-  color: white !important;
-  background-color: var(--shadow-color);
-  border-radius: 50%;
-  padding: 5px;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 10;
-  font-size: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 670px) {
-  .status_bar_Con {
-    min-width: 300px;
-    max-width: 300px;
-  }
+  
 }

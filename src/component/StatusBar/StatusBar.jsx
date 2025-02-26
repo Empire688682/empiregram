@@ -1,12 +1,6 @@
 import React from "react";
 import style from "./StatusBar.module.css";
 import Image from "next/image";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { useGlobalContext } from "../Context";
 
 const StatusBar = ({ handleGetPostId }) => {
@@ -32,17 +26,9 @@ const StatusBar = ({ handleGetPostId }) => {
             <h2>Loading...</h2>
           </div>
         ) : (
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={0}
-            slidesPerView={4}
-            navigation={{ clickable: true }}
-            pagination={{ clickable: true }}
-            scrollbar={false}
-            loop={false}
-          >
+          <div className={style.post_slider_Con}>
             {posts.map((post) => (
-              <SwiperSlide
+              <div
                 key={post.login.uuid}
                 onClick={() => handleGetPostId(post.login.uuid)}
                 className={style.post_slider}
@@ -69,9 +55,9 @@ const StatusBar = ({ handleGetPostId }) => {
                     className={style.friends_name}
                   >{`${post.name.first} ${post.name.last}`}</p>
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </div>
         )}
       </div>
     </div>
