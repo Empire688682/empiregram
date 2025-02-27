@@ -1,32 +1,27 @@
 .status_bar {
-  min-width: 300px;
-  max-width: 800px;
+  width: 100%;
   height: 250px;
 }
 
-.status_bar_Con {
+.status_Con {
   display: flex;
   width: 100%;
   box-shadow: 0 4px 15px var(--menu-color);
   border-radius: 12px;
-  background-color: var(--white-color);
-  position: relative;
+ background-color: var(--white-color);
   gap: 10px;
+  margin-right: 10px;
+  overflow-x: scroll;
 }
 
-.style.user_Con{
-  flex-basis: 20%;
-}
-
-.user {
+.status {
   width: 100%;
-  min-width: 120px;
+  min-width: 100px;
   height: 200px;
   position: relative;
   border-radius: 9px;
   box-shadow: 0 0 2.5px var(--text-color);
   cursor: pointer;
-  margin-right: 10px;
   overflow: hidden;
 }
 .all_post {
@@ -80,18 +75,4 @@
 .user_plus span {
   color: black;
   padding: 20px 0 10px 0;
-}
-
-.post_slider_Con{
-  display: flex;
-  overflow-x:scroll ;
-  flex-basis: 80%;
-  scrollbar-width: 50%;
-}
-.freiend{
-  width: 100%;
-  width: 100%;
-  min-width: 120px;
-  height: 200px;
-  position: relative;
 }
