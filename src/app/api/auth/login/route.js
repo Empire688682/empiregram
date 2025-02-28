@@ -60,7 +60,7 @@ const loginUser = async (req) => {
     } catch (error) {
       console.log("Error:", error);
       return NextResponse.json(
-        { success: false, message: "Unable to login user" },
+        { success: false, message: `Unable to login user:${error.message}` },
         { status: 500 },
       );
     }
