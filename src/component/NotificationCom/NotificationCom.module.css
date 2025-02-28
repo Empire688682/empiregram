@@ -73,3 +73,21 @@
   overflow: hidden;
   border-radius: 50%;
 }
+
+@media screen and (max-width: 500px) {
+  .notificationComCon {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notificationComCon {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .notificationComCon {
+    width: 250px;
+  }
+}

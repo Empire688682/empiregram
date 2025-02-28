@@ -109,3 +109,18 @@
 .icons {
   font-size: 25px;
 }
+@media screen and (max-width: 500px) {
+  .right_bar {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .right_bar {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .right_bar {
+    width: 250px;
+  }
+}
