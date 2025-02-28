@@ -64,3 +64,10 @@
   padding-top: 30px;
   width: 100%;
 }
+
+@media (max-width: 1159px) {
+  .chat_box {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
