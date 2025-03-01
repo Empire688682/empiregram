@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AiOutlineLike } from "react-icons/ai";
 import { MdFavorite } from "react-icons/md";
 import { allVideoPost } from "../data";
+import { BsThreeDots } from "react-icons/bs";
 
 const SavedVideo = () => {
   // Function to shorten text
@@ -29,6 +30,7 @@ const SavedVideo = () => {
               <video src={video.video} controls></video>
             </div>
             <div className={style.right_side}>
+              <div className={style.right_author_info_header}>
               <div className={style.right_author_info}>
                 <div className={style.author_img_Con}>
                   <Image
@@ -44,6 +46,10 @@ const SavedVideo = () => {
                   <p>{video.user_Name}</p>
                   <p>{video.date}</p>
                 </div>
+              </div>
+              <div>
+                <BsThreeDots className={style.dot_icon}/>
+              </div>
               </div>
 
               {/* Read More / Read Less Logic */}

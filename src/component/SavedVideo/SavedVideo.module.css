@@ -30,6 +30,14 @@
   display: flex;
   flex-direction: column;
 }
+.right_author_info_header{
+  display: flex;
+  justify-content: space-between;
+}
+.dot_icon{
+  cursor: pointer;
+  font-size: 20px;
+}
 .right_author_info {
   display: flex;
   align-items: center;
