@@ -2,6 +2,7 @@ import React from "react";
 import style from "./StatusBar.module.css";
 import Image from "next/image";
 import { useGlobalContext } from "../Context";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const StatusBar = ({ handleGetPostId }) => {
   const { posts, loading } = useGlobalContext();
@@ -13,7 +14,7 @@ const StatusBar = ({ handleGetPostId }) => {
        {
          loading && (
           <div className={style.loading}>
-            <h2>Loading...</h2>
+            <LoadingSpinner/>
           </div>
            )
        }
@@ -40,7 +41,7 @@ const StatusBar = ({ handleGetPostId }) => {
               <div className={style.status} key={i}>
               <Image
                 className={style.user_img}
-                src="/avatar_icon.png"
+                src={post.picture.large}
                 fill
                 alt="IMG"
                 sizes="100%"
@@ -48,13 +49,14 @@ const StatusBar = ({ handleGetPostId }) => {
               <div className={style.friends_small_img_container}>
                 <Image
                 className={style.friends_small_img}
-                src="/avatar_icon.png"
+                src={post.picture.medium}
                 width={45}
                 alt="IMG"
                 sizes="100%"
                 height={45}
                 />
               </div>
+              <p className={style.friends_name}>{post.name.first} {post.name.last.charAt(0)}...</p>
             </div>
             ))
           }

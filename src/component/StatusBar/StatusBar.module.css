@@ -85,3 +85,16 @@
   border: 1px solid snow;
   overflow: hidden;
 }
+
+.friends_name{
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 2px black;
+  bottom: 5px;
+  left: 5px;
+}
+
+.loading{
+  width: 100%;
+  justify-content: center;
+}
