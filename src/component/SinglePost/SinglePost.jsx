@@ -11,6 +11,15 @@ import { MdOutlinePublic } from "react-icons/md";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { allPosts } from "../data";
 
+// Function to truncate text to a specific word limit
+const truncateText = (text, wordLimit) => {
+  const words = text.split(" "); // Split text into words
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(" ") + " ..."; // Return first 50 words + "..."
+  }
+  return text; // Return full text if it's within the limit
+};
+
 const SinglePost = () => {
   const [posts, setAllPost] = useState([]);
 
@@ -59,7 +68,10 @@ const SinglePost = () => {
               />
             </div>
           </div>
-          <p className={style.post_text}>{post.text}</p>
+
+          {/* Display truncated text */}
+          <p className={style.post_text}>{truncateText(post.text, 20)}</p>
+
           <div className={style.post_images}>
             <div className={style.img_big_Con}>
               <Image
@@ -95,6 +107,7 @@ const SinglePost = () => {
               )}
             </div>
           </div>
+
           <div className={style.post_reaction_header}>
             <div className={style.post_reaction_header_left}>
               <AiOutlineLike className={style.icon} />
@@ -111,6 +124,7 @@ const SinglePost = () => {
               </div>
             </div>
           </div>
+
           <div className={style.post_reaction_Con}>
             <div className={style.like}>
               <AiOutlineLike className={style.icon} />
