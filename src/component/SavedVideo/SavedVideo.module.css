@@ -54,4 +54,11 @@
   .saved_video_Con {
     padding: 20px 20px 20px 20px;
   }
+  .saved_video {
+    flex-direction: column-reverse;
+    margin-bottom: 30px;
+  }
+  .left_side {
+    max-width: 80%;
+  }
 }
