@@ -36,39 +36,27 @@ const PeopleYMK = () => {
         <BsThreeDots className={style.icon} />
       </div>
       <div className={style.Con}>
-        <Swiper
-          modules={[Navigation]}
-          navigation={{ clickable: true }}
-          pagination={{ clickable: true }}
-          scrollbar={false}
-          loop={false}
-          slidesPerView={3}
-          spaceBetween={1}
-        >
           {allPeople.map((people, id) => (
-            <SwiperSlide key={id}>
-              <div className={style.user}>
-                <Image
-                  className={style.user_img}
-                  src={people.picture.large}
-                  fill
-                  alt="IMG"
-                  sizes="100%"
-                />
-                <LiaTimesSolid className={style.icon} />
-                <div className={style.user_details}>
-                  <p
-                    className={style.name}
-                  >{`${people.name.first} ${people.name.first}`}</p>
-                  <div className={style.add_btn}>
-                    <HiUserAdd className={style.icon} />
-                    <span>Add User</span>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+           <div className={style.user} key={id}>
+           <Image
+             className={style.user_img}
+             src={people.picture.large}
+             fill
+             alt="IMG"
+             sizes="100%"
+           />
+           <LiaTimesSolid className={style.icon} />
+           <div className={style.user_details}>
+             <p
+               className={style.name}
+             >{`${people.name.first} ${people.name.first}`}</p>
+             <div className={style.add_btn}>
+               <HiUserAdd className={style.icon} />
+               <span>Add User</span>
+             </div>
+           </div>
+         </div>
           ))}
-        </Swiper>
       </div>
       <p className={style.see_all}>See all</p>
     </div>

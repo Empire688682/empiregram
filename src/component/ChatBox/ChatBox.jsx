@@ -45,9 +45,7 @@ const ChatBox = () => {
             <SinglePost />
           </div>
           <div className={style.people_you_may_know}>
-            {
-              //<PeopleYMK />
-            }
+              <PeopleYMK />
           </div>
           <div className={style.single_post}>
             <SinglePost />
