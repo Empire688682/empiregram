@@ -49,7 +49,7 @@ const PeopleYMK = () => {
            <div className={style.user_details}>
              <p
                className={style.name}
-             >{`${people.name.first} ${people.name.first}`}</p>
+             >{people.name.first} {people.name.first.charAt(0)}...</p>
              <div className={style.add_btn}>
                <HiUserAdd className={style.icon} />
                <span>Add User</span>

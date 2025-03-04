@@ -51,9 +51,7 @@ const ChatBox = () => {
             <SinglePost />
           </div>
           <div className={style.group_you_may_like}>
-            {
-              //<GroupYML />
-            }
+            <GroupYML />
           </div>
         </div>
       </div>

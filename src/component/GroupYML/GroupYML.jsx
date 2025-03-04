@@ -20,38 +20,26 @@ const GroupYML = () => {
         <BsThreeDots className={style.icon} />
       </div>
       <div className={style.Con}>
-        <Swiper
-          modules={[Navigation]}
-          navigation={{ clickable: true }}
-          pagination={{ clickable: true }}
-          scrollbar={false}
-          loop={false}
-          slidesPerView={2}
-          spaceBetween={0}
-        >
-          {groupYML.map((group, id) => (
-            <SwiperSlide key={id}>
-              <div className={style.group}>
-                <Image
-                  className={style.group_img}
-                  src={group.img}
-                  fill
-                  alt="IMG"
-                  sizes="100%"
-                />
-                <div className={style.group_details}>
-                  <p className={style.name}>{group.name}</p>
-                  <div className={style.add_btn}>
-                    <div className={style.group_btns}>
-                      <button>Join Group</button>
-                      <button>Remove</button>
-                    </div>
-                  </div>
+        {groupYML.map((group, id) => (
+          <div className={style.group} key={id}>
+            <Image
+              className={style.group_img}
+              src={group.img}
+              fill
+              alt="IMG"
+              sizes="100%"
+            />
+            <div className={style.group_details}>
+              <p className={style.name}>{group.name}</p>
+              <div className={style.add_btn}>
+                <div className={style.group_btns}>
+                  <button>Join</button>
+                  <button>Remove</button>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
