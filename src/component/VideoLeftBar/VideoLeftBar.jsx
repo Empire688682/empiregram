@@ -36,10 +36,6 @@ const VideoLeftBar = ({ videoTag, setVideoTag }) => {
             <p>Home</p>
           </div>
           <div className={style.menu}>
-            <IoMdVideocam className={style.icon} />
-            <p>Live</p>
-          </div>
-          <div className={style.menu}>
             <FaPhotoVideo className={style.icon} />
             <p>Reels</p>
           </div>
