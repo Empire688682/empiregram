@@ -38,23 +38,24 @@
 }
 .createReelBtn{
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     display: flex;
     gap: 5px;
     cursor: pointer;
     align-items: center;
     background:rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    padding:10px;
     border-radius: 5px;
 }
 .createReelBtn .icon{
     font-size: 15px;
     color: white;
+    padding: 0;
 }
 .createReelBtn p{
-    font-size: 15px;
-    color: whitw;
+    font-size: 16px;
+    color: white;
 }
 .reactions{
     position: absolute;
@@ -72,6 +73,10 @@
 }
 .icon{
     font-size: 30px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
 }
 .reactions p{
     color: var(--text-color);
