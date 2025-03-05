@@ -34,7 +34,6 @@
 
   .chat_box {
     flex-basis: 100%;
-    overflow-x: scroll;
   }
 }
 @media (max-width: 1159px) {

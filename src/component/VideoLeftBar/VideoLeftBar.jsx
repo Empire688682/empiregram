@@ -7,8 +7,10 @@ import { IoMdVideocam } from "react-icons/io";
 import { FaPhotoVideo } from "react-icons/fa";
 import { PiVideoFill } from "react-icons/pi";
 import { MdSaveAlt } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 const VideoLeftBar = ({ videoTag, setVideoTag }) => {
+  const route = useRouter();
   return (
     <div className={style.video_left_bar}>
       <div className={style.video_left_bar_Con}>
@@ -35,7 +37,7 @@ const VideoLeftBar = ({ videoTag, setVideoTag }) => {
             <RiFolderVideoFill className={style.icon} />
             <p>Home</p>
           </div>
-          <div className={style.menu}>
+          <div className={style.menu}  onClick={() => route.push("/reel")}>
             <FaPhotoVideo className={style.icon} />
             <p>Reels</p>
           </div>
