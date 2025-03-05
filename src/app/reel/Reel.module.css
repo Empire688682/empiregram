@@ -1,10 +1,17 @@
 .container{
     padding-top: 90px;
     padding-bottom: 30px;
-    background-color: black;
+    background-color: var(--secondary-background-color);
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    position: relative;
+}
+.reactions{
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    padding-right: 10px;
 }

@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { peopleYMK } from "../data";
+import { peopleYMK } from "../src/component/data";
 import axios from "axios";
 
 const PeopleYMK = () => {
