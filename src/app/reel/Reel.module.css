@@ -9,9 +9,71 @@
     justify-content: center;
     position: relative;
 }
+.video{
+    position: relative;
+    height: 100%;
+}
+.userData {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: medium;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 0  0 9px 9px;
+}
+
+.userData p{
+    color: white;
+    font-size: 15px;
+}
+.header{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+.createReelBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+.createReelBtn .icon{
+    font-size: 15px;
+    color: white;
+}
+.createReelBtn p{
+    font-size: 15px;
+    color: whitw;
+}
 .reactions{
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 30px;
     padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.reactions div{
+    cursor: pointer;
+    font-size: larger;
+    color: var(--accent-color);
+}
+.icon{
+    font-size: 30px;
+}
+.reactions p{
+    color: var(--text-color);
+    font-size: medium;
 }
