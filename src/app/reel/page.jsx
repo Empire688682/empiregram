@@ -11,20 +11,22 @@ const Page = () => {
     reels
   } = useGlobalContext();
   const [index, setIndex] = useState(0);
+
   const nextVideo = () =>{
     setIndex((prevIndex)=>{
       if(prevIndex === reels.length){
-        return 
+        return reels.length
       }
       else{
         return prevIndex += 1
       }
     });
   }
+
   const nextBackVideo = () =>{
     setIndex((prevIndex)=>{
       if(prevIndex === 0){
-        return 
+        return 0
       }
       else{
         return prevIndex - 1
@@ -37,12 +39,14 @@ const Page = () => {
   },[]);
 
   useEffect(()=>{
-    setReelData(reels[0]);
-  },[reels])
+    setReelData(reels[index]);
+  },[reels, nextBackVideo, nextVideo]);
+
+  console.log("Index:", index);
   
   return (
     <div className={style.container}>
-      <ReelComp reelData={reelData}/>
+      <ReelComp reelData={reelData} nextVideo={nextVideo} nextBackVideo={nextBackVideo}/>
     </div>
   )
 }

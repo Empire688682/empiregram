@@ -18,7 +18,7 @@ import { CiPause1 } from "react-icons/ci";
 import { revalidateTag } from 'next/cache';
 import LoadingSpinner from '../Navbar/LoadingSpinner/LoadingSpinner';
 
-const ReelComp = ({reelData}) => {
+const ReelComp = ({reelData, nextBackVideo, nextVideo}) => {
   const [mute, setMute] = useState(true);
   const [play, setPlay] = useState(true);
   return reelData ? (
@@ -48,8 +48,8 @@ const ReelComp = ({reelData}) => {
           <BsThreeDots className={style.controlIcon} />
         </div>
         <div className={style.nextBtns}>
-          <GrFormPrevious className={style.icon} />
-          <MdNavigateNext className={style.icon} />
+          <GrFormPrevious className={style.icon} onClick={nextBackVideo}/>
+          <MdNavigateNext className={style.icon} onClick={nextVideo}/>
         </div>
         <ReelVideo reelVideo={reelData.video} mute={mute} play={play} setPlay={setPlay}/>
         <div className={style.userData}>
