@@ -14,7 +14,11 @@ const Page = () => {
   const router = useRouter();
 
   const nextVideo = () => {
-    setIndex((prevIndex) => (prevIndex === reels.length - 1 ? prevIndex : prevIndex + 1));
+    setIndex((prevIndex) => 
+      (prevIndex === reels.length - 1 ? prevIndex 
+        : prevIndex + 1
+      ));
+      pushReelById();
   };
   
 
@@ -27,6 +31,7 @@ const Page = () => {
         return prevIndex - 1
       }
     });
+    pushReelById();
   }
 
 const pushReelById = () =>{
@@ -40,12 +45,6 @@ const pushReelById = () =>{
   useEffect(()=>{
     fetchReels();
   },[fetchReels]);
-
-  useEffect(()=>{
-    pushReelById()
-  },[nextBackVideo, nextVideo])
-
-  console.log("Index:", index);
   
   return (
     <div className={style.container}>
