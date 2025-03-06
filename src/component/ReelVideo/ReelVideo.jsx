@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import style from "./ReelVideo.module.css";
 
-const ReelVideo = ({ mute, setPlay, play }) => {
+const ReelVideo = ({ mute, setPlay, play, reelData }) => {
     const videoRef = useRef(null);
+    console.log("reelData:", reelData);
 
     useEffect(() => {
         if (videoRef.current) {

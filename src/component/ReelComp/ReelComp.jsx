@@ -15,12 +15,12 @@ import { CiVolumeMute } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { CiVolumeHigh } from "react-icons/ci";
 import { CiPause1 } from "react-icons/ci";
+import { revalidateTag } from 'next/cache';
 
-const ReelComp = ({reels}) => {
+const ReelComp = ({reelData}) => {
   const [mute, setMute] = useState(true);
   const [play, setPlay] = useState(true);
-  console.log("Reels:", reels);
-  return (
+  return reelData && (
     <div className={style.container}>
       <div className={style.video}>
         <div className={style.topHeader}>
@@ -50,20 +50,20 @@ const ReelComp = ({reels}) => {
           <GrFormPrevious className={style.icon} />
           <MdNavigateNext className={style.icon} />
         </div>
-        <ReelVideo  mute={mute} play={play} setPlay={setPlay}/>
+        <ReelVideo reelData={reelData} mute={mute} play={play} setPlay={setPlay}/>
         <div className={style.userData}>
           <div className={style.header}>
             <Image src="/avatar_icon.png" alt="" width={30} height={30} sizes='100%' />
-            <p>Juwon Asehinde</p>
+            <p>{reelData.authorName}</p>
           </div>
           <div className={style.bottom}>
-            <p>This is a lady walking lol </p>
+            <p>{reelData.description} </p>
           </div>
         </div>
         <div className={style.reactions}>
-          <div><AiOutlineLike className={style.icon} /> <p>200</p></div>
-          <div><BiMessage className={style.icon} /> <p>20</p></div>
-          <div><TiArrowForward className={style.icon} /> <p>10</p></div>
+          <div><AiOutlineLike className={style.icon} /> <p>{reelData.like}</p></div>
+          <div><BiMessage className={style.icon} /> <p>{reelData.comment}</p></div>
+          <div><TiArrowForward className={style.icon} /> <p>{reelData.share}</p></div>
         </div>
       </div>
     </div>
