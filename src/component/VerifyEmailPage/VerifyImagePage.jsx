@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
-import LoadingSpinner from "@/component/LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "@/component/Navbar/LoadingSpinner/LoadingSpinner";
 import style from "./VerifyImage.module.css";
 
 const VerifyEmailPage = () => {

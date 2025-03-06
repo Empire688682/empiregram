@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { reelsData } from "../../public/assets";
 
 const AppContext = React.createContext();
 
@@ -78,6 +79,15 @@ export const AppProvider = ({ children }) => {
   };
 
   const [mobileChatClick, setMobileChatClick] = useState(false);
+  const [reels, setReels] = useState([]);
+
+  const fetchReels = async () =>{
+    setReels(reelsData)
+  };
+
+  useEffect(()=>{
+    fetchReels()
+  }, [])
 
   return (
     <AppContext.Provider
@@ -92,6 +102,8 @@ export const AppProvider = ({ children }) => {
         colorModeToggle,
         mobileChatClick,
         setMobileChatClick,
+        fetchReels,
+        reels
       }}
     >
       {children}

@@ -2,7 +2,7 @@ import React from "react";
 import style from "./StatusBar.module.css";
 import Image from "next/image";
 import { useGlobalContext } from "../Context";
-import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "../Navbar/LoadingSpinner/LoadingSpinner";
 
 const StatusBar = ({ handleGetPostId }) => {
   const { posts, loading } = useGlobalContext();

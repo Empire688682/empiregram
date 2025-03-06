@@ -1,6 +1,3 @@
-import video_1 from '/video.2.mp4';
-import video_2 from '/video.3.mp4';
-
 export const reelsData = [
   {
     id: 1,
@@ -9,7 +6,7 @@ export const reelsData = [
     coments: 14,
     like: 200,
     share: 12,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 2,
@@ -18,7 +15,7 @@ export const reelsData = [
     coments: 22,
     like: 340,
     share: 15,
-    video: video_2
+    video: "/video.2.mp4"
   },
   {
     id: 3,
@@ -27,7 +24,7 @@ export const reelsData = [
     coments: 18,
     like: 290,
     share: 9,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 4,
@@ -36,7 +33,7 @@ export const reelsData = [
     coments: 10,
     like: 180,
     share: 8,
-    video: video_2
+    video: "/video.2.mp4"
   },
   {
     id: 5,
@@ -45,7 +42,7 @@ export const reelsData = [
     coments: 30,
     like: 410,
     share: 21,
-    video: video_1
+    video: "/video.3.mp4"
   },
   {
     id: 6,
@@ -54,7 +51,7 @@ export const reelsData = [
     coments: 12,
     like: 205,
     share: 7,
-    video: video_2
+    video: "/video.1.mp4"
   },
   {
     id: 7,
@@ -63,7 +60,7 @@ export const reelsData = [
     coments: 19,
     like: 330,
     share: 14,
-    video: video_1
+    video: "/video.2.mp4"
   },
   {
     id: 8,
@@ -72,7 +69,7 @@ export const reelsData = [
     coments: 25,
     like: 410,
     share: 18,
-    video: video_2
+    video: "/video.3.mp4"
   },
   {
     id: 9,
@@ -81,7 +78,7 @@ export const reelsData = [
     coments: 14,
     like: 270,
     share: 10,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 10,
@@ -90,7 +87,7 @@ export const reelsData = [
     coments: 16,
     like: 300,
     share: 12,
-    video: video_2
+    video: "/video.2.mp4"
   },
   {
     id: 11,
@@ -99,7 +96,7 @@ export const reelsData = [
     coments: 28,
     like: 380,
     share: 20,
-    video: video_1
+    video: "/video.3.mp4"
   },
   {
     id: 12,
@@ -108,7 +105,7 @@ export const reelsData = [
     coments: 20,
     like: 310,
     share: 16,
-    video: video_2
+    video: "/video.1.mp4"
   },
   {
     id: 13,
@@ -117,7 +114,7 @@ export const reelsData = [
     coments: 15,
     like: 260,
     share: 11,
-    video: video_1
+    video: "/video.2.mp4"
   },
   {
     id: 14,
@@ -126,7 +123,7 @@ export const reelsData = [
     coments: 13,
     like: 240,
     share: 9,
-    video: video_2
+    video: "/video.3.mp4"
   },
   {
     id: 15,
@@ -135,7 +132,7 @@ export const reelsData = [
     coments: 17,
     like: 280,
     share: 13,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 16,
@@ -144,7 +141,7 @@ export const reelsData = [
     coments: 21,
     like: 350,
     share: 17,
-    video: video_2
+    video: "/video.2.mp4"
   },
   {
     id: 17,
@@ -153,7 +150,7 @@ export const reelsData = [
     coments: 11,
     like: 190,
     share: 8,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 18,
@@ -162,7 +159,7 @@ export const reelsData = [
     coments: 24,
     like: 370,
     share: 19,
-    video: video_2
+    video: "/video.2.mp4"
   },
   {
     id: 19,
@@ -171,7 +168,7 @@ export const reelsData = [
     coments: 27,
     like: 400,
     share: 22,
-    video: video_1
+    video: "/video.1.mp4"
   },
   {
     id: 20,
@@ -180,6 +177,6 @@ export const reelsData = [
     coments: 26,
     like: 390,
     share: 21,
-    video: video_2
+    video: "/video.2.mp4"
   }
 ];
