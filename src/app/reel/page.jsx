@@ -10,6 +10,27 @@ const Page = () => {
     fetchReels,
     reels
   } = useGlobalContext();
+  const [index, setIndex] = useState(0);
+  const nextVideo = () =>{
+    setIndex((prevIndex)=>{
+      if(prevIndex === reels.length){
+        return 
+      }
+      else{
+        return prevIndex += 1
+      }
+    });
+  }
+  const nextBackVideo = () =>{
+    setIndex((prevIndex)=>{
+      if(prevIndex === 0){
+        return 
+      }
+      else{
+        return prevIndex - 1
+      }
+    });
+  }
 
   useEffect(()=>{
     fetchReels();

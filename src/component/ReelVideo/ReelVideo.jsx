@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import style from "./ReelVideo.module.css";
 
-const ReelVideo = ({ mute, setPlay, play, reelData }) => {
+const ReelVideo = ({ mute, setPlay, play, reelVideo }) => {
     const videoRef = useRef(null);
-    console.log("reelData:", reelData);
 
     useEffect(() => {
         if (videoRef.current) {
@@ -22,7 +21,7 @@ const ReelVideo = ({ mute, setPlay, play, reelData }) => {
                     ref={videoRef}
                     onClick={() => setPlay(!play)}
                     className={style.video}
-                    src="/video.1.mp4"
+                    src={reelVideo}
                     muted={mute}
                     playsInline
                     loop
