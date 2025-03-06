@@ -3,25 +3,20 @@ import React, { useEffect, useState } from 'react';
 import style from './Reel.module.css'
 import ReelComp from '@/component/ReelComp/ReelComp';
 import { useGlobalContext } from '@/component/Context';
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
-  const [reelData, setReelData] = useState({});
   const {
     fetchReels,
     reels
   } = useGlobalContext();
   const [index, setIndex] = useState(0);
+  const router = useRouter();
 
-  const nextVideo = () =>{
-    setIndex((prevIndex)=>{
-      if(prevIndex === reels.length){
-        return reels.length
-      }
-      else{
-        return prevIndex += 1
-      }
-    });
-  }
+  const nextVideo = () => {
+    setIndex((prevIndex) => (prevIndex === reels.length - 1 ? prevIndex : prevIndex + 1));
+  };
+  
 
   const nextBackVideo = () =>{
     setIndex((prevIndex)=>{
@@ -34,19 +29,27 @@ const Page = () => {
     });
   }
 
-  useEffect(()=>{
-    fetchReels();
-  },[]);
+const pushReelById = () =>{
+  if(index > 0){
+    const nextReelId = reels[index].id;
+    console.log("nextReelId:", nextReelId);
+    router.push(`/reel/${nextReelId}`)
+  }
+}
 
   useEffect(()=>{
-    setReelData(reels[index]);
-  },[reels, nextBackVideo, nextVideo]);
+    fetchReels();
+  },[fetchReels]);
+
+  useEffect(()=>{
+    pushReelById()
+  },[nextBackVideo, nextVideo])
 
   console.log("Index:", index);
   
   return (
     <div className={style.container}>
-      <ReelComp reelData={reelData} nextVideo={nextVideo} nextBackVideo={nextBackVideo}/>
+      <ReelComp reelData={reels[index]} reels={reels} index={index} nextVideo={nextVideo} nextBackVideo={nextBackVideo}/>
     </div>
   )
 }

@@ -14,6 +14,13 @@ const ReelVideo = ({ mute, setPlay, play, reelVideo }) => {
         }
     }, [play]); // Runs whenever `play` state changes
 
+    useEffect(()=>{
+        if(videoRef.current){
+            videoRef.current.play();
+        }
+        setPlay(true)
+    },[reelVideo]);
+
     return (
         <div className={style.container}>
             <div className={style.videoCom}>

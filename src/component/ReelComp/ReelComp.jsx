@@ -18,7 +18,7 @@ import { CiPause1 } from "react-icons/ci";
 import { revalidateTag } from 'next/cache';
 import LoadingSpinner from '../Navbar/LoadingSpinner/LoadingSpinner';
 
-const ReelComp = ({reelData, nextBackVideo, nextVideo}) => {
+const ReelComp = ({ reelData, nextBackVideo, nextVideo, reels, index }) => {
   const [mute, setMute] = useState(true);
   const [play, setPlay] = useState(true);
   return reelData ? (
@@ -36,22 +36,30 @@ const ReelComp = ({reelData, nextBackVideo, nextVideo}) => {
         </div>
         <div className={style.controlBtns}>
           {
-            play ?<CiPause1 className={style.controlIcon} onClick={()=>setPlay(!play)}/>
-            :
-            <CiPlay1 className={style.controlIcon} onClick={()=>setPlay(!play)}/>
+            play ? <CiPause1 className={style.controlIcon} onClick={() => setPlay(!play)} />
+              :
+              <CiPlay1 className={style.controlIcon} onClick={() => setPlay(!play)} />
           }
           {
-            mute ? <CiVolumeMute className={style.controlIcon} onClick={()=>setMute(!mute)}/>
-            :
-            <CiVolumeHigh className={style.controlIcon} onClick={()=>setMute(!mute)}/>
+            mute ? <CiVolumeMute className={style.controlIcon} onClick={() => setMute(!mute)} />
+              :
+              <CiVolumeHigh className={style.controlIcon} onClick={() => setMute(!mute)} />
           }
           <BsThreeDots className={style.controlIcon} />
         </div>
         <div className={style.nextBtns}>
-          <GrFormPrevious className={style.icon} onClick={nextBackVideo}/>
-          <MdNavigateNext className={style.icon} onClick={nextVideo}/>
+          <div>
+            {
+              index > 0 && <GrFormPrevious className={style.icon} onClick={nextBackVideo} />
+            }
+          </div>
+          <div>
+            {
+              index !== reels.length - 1  && <MdNavigateNext className={style.icon} onClick={nextVideo} />
+            }
+          </div>
         </div>
-        <ReelVideo reelVideo={reelData.video} mute={mute} play={play} setPlay={setPlay}/>
+        <ReelVideo reelVideo={reelData.video} mute={mute} play={play} setPlay={setPlay} />
         <div className={style.userData}>
           <div className={style.header}>
             <Image src="/avatar_icon.png" alt="" width={30} height={30} sizes='100%' />
@@ -63,14 +71,14 @@ const ReelComp = ({reelData, nextBackVideo, nextVideo}) => {
         </div>
         <div className={style.reactions}>
           <div><AiOutlineLike className={style.icon} /> <p>{reelData.like}</p></div>
-          <div><BiMessage className={style.icon} /> <p>{reelData.comment}</p></div>
+          <div><BiMessage className={style.icon} /> <p>{reelData.coment}</p></div>
           <div><TiArrowForward className={style.icon} /> <p>{reelData.share}</p></div>
         </div>
       </div>
     </div>
   )
-  :
-  <LoadingSpinner/>
+    :
+    <LoadingSpinner />
 }
 
 export default ReelComp
