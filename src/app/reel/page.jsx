@@ -34,14 +34,6 @@ const Page = () => {
     pushReelById();
   }
 
-const pushReelById = () =>{
-  if(index > 0){
-    const nextReelId = reels[index].id;
-    console.log("nextReelId:", nextReelId);
-    router.push(`/reel/${nextReelId}`)
-  }
-}
-
   useEffect(()=>{
     fetchReels();
   },[fetchReels]);
