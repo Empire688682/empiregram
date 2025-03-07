@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import style from './Reel.module.css'
 import ReelComp from '@/component/ReelComp/ReelComp';
 import { useGlobalContext } from '@/component/Context';
-import { useRouter } from 'next/navigation';
 
 const Page = () => {
   const {
@@ -11,14 +10,13 @@ const Page = () => {
     reels
   } = useGlobalContext();
   const [index, setIndex] = useState(0);
-  const router = useRouter();
 
   const nextVideo = () => {
     setIndex((prevIndex) => 
       (prevIndex === reels.length - 1 ? prevIndex 
         : prevIndex + 1
       ));
-      pushReelById();
+
   };
   
 
@@ -31,7 +29,6 @@ const Page = () => {
         return prevIndex - 1
       }
     });
-    pushReelById();
   }
 
   useEffect(()=>{
