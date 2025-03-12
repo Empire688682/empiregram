@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import VerifyEmailPage from "../VerifyEmailPage/VerifyImagePage";
+import VerifyEmailPage from "../VerifyEmailPage/VerifyEmailPage";
 import { Suspense } from "react";
 
 const VerifyEmailWrapper = () => {
