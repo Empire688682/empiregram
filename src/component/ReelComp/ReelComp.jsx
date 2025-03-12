@@ -15,12 +15,12 @@ import { CiVolumeMute } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { CiVolumeHigh } from "react-icons/ci";
 import { CiPause1 } from "react-icons/ci";
-import { revalidateTag } from 'next/cache';
 import LoadingSpinner from '../Navbar/LoadingSpinner/LoadingSpinner';
 
 const ReelComp = ({ reelData, nextBackVideo, nextVideo, reels, index }) => {
   const [mute, setMute] = useState(true);
   const [play, setPlay] = useState(true);
+
   return reelData ? (
     <div className={style.container}>
       <div className={style.video}>
