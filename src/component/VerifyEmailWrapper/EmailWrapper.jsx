@@ -3,7 +3,7 @@ import React from "react";
 import VerifyEmailPage from "../VerifyEmailPage/VerifyEmailPage";
 import { Suspense } from "react";
 
-const VerifyEmailWrapper = () => {
+const EmailWrapper = () => {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
@@ -13,4 +13,4 @@ const VerifyEmailWrapper = () => {
   );
 };
 
-export default VerifyEmailWrapper;
+export default EmailWrapper;

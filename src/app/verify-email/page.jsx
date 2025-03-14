@@ -1,12 +1,12 @@
 "use client";
-import VerifyEmailWrapper from "@/Component/VerifyEmailWrapper/VerifyEmailWrapper";
+import EmailWrapper from "@/component/EmailWrapper/EmailWrapper";
 import React from "react";
 
 
 const Page = () => {
   return (
     <div>
-      <VerifyEmailWrapper />
+      <EmailWrapper />
     </div>
   );
 };
