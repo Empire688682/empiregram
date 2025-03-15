@@ -71,3 +71,5 @@ const PostDisplay = ({ setPostDisplayData, postDisplayData }) => {
 };
 
 export default PostDisplay;
+
+

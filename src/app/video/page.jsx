@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import style from "./video.module.css";
-import VideoLeftBar from "@/Component/VideoLeftBar/VideoLeftBar";
-import Video from "@/Component/Video/Video";
-import SavedVideo from "@/Component/SavedVideo/SavedVideo";
+import VideoLeftBar from "@/component/VideoLeftBar/VideoLeftBar";
+import Video from "@/component/Video/Video";
+import SavedVideo from "@/component/SavedVideo/SavedVideo";
 
 const Page = () => {
   const [videoTag, setVideoTag] = useState("savedVideos");
@@ -29,3 +29,5 @@ const Page = () => {
 };
 
 export default Page;
+
+

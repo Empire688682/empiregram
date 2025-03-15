@@ -82,3 +82,5 @@ const ReelComp = ({ reelData, nextBackVideo, nextVideo, reels, index }) => {
 }
 
 export default ReelComp
+
+

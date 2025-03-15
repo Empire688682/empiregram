@@ -1,9 +1,9 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import style from './Reel.module.css'
-import ReelComp from '@/Component/ReelComp/ReelComp';
+import ReelComp from '@/component/ReelComp/ReelComp';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useGlobalContext } from '@/Component/Context';
+import { useGlobalContext } from '@/component/Context';
 
 const Page = () => {
   const {
@@ -70,3 +70,5 @@ const Page = () => {
 }
 
 export default Page
+
+

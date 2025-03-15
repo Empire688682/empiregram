@@ -15,3 +15,4 @@ export const emailDecoder = async (token) => {
         console.log("JWT Error:", error)
     }
 }
+

@@ -28,3 +28,4 @@ export const emailTransporter = async (email, verifyLink) =>{
         throw new Error(`Failed to send verification email: ${error.message}`);
       }
 }
+

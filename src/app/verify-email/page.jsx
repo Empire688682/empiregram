@@ -1,5 +1,5 @@
 "use client";
-import EmailWrapper from "../../Component/VerifyEmailWrapper/EmailWrapper"
+import EmailWrapper from "../../component/VerifyEmailWrapper/EmailWrapper"
 import React from "react";
 
 
@@ -12,3 +12,5 @@ const Page = () => {
 };
 
 export default Page;
+
+

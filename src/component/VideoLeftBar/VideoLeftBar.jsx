@@ -59,3 +59,5 @@ const VideoLeftBar = ({ videoTag, setVideoTag }) => {
 };
 
 export default VideoLeftBar;
+
+

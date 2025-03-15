@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import style from "./group.module.css";
-import GroupCom from "@/Component/GroupCom/GroupCom";
-import GroupLeftBar from "@/Component/GroupLeftBar/GroupLeftBar";
+import GroupCom from "@/component/GroupCom/GroupCom";
+import GroupLeftBar from "@/component/GroupLeftBar/GroupLeftBar";
 
 
 const Page = () => {
@@ -22,3 +22,5 @@ const Page = () => {
 };
 
 export default Page;
+
+

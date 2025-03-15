@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
-import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "@/component/LoadingSpinner/LoadingSpinner";
 import style from "./VerifyEmailPage.module.css";
 
 const VerifyEmailPage = () => {
@@ -52,3 +52,5 @@ const VerifyEmailPage = () => {
 };
 
 export default VerifyEmailPage;
+
+

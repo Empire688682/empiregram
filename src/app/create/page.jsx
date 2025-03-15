@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import style from "./create.module.css";
-import CreateGroupLeftbar from "@/Component/CreateGroupLeftbar/CreateGroupLeftbar";
-import CreateGroupPrev from "@/Component/CreateGroupPrev/CreateGroupPrev";
+import CreateGroupLeftbar from "@/component/CreateGroupLeftbar/CreateGroupLeftbar";
+import CreateGroupPrev from "@/component/CreateGroupPrev/CreateGroupPrev";
 
 const Page = () => {
   const [groupData, setGroupData] = useState({
@@ -24,3 +24,5 @@ const Page = () => {
 };
 
 export default Page;
+
+

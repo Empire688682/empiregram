@@ -67,3 +67,5 @@ const StatusBar = ({ handleGetPostId }) => {
 };
 
 export default StatusBar;
+
+

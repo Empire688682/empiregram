@@ -12,3 +12,5 @@ export const logoutUser = () => {
 export function GET() {
   return logoutUser();
 }
+
+

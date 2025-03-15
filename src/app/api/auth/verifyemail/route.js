@@ -39,3 +39,4 @@ export async function POST(req) {
         return NextResponse.json({ success: false, message: "Unable to verify email" }, { status: 500 })
     }
 }
+
