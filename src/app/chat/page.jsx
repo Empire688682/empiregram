@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import style from "./chat.module.css";
-import LeftBar from "@/component/LeftBar/LeftBar";
-import ChatBox from "@/component/ChatBox/ChatBox";
-import { useGlobalContext } from "@/component/Context";
+import LeftBar from "@/Component/LeftBar/LeftBar";
+import ChatBox from "@/Component/ChatBox/ChatBox";
+import { useGlobalContext } from "@/Component/Context";
 
 const Page = () => {
   const { mobileChatClick } = useGlobalContext();

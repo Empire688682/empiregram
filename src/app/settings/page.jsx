@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import style from "./settings.module.css";
-import Settings from "@/component/Settings/Settings";
+import Settings from "@/Component/Settings/Settings";
 
 const page = () => {
   return (

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import style from "./cart.module.css";
-import { useGlobalContext } from "@/component/Context";
-import GroupLeftbarCart from "@/component/GroupLeftbarCart/GroupLeftCart";
-import GroupMainCart from "@/component/GroupMainCart/GroupMainCart";
+import { useGlobalContext } from "@/Component/Context";
+import GroupLeftbarCart from "@/Component/GroupLeftbarCart/GroupLeftCart";
+import GroupMainCart from "@/Component/GroupMainCart/GroupMainCart";
 
 const Page = () => {
   const { friends, loading } = useGlobalContext();

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import style from "./group.module.css";
-import GroupLeftBar from "@/component/GroupLeftBar/GroupLeftBar";
-import GroupCom from "@/component/GroupCom/GroupCom";
+import GroupLeftBar from "@/Component/GroupLeftBar/GroupLeftBar";
+import GroupCom from "@/Component/GroupCom/GroupCom";
 
 const Page = () => {
   const [showGroups, setShowGroups] = useState("discover");

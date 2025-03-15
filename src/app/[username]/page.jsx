@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Username.module.css";
-import UserData from "@/component/UserData/UserData";
-import MenuBar from "@/component/MenuBar/MenuBar";
+import UserData from "@/Component/UserData/UserData";
+import MenuBar from "@/Component/MenuBar/MenuBar";
 
 const page = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./notification.module.css";
-import NotificationCom from "@/component/NotificationCom/NotificationCom";
+import NotificationCom from "@/Component/NotificationCom/NotificationCom";
 
 const Page = () => {
   return (
