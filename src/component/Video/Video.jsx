@@ -11,6 +11,7 @@ import Image from "next/image";
 import { allVideoPost } from "../data";
 
 const Video = () => {
+  const [readmore, setReadmore] = useState(true);
   const shortenText = (text, maxText) => {
     const words = text.split(" ");
     if (words.length > maxText) {
@@ -21,7 +22,6 @@ const Video = () => {
   return (
     <div className={style.video}>
       {allVideoPost.map((video, id) => {
-        const [readmore, setReadmore] = useState(true);
         return (
           <div className={style.single_post_Con} key={id}>
             <div className={style.header}>
