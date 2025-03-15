@@ -5,13 +5,6 @@ import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
 import { LiaTimesSolid } from "react-icons/lia";
 import { HiUserAdd } from "react-icons/hi";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { peopleYMK } from "../src/component/data";
 import axios from "axios";
 
 const PeopleYMK = () => {

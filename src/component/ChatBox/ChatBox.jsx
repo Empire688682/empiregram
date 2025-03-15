@@ -5,7 +5,7 @@ import Image from "next/image";
 import PostCreator from "../PostCreator/PostCreator";
 import StatusBar from "../StatusBar/StatusBar";
 import SinglePost from "../SinglePost/SinglePost";
-import PeopleYMK from "../../../PeopleYMK/PeopleYMK";
+import PeopleYMK from "../PeopleYMK/PeopleYMK";
 import GroupYML from "../GroupYML/GroupYML";
 import PostDisplay from "../PostDisplay/PostDisplay";
 import { useGlobalContext } from "../Context";
