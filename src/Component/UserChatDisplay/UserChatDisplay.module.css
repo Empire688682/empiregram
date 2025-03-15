@@ -1,0 +1,113 @@
+.user {
+  width: 100%;
+  position: absolute;
+  background-color: var(--secondary-background-color);
+  z-index: 99;
+  top: 30%;
+  transform: translateY(-50%);
+  left: 50%;
+  min-width: 300px;
+  max-width: 800px;
+  border: 2px solid var(--background-color);
+  border-radius: 9px;
+}
+.userCon {
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.userHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--secondary-background-color);
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0 15px var(--background-color);
+}
+.headerImgCon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.userImg {
+  border-radius: 50%;
+}
+.headerText p {
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.headerText span {
+  font-size: 10px;
+}
+.headerIconsCon {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+.userCenter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+.userChatBox {
+  margin-top: 20px;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  align-items: stretch;
+}
+.userMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align user messages to the right */
+}
+
+.friendMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align friend messages to the left */
+}
+.usertext {
+  padding: 5px;
+  max-width: 60%;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 9px;
+}
+.friendText {
+  padding: 5px;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  max-width: 60%;
+}
+.timestamp {
+  font-size: 0.75rem;
+  color: gray;
+  margin-left: 10px;
+}
+
+@media (max-width: 1040px) {
+  .user {
+    left: 20px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}

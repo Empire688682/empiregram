@@ -1,0 +1,93 @@
+.notificationComCon {
+  min-width: 300px;
+  max-width: 600px;
+  height: 100%;
+  background-color: var(--background-color);
+  padding-top: 90px;
+}
+
+.notificationToggleComCon {
+  width: 100%;
+}
+
+.notificationCom {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notificationsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notificationsHeader p {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.btns li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--accent-color);
+  font-weight: bolder;
+}
+
+.notificationsCart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.notificationCom h3 {
+  padding-bottom: 15px;
+}
+
+.notificationsCart .icon {
+  font-size: 30px;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.imgCon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .notificationComCon {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notificationComCon {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .notificationComCon {
+    width: 250px;
+  }
+}

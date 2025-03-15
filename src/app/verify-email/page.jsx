@@ -1,5 +1,5 @@
 "use client";
-import EmailWrapper from "@/Component/EmailWrapper/EmailWrapper";
+import EmailWrapper from "../../Component/VerifyEmailWrapper/EmailWrapper"
 import React from "react";
 
 

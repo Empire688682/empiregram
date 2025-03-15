@@ -1,0 +1,170 @@
+.userData {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 0 auto;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.userBanner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.editCoverBtn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  font-size: 15px;
+}
+.editCoverBtn span {
+  color: black;
+  font-size: 15px;
+}
+
+/*Userprofile*/
+.userProfileCon {
+  display: flex;
+  padding: 20px 20px 50px 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 2px solid var(--background-color);
+}
+.userProfile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  min-width: 250px;
+}
+.userProfileNamesNfriends {
+  display: flex;
+  flex-direction: column;
+}
+.userProfileName {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+.userProfileImg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}
+.userProfileImgIcon {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  border: 3px solid var(--white);
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--button-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userProfileEdit {
+  display: flex;
+  gap: 10px;
+  min-width: 250px;
+}
+.userProfileEdit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+  min-width: 100px;
+  gap: 10px;
+  font-size: 18px;
+}
+
+/*Userprofile Media query*/
+@media screen and (max-width: 890px){
+  .userProfileCon {
+    transform: translateY(-100px);
+    gap: 30px;
+    padding: 20px 20px 0 20px;
+  }
+  .editCoverBtn {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .editCoverBtn span {
+    display: none;
+  }
+  .userProfile {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .userProfileName {
+    align-items: center;
+    justify-content: center;
+  }
+  .userProfileEdit {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .userProfileEdit button {
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    gap: 2px;
+  }
+}
+
+/*Userprofile Bio&Post*/
+.userProfileBioNuserPost{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 10px;
+}
+.userProfileBio{
+  flex-basis: 40%;
+  min-width: 300px;
+  height: 500px;
+  background-color: blue;
+}
+.userProfilePost{
+  min-width: 300px;
+  flex-basis: 55%;
+  height: 500px;
+}
+
+/*Userprofile Bio&Post Query*/
+@media screen and (max-width: 890px){
+  .userProfileBioNuserPost{
+    width: 100%;
+    justify-content: center;
+  }
+  .userProfileBio{
+    flex-basis: 100%;
+    max-width: 600px;
+  }
+  .userProfilePost{
+    flex-basis: 100%;
+    max-width: 600px;
+  }
+}

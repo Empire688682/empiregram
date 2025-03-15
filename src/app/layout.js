@@ -1,12 +1,12 @@
 // app/layout.js
 "use client";
-import { AppProvider, useGlobalContext } from "@/component/Context";
 import "./globals.css";
 import Head from "next/head";
-import MenuBar from "@/component/MenuBar/MenuBar";
 import { usePathname } from "next/navigation";
 import { useState, useEffect  } from "react";
-import Footer from "@/component/Footer/Footer";
+import { AppProvider, useGlobalContext } from "@/Component/Context";
+import MenuBar from "@/Component/MenuBar/MenuBar";
+import Footer from "@/Component/Footer/Footer";
 export default function RootLayout({ children }) {
   const pathName = usePathname();
   const [showMenu, setShowMenu] = useState(pathName !== "/");

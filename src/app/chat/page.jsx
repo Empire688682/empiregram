@@ -5,8 +5,9 @@ import LeftBar from "@/Component/LeftBar/LeftBar";
 import ChatBox from "@/Component/ChatBox/ChatBox";
 import { useGlobalContext } from "@/Component/Context";
 
+
 const Page = () => {
-  const { mobileChatClick } = useGlobalContext();
+  const { mobileChatClick } = useGlobalContext;
   return (
     <div className={style.chat}>
       <div className={style.chat_Con}>

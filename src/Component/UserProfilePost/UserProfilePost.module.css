@@ -1,0 +1,115 @@
+.home_user_post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px var(--text-color);
+}
+
+.img_Con {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(139, 131, 131);
+}
+
+.home_user_post p {
+  padding: 10px;
+  background-color: rgb(228, 224, 224);
+  color: rgb(88, 86, 86);
+  border-radius: 20px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.postView {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.postView p {
+  padding-bottom: 5px;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.postView .active {
+  border-bottom: 3px solid var(--text-color);
+}
+
+/**Grid styling**/
+.gridViewCon {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.gridView {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--text-color);
+  border-radius: 9px;
+  flex-basis: 48%;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.imgCon {
+  border-bottom: 2px solid var(--text-color);
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.gridViewContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 15px 10px;
+}
+
+.gridViewContentImg {
+  border-radius: 50%;
+}
+
+.gridViewContentText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.singleGridDisplay {
+  position: fixed;
+  max-width: 400px;
+  min-width: 300px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-color);
+  height: 70vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  border-radius: 9px;
+  padding: 20px;
+}

@@ -1,0 +1,179 @@
+.settings {
+  width: 100%;
+}
+.settings_Con {
+  display: flex;
+  width: 100%;
+}
+.SettingsLeftBar {
+  flex-basis: 30%;
+  min-width: 300px;
+  width: 100%;
+  background-color: var(--secondary-background-color);
+}
+.Settings_Content {
+  flex-basis: 70%;
+  padding: 100px 50px 0 50px;
+  min-width: 300px;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.container h2,
+.container h3,
+.container p {
+  color: var(--text-color);
+}
+.cart {
+  padding: 10px;
+  background-color: var(--secondary-background-color);
+  border-radius: 5px;
+}
+.secondary_cart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 50px;
+}
+.settings_Con h2 {
+  color: black;
+}
+.cart_left_notification {
+  display: flex;
+  gap: 20px;
+}
+.cart_left_text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cart_left_text p {
+  font-weight: bold;
+}
+.mode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  gap: 20px;
+  transition: 0.1s ease-in-out;
+  padding: 10px;
+}
+.mode_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mode_right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(66, 66, 187);
+  border-radius: 20px;
+}
+.mode_motor {
+  position: relative;
+  background-color: rgb(66, 66, 187);
+  height: 20px;
+  width: 50px;
+  border-radius: 40px;
+  border: 1px solid rgb(82, 81, 81);
+}
+.mode_motor::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  left: 0;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+.mode_motor.dark::before {
+  background-color: white;
+  transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
+  right: auto; /* Override the `right` position */
+}
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.hidden_content {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--background-color);
+  width: 100%;
+}
+.hidden_content p {
+  font-weight: normal;
+}
+.hidden_content span {
+  font-weight: bold;
+}
+.hidden_btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.btn_text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btn_btn {
+  position: relative;
+  background-color: rgb(66, 66, 187);
+  height: 20px;
+  width: 50px;
+  border-radius: 40px;
+  border: 1px solid rgb(82, 81, 81);
+}
+.btn_btn::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  right: 0;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+.btn_btn.dark::before {
+  background-color: white;
+  transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
+  right: auto; /* Override the `right` position */
+}
+
+@media screen and (max-width: 900px) {
+  .settings_Con {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .Settings_Content {
+    flex-basis: 70%;
+    padding: 0 20px 50px 20px;
+    min-width: 300px;
+    height: 100%;
+    overflow: none;
+    scrollbar-width: none;
+  }
+}

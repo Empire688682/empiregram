@@ -1,0 +1,125 @@
+.groupLeftbarCartContainer {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.groupLeftbarCart {
+  height: 100%;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+}
+.headerImgName {
+  display: flex;
+  gap: 5px;
+}
+.headerImgName span {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.headerImgName .icon {
+  font-size: 15px;
+}
+.headerImg {
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.search_bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  height: 30px;
+  background-color: rgb(228, 224, 224);
+  border-radius: 5px;
+  padding: 3px;
+}
+.search_bar label {
+  display: flex;
+}
+.search_bar input {
+  flex: 2;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+}
+.search_bar input::placeholder {
+  color: rgb(88, 86, 86);
+}
+.search_bar_icon {
+  font-size: 25px;
+  color: rgb(88, 86, 86);
+}
+.header_fixed {
+  position: absolute;
+  background-color: var(--background-color);
+  z-index: 50;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+  width: 100%;
+  margin-right: 10px;
+  padding-top: 100px;
+}
+.loading {
+  margin-top: 150px;
+  padding-bottom: 40px;
+}
+.users_list {
+  margin-top: 140px;
+  padding: 60px 10px 40px 10px;
+  height: 75vh;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  width: 100%;
+}
+.users {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+  width: 100%;
+  padding-right: 10px;
+}
+.users:hover {
+  background-color: var(--background-color);
+}
+.left_side {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  place-items: center;
+  gap: 5px;
+}
+.left_side span {
+  font-size: 13px;
+}
+.img_Con {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(228, 216, 216);
+}
+.addUser button {
+  border-radius: 3px;
+  padding: 5px 10px;
+}

@@ -1,0 +1,126 @@
+.right_bar {
+  min-width: 300px;
+  max-height: 100vh;
+  background-color: var(--background-color);
+  padding: 20px 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  flex-basis: 25%;
+  position: relative;
+}
+.right_bar_Con {
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: var(--background-color);
+  width: 100%;
+}
+.img_Con {
+  margin-left: 20px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(139, 131, 131);
+}
+.user_cart_Con {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+.user_cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  gap: 20px;
+  transition: 0.1s ease-in-out;
+  padding: 10px;
+}
+.mode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  gap: 20px;
+  transition: 0.1s ease-in-out;
+  padding: 10px;
+}
+.mode_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mode_right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+}
+.mode_motor {
+  position: relative;
+  background-color: rgb(192, 182, 182);
+  height: 20px;
+  width: 50px;
+  border-radius: 40px;
+  border: 1px solid rgb(82, 81, 81);
+}
+
+.mode_motor::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  left: 0;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.mode_motor.dark::before {
+  background-color: black;
+  transform: translateY(-50%) translateX(32px); /* Adjust distance as needed */
+  right: auto; /* Override the `right` position */
+}
+
+.user_cart:hover {
+  background-color: var(--background-color);
+  border-radius: 3px;
+}
+.icons {
+  font-size: 25px;
+}
+@media screen and (max-width: 500px) {
+  .right_bar {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .right_bar {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .right_bar {
+    width: 250px;
+  }
+}

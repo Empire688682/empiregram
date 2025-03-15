@@ -1,0 +1,103 @@
+.settings_left_bar {
+  min-width: 300px;
+  height: 100vh;
+  background-color: var(--secondary-background-color);
+  padding: 20px 10px;
+  flex-basis: 25%;
+  position: relative;
+  width: 100%;
+}
+.settings_left_bar_Con {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding-top: 100px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+  width: 100%;
+}
+.header h3 {
+  font-size: 28px;
+}
+.settings_menu_Con {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.settings_menu_Conheader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 5px 5px 20px;
+  margin-bottom: 20px;
+  background-color: var(--background-color);
+}
+.settings_menu_Conheader h4 {
+  font-size: 22px;
+}
+.settings_menu_Conheader p {
+  font-size: 18px;
+}
+.settings_menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  gap: 20px;
+  transition: 0.1s ease-in-out;
+  padding: 10px;
+}
+.settings_menu:hover {
+  background-color: var(--background-color);
+  border-radius: 3px;
+}
+.icons {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 900px) {
+  .settings_left_bar {
+    max-height: 250px;
+  }
+  .settings_menu_Conheader {
+    display: none;
+  }
+  .settings_menu_Con {
+    height: 100%;
+    width: 100%;
+    overflow: none;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+ .menus {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .settings_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .settings_menu p{
+    display:none;
+  }
+  .icons {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,133 @@
+.container{
+    padding-top: 90px;
+    padding-bottom: 30px;
+    background-color: var(--secondary-background-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+.video{
+    position: relative;
+    height: 100%;
+}
+.topHeader{
+    width: 90%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 20px;
+    margin: 0 auto;
+    z-index: 11;
+}
+.calcel{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.calcelIcon{
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.createReelBtn{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.5);
+    padding:10px;
+    border-radius: 5px;
+}
+.createReelBtnIcon{
+    font-size: 15px;
+    color: white;
+    padding: 0;
+}
+.createReelBtn p{
+    font-size: 16px;
+    color: white;
+}
+.controlBtns{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    display: flex;
+    gap: 10px;
+    z-index: 11;
+}
+.controlIcon{
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+.nextBtns{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 57%;
+}
+
+.userData {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: medium;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 0  0 9px 9px;
+}
+
+.userData p{
+    color: white;
+    font-size: 15px;
+}
+.header{
+    display: flex;
+    gap:5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.reactions{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.reactions div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+    color: var(--accent-color);
+    align-items: center;
+    gap: 5px;
+}
+.icon{
+    font-size: 35px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+.icon:hover, .createReelBtn:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+.reactions p{
+    color: var(--text-color);
+    font-size: medium;
+}
